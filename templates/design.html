@@ -1,0 +1,871 @@
+<!DOCTYPE html>
+<html lang="zxx">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--====== Title ======-->
+    <title>iRiseup - Book and publisher landing page</title>
+    <!-- ========== Favicon Ico ========== -->
+    <link rel="icon" href="assets/images/logo1.png" />
+    <!-- Headings font -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Body font -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <!--====== Bootstrap css ======-->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+    <!--====== IcoFont css ======-->
+    <link rel="stylesheet" href="assets/css/icofont.min.css" />
+    <!--====== Glightbox css ======-->
+    <link rel="stylesheet" href="assets/css/glightbox.css" />
+    <!--====== swiper css ======-->
+    <link rel="stylesheet" href="assets/css/swiper.min.css" />
+    <!--====== Margins & Paddings css ======-->
+    <link rel="stylesheet" href="assets/css/margins-paddings.css" />
+    <!--====== Aos & Paddings css ======-->
+    <link rel="stylesheet" href="assets/css/aos.css" />
+    <!--====== Style css ======-->
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <!--====== Custom variants ======-->
+    <link
+      rel="stylesheet"
+      href="assets/css/colors/oldRose.css"
+      id="color-switch"
+    />
+    <!-- Default color version -->
+    <link
+      rel="stylesheet"
+      href="assets/css/fonts/philosopher-poppins.css"
+      id="font-switch"
+    />
+    <!-- Default font version -->
+    <!--  Template Flat BG -->
+    <!-- <link href="assets/css/colors/wildBlue.css" rel="stylesheet"> -->
+    <!-- <link href="assets/css/colors/nomad.css" rel="stylesheet"> -->
+    <!-- <link href="assets/css/colors/viridian.css" rel="stylesheet"> -->
+    <!-- <link href="assets/css/colors/pink.css" rel="stylesheet"> -->
+    <!-- <link href="assets/css/colors/coffee.css" rel="stylesheet"> -->
+    <!-- <link href="assets/css/colors/royal.css" rel="stylesheet"> -->
+    <!-- <link href="assets/css/colors/sky.css" rel="stylesheet"> -->
+    <!-- <link href="assets/css/colors/olive.css" rel="stylesheet"> -->
+    <!--  Template Typography -->
+    <!-- <link href="assets/css/fonts/poppins-roboto.css" rel="stylesheet"> -->
+    <!-- <link href="assets/css/fonts/josepin-sourceSansPro.css" rel="stylesheet"> -->
+    <!-- <link href="assets/css/fonts/montserrat-lato.css" rel="stylesheet"> -->
+    <!-- <link href="assets/css/fonts/raleway-montserrat.css" rel="stylesheet"> -->
+    <!-- <link href="assets/css/fonts/avril-lato.css" rel="stylesheet"> -->
+    <!--====== Custom css ======-->
+    <!-- <link rel="stylesheet" href="assets/css/custom.css" /> -->
+    
+  </head>
+
+  <style>
+
+
+.input-border-focus {
+            --tw-ring-color: #60A5FA;
+        }
+        .btn-hover:focus, .btn-hover:hover {
+            background-color: #4CAF50;
+            border-color: #4CAF50;
+        }
+        .floating-form {
+            position: fixed;
+            bottom: -100px; /* Initially hide the form */
+            right: 20px;
+            transition: bottom 0.3s ease-in-out; /* Smooth transition */
+            z-index: 999;
+        }
+        .floating-form.show {
+            bottom: 20px; /* Show the form when scrolled down */
+        }
+
+.banner-logo-bg {
+	background: transparent radial-gradient(closest-side at 50% 50%, #091a39 0, #091a39 100%);
+	padding: 30px 0;
+}
+.banner-form {
+	background: #fff;
+	box-shadow: 0 3px 30px #00000029;
+	border-radius: 15px;
+	padding: 35px;
+	position: relative;
+	top: 60px;
+	margin: 0
+}
+.banner-btn button {
+	background: #4CAF50;
+	border-radius: 5px;
+	text-decoration: none;
+	color: #fff;
+	padding: 10px 0;
+	width: 100%;
+	border: 2px solid #4CAF50
+}
+.banner-logo-bg input {
+	height: 50px
+}
+.banner-logo-bg .owl-carousel .owl-item img {
+	width: 160px;
+}
+
+.owl-carousel .item {
+    margin-right: 30px;
+    margin-left: 30px; /* Adjust the value as needed */
+}
+
+
+
+.button-container {
+  display: flex;
+  align-items: center;
+}
+
+.get-started-btn,
+.live-chat-btn {
+  display: inline-block;
+  padding: 10px 20px;
+  margin-right: 10px; /* Adjust margin as needed */
+  background-color: #4CAF50;
+  color: white;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+  border-radius: 5px;
+}
+
+.get-started-btn:hover,
+.live-chat-btn:hover {
+  background-color: #45a049;
+}
+
+
+.chat-now, 
+.contact-us-now, .get-a-quote {
+  display: inline-block;
+  padding: 10px 20px;
+  margin-right: 10px; /* Adjust margin as needed */
+  background-color: #005503;
+  color: white;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+  border-radius: 5px;
+}
+
+.chat-now:hover, 
+.contact-us-now:hover, .get-a-quote:hover {
+  display: inline-block;
+  padding: 10px 20px;
+  margin-right: 10px; /* Adjust margin as needed */
+  background-color: #4CAF50;
+  color: white;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+  border-radius: 5px;
+}
+
+
+
+    .floatbutton {
+      position: fixed;
+      right: 0px;
+      bottom: 200px;
+      z-index: 9999;
+
+    }
+
+    .clickbutton {
+      width: 50px;
+      height: 200px;
+      cursor: pointer;
+      border-radius: 30px 0 0 30px;
+      display: inline-block;
+      vertical-align: top;
+      color: #000000;
+      font-size: 16px;
+      font-weight: 800;
+      position: relative;
+      border: 1px solid #fff;
+      text-transform: uppercase;
+      background-color: #D9BF77;
+      box-shadow: -20px 7px 18px -7px rgba(87, 184, 151, .09), 0 0 40px #00000026;
+      transition: all 0.3s ease;
+    }
+
+    .clickbutton:hover {
+      background-color: #ffffff;
+    }
+
+    .content2 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-90deg);
+  white-space: nowrap;
+  transform-origin: center;
+  font-style: bold;
+  bottom:87px;
+  padding: 0px;
+  
+    }
+
+    .clickbutton:hover .crossbar {
+      height: 60px;
+    }
+
+    
+
+.flip-cards-container {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 8px;
+    z-index:-1;
+}
+
+.flip-card {
+    width: calc(25% - 25px); /* Adjust width as needed */
+    margin-bottom: 20px; /* Adjust margin as needed */
+    margin-left: 50px;
+    margin-right: 50px;
+    
+}
+
+/* Add your existing CSS styles here */
+
+.floating-btn {
+  position: fixed;
+  top: 20%;
+  right: 20px; /* Adjust right positioning */
+  transform: translateY(-50%);
+  width: 230px; /* Adjust width */
+  height: 70px; /* Adjust height */
+  background-color: #D9BF77;
+  border: 2px solid #fff; /* Add border with white color */
+  border-radius: 100px; /* Adjust border-radius to make it more oblong */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: width 0.3s ease-in-out, margin-right 0.3s ease-in-out; /* Adjust transition properties */
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #F3E9D2;
+  font-weight: bold;
+  margin-right: -180px; /* Hide half of the button */
+  z-index: 9999;
+}
+
+
+.logo-container {
+  position: absolute;
+  right: 130px;
+  left:10px;
+}
+.logobox {
+  width: 60px; /* Adjust logo width */
+  height: auto; /* Maintain aspect ratio */
+  margin-right: 20px; /* Adjust spacing between logo and text */
+  display: flex;
+  
+}
+
+.floating-content {
+  width: 300px; /* Width of the content */
+  background-color: #F3E9D2;
+  padding: 20px;
+  display: none;
+}
+
+.floating-btn:hover .floating-content {
+  display: block; /* Show content on hover */
+}
+
+.floating-btn:hover {
+  margin-right: -50px; /* Show full button on hover */
+  width: 300px; /* Adjust width on hover */
+  z-index: 99999; /* Ensure the button stays on top */
+}
+  .other-content {
+  z-index: 99999; /* Adjust as needed */
+}
+
+/* Add your existing CSS styles here */
+
+/* Second Floating Button */
+.floating-btn-2 {
+  position: fixed;/* Adjust positioning */
+  top: 32%; /* Adjust top positioning */
+  right: 20px; /* Adjust right positioning */
+  padding: 0px;
+  font-weight: bold;
+  color: #D9BF77;
+}
+
+/* You can customize the styles for the second button as needed */
+.floating-btn-2 .logo {
+  width: 60px; /* Adjust logo width */
+  height: auto; /* Maintain aspect ratio */
+  margin-right: 20px; /* Adjust spacing between logo and text */
+  display: flex;
+}
+
+.floating-btn-2 .floating-content {
+  width: 300px; /* Width of the content */
+  background-color: #F3E9D2;
+  padding: 20px;
+  display: none;
+}
+
+/* You may need to adjust z-index and other properties if the second button overlaps with other content */
+
+/* Unique form container class */
+.form-container-unique {
+  background-color: #F3E9D2(253, 252, 251, 0.7); /* Nude color with some transparency */
+  padding: 20px;
+}
+
+/* Unique form wrapper class */
+.form-wrapper-unique {
+  background-color: rgba(255, 220, 200, 0.7); /* Solid white background for the form */
+  padding: 20px;
+  border-radius: 10px;
+}
+
+/* Unique heading class */
+.form-heading-unique {
+  margin-bottom: 20px;
+}
+
+/* Unique form group class */
+.form-group-unique {
+  margin-bottom: 20px;
+}
+
+/* Unique form control class */
+.form-control-unique {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+/* Unique button class */
+/* Unique button class */
+.btn-form-primary-unique {
+  background-color: #007bff; /* Blue color for the button */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Unique button class initial state */
+.btn-form-primary-unique:not(:hover) {
+  background-color: #D9BF77; /* Same as hover state */
+}
+
+/* Hover state for the unique button */
+.btn-form-primary-unique:hover {
+  background-color: #cfac4d; }
+
+  </style>
+
+
+  <body>
+    <div class="floating-btn">
+      <div class="logo-container">
+        <img src="assets/images/chatlogo10.png" alt="Logo" class="logobox">
+      </div>
+      <div class="floating-content">
+        <!-- Content to display when hovered -->
+        <p> |  CHAT US NOW</p>
+        <p></p>
+      </div>
+    </div>
+  
+  </body>
+
+  <div class="floating-btn floating-btn-2">
+    <div class="logo-container">
+      <img src="assets/images/2.png" alt="Logo 2" class="logobox">
+    </div>
+
+    <div class="floating-content">
+      <!-- Content to display when hovered -->
+    <span>  | Phone:</span><a href="tel:1124447900"> 112 444 7900</a>
+          
+    </div>
+  </div>
+
+
+
+    <div class="floatbutton">
+      <div class="clickbutton">
+        <p class="content2">LETS GET STARTED</p> </div>
+        <div class="crossbar"></div>
+      </div>
+    </div>
+  
+  
+</body>
+</html>
+  </html>
+  
+    <div class="section-wrapper">
+      <!-- Tmb loader end -->
+      <div id="preLoader"></div>
+      <!-- Tmb loader end -->
+      <!-- ========== Header start ========== -->
+      <header class="header">
+        <div class="container">
+          <div class="row">
+            <nav class="navbar navbar-expand-lg">
+              <a class="navbar-brand" href="iRiseup.html">
+                <!-- <h1 class="m-0">WONTED</h1> -->
+                <img src="assets/images/logo1.png" alt="iRiseup.html" />
+              </a>
+              <div class="collapsed navbar-collapsed" id="navbarSupportedContent">
+                <ul id="onepage-nav" class="navbar-nav menu ms-lg-auto">
+                  <li class="nav-item dropdown submenu">
+                    <li class="nav-item">
+                      <a class="nav-link" href="iRiseup.html">Home</a>
+                    </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="about.html">About</a>
+                  </li>
+
+                  <div class="collapsed navbar-collapsed" id="navbarSupportedContent">
+                    <ul id="onepage-nav" class="navbar-nav menu ms-lg-auto">
+                      <li class="nav-item dropdown submenu">
+                        <a
+                          class="nav-link active dropdown-toggle"
+                          href="#hero"
+                          role="button"
+                          data-bs-toggle="dropdown"
+                          aria-expanded="false"
+                          >Ghostwriting
+                          </a>
+    <span
+                          class="sub-menu-toggle dropdown-toggle"
+                          role="button"
+                          data-bs-toggle="dropdown"
+                          aria-expanded="false"
+                        >
+                          <i class="icofont-rounded-down"></i>
+                        </span>
+                        <ul class="dropdown-menu row">
+                          <li class="nav-item col-6 col-md-2">
+                              <a href="biography.html" class="nav-link"> > BIOGRAPHY WRITING</a>
+                          </li>
+                          <li class="nav-item col-6 col-md-2">
+                              <a href="memoir.html" class="nav-link"> > MEMOIR WRITING</a>
+                          </li>
+                          <li class="nav-item col-6 col-md-2">
+                              <a href="manuscript.html" class="nav-link"> > MANUSCRIPT WRITING</a>
+                          </li>
+                          <li class="nav-item col-6 col-md-2">
+                              <a href="comicbook.html" class="nav-link"> > COMIC BOOK WRITING</a>
+                          </li>
+                          <li class="nav-item col-6 col-md-2">
+                              <a href="childrensbook.html" class="nav-link"> > CHILDRENS BOOK WRITING</a>
+                          </li>
+                          <li class="nav-item col-6 col-md-2">
+                              <a href="nonfiction.html" class="nav-link"> > NON-FICTION WRITING</a>
+                          </li>
+                          <li class="nav-item col-6 col-md-2">
+                              <a href="screenwriting.html" class="nav-link"> > SCREENWRITING SERVICES</a>
+                          </li>
+                          <li class="nav-item col-6 col-md-2">
+                              <a href="horrorwriting.html" class="nav-link"> > HORRORWRITING SERVICES</a>
+                          </li>
+                          <li class="nav-item col-6 col-md-2">
+                              <a href="audiobook.html" class="nav-link"> > AUDIO BOOK SERVICES</a>
+                          </li>
+                          <li class="nav-item col-6 col-md-2">
+                              <a href="booktrailer.html" class="nav-link"> > BOOK TRAILER SERVICES</a>
+                          </li>
+                      </ul>
+                      
+                  
+                  
+
+                  <li class="nav-item">
+                    <a class="nav-link" href="editing.html">Editing</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="publishing.html"> Publishing</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="design.html">Design</a>
+                  </li>
+
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="marketing.html">Marketing</a>
+                  </li>
+                  
+                  <li class="nav-item">
+                    <a class="nav-link" href="bloglist.html">Blog</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="contact.html">Contact</a>
+                  </li>
+                </ul>
+              </div>
+              <button
+                class="navbar-toggler collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+              >
+                <span></span><span></span><span></span><span></span><span></span
+                ><span></span>
+              </button>
+            </nav>
+          </div>
+        </div>
+      </header>
+      <!-- ========== Header end ========== -->
+
+      <!-- ========== Hero section start ========== -->
+      <section
+        id="hero"
+        class="hero hero__padding overflow-hidden position-relative bg-one"
+      >
+        <div class="circle x1"></div>
+        <div class="circle x2"></div>
+        <div class="circle x3"></div>
+        <div class="circle x4"></div>
+        <div class="circle x5"></div>
+        <div class="container">
+          <div class="row gx-5 align-items-left">
+            <div class="col-md-7 mb-4 mb-md-0 p-10" data-aos="zoom-in-up" data-aos-duration="1000" data-aos-delay="850">
+              <div class="hero__content position-relative">
+                <h1 class="display-4 mb-4 text-capitalize" style="font-size: 52px;"  >
+                  THE BEST MEMOIR WRITING SERVICE YOU CAN FIND NATIONWIDE
+                </h1> 
+                <p class="text-muted mb-5 fs-5" style="font-size: 5px;">
+                  Our memoir writer for hire can help you share a legendary tale worldwide. Click below for more details
+              </div>
+            
+              <div class="row">
+                <div class="col-3">
+                  <img src="assets/images/goodfirms.png" class="img-fluid" alt="GoodFirms">
+                </div>
+                <div class="col-3">
+                  <img src="assets/images/clutch.png" class="img-fluid" alt="Clutch">
+                </div>
+                <div class="col-3">
+                  <img src="assets/images/pilot.png" class="img-fluid" alt="Pilot">
+                </div>
+              </div>
+              <div class="button-container">
+                <a href="#" class="chat-now" style="margin-top: 30px;">CHAT NOW</a>
+                <a href="#" class="get-a-quote" style="margin-top: 30px;">GET A QUOTE</a>
+                <a href="#" class="contact-us-now" style="margin-top: 30px;">CONTACT US NOW</a>
+              </div>
+            </div>
+            <div class="col-md-5 text-center form-container-unique" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="850" >
+              <div class="form-wrapper-unique" style="padding-right: 20px;">
+                <h2 class="form-heading-unique" style="font-size: 30px; font-style:italic;">Take Control of Your Writing Journey!</h2>
+                <p>Fill out the form now to consult our book experts.</p>
+                <form id="contact-form" method="post" action="#">
+                  <div class="form-group-unique">
+                    <input type="text" class="form-control-unique" id="name" name="name_1" placeholder="Name" required>
+                  </div>
+                  <div class="form-group-unique">
+                    <input type="email" class="form-control-unique" id="email" name="email" placeholder="Email Address" required>
+                  </div>
+                  <div class="form-group-unique">
+                    <input type="tel" class="form-control-unique" id="phone" name="phone_1" placeholder="Phone Number" required>
+                  </div>
+                  <div class="form-group-unique">
+                    <textarea class="form-control-unique" id="project-details" name="project_details_1" rows="3" placeholder="Project Details" required></textarea>
+                  </div>
+                  <button type="submit" class="btn-form-primary-unique">SEND MESSAGE</button>
+                </form>
+              </div>
+            </div>
+            
+          </div>
+          
+      </section>
+      <!-- ========== Hero section end ========== -->
+
+      <!-- Banner Logo Start -->
+
+      <section class="banner-logo-bg">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="owl-carousel owl-banner-logo owl-theme d-flex justify-content-center align-items-center">
+                        <div class="item"><img src="assets/images/banner1.png" class="img-fluid" alt="LT-writing "></div>
+                        <div class="item"><img src="assets/images/banner2.png" class="img-fluid" alt="LT-writing "></div>
+                        <div class="item"><img src="assets/images/banner3.png" class="img-fluid" alt="LT-writing "></div>
+                        <div class="item"><img src="assets/images/banner4.png" class="img-fluid" alt="LT-writing "></div>
+                        <div class="item"><img src="assets/images/banner5.png" class="img-fluid" alt="LT-writing "></div>
+                        <div class="item"><img src="assets/images/banner6.png" class="img-fluid" alt="LT-writing "></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+<section>
+    
+  <div class="bg-gray-100 flex items-center justify-center">
+    <div class="bg-white p-7 rounded-lg shadow-lg" data-aos="zoom-in-up"
+    data-aos-duration="1000"
+    data-aos-delay="200">
+        <form class="flex flex-wrap gap-4 justify-center items-center">
+            <input type="text" name="name" placeholder="Name" class="input-border-focus flex-1 min-w-[140px] px-4 py-2 border rounded border-gray-300 focus:outline-none focus:ring focus:border-blue-300">
+            <input type="email" name="email" placeholder="Email" class="input-border-focus flex-1 min-w-[140px] px-4 py-2 border rounded border-gray-300 focus:outline-none focus:ring focus:border-blue-300">
+            <input type="tel" name="phone" placeholder="Number" class="input-border-focus flex-1 min-w-[140px] px-4 py-2 border rounded border-gray-300 focus:outline-none focus:ring focus:border-blue-300">
+            <button type="submit" class="btn-hover px-6 py-2 text-white bg-green-400 rounded shadow-lg hover:bg-teal-500 focus:outline-none focus:ring-2 focus:ring-teal-400 focus:ring-opacity-50">
+                LET'S START
+            </button>
+        </form>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+<!-- ========== Footer section Start ========== -->
+<footer class="footer bg-one overflow-hidden">
+  <div class="container">
+    <div class="footer__topv2 m-50px-t m-50px-b">
+      <div class="row">
+        <div
+          class="col-md-6 col-lg-3 mb-4 mb-lg-0"
+          data-aos="fade-up"
+          data-aos-duration="1000"
+          data-aos-delay="200"
+        >
+          <div class="footer__topv2__about">
+            <div class="logo">
+              <img
+                src="assets//images/logo1.png"
+                alt="Footer Logo"
+              />
+            </div>
+            <div class="text">
+              <p>
+                iRiseup helps authors turn their ideas into published works, 
+                providing expert editing, ghostwriting, and publishing services.
+              </p>
+
+              
+            </div>
+          </div>
+        </div>
+        <div
+          class="col-md-6 col-lg-3 mb-4 mb-lg-0"
+          data-aos="fade-up"
+          data-aos-duration="1000"
+          data-aos-delay="250"
+        >
+          <div class="footer__topv2__link"> 
+            <div class="title">
+              <p>SERVICES</p>
+            </div>
+            <ul class="link">
+              <li><a href="marketing.html"> > Book Marketing</a></li>
+              <li>
+                <a href="page-without-sidebar.html"
+                  > > Book Cover</a
+                >
+              </li>
+              <li>
+                <a href="publishing.html"> > Book Publishing</a>
+              
+              <li>
+                <a href="editing.html"> > Book Editing</a>
+              </li>
+              <li><a href="cover.html"> > Book Cover Design</a></li>
+              <li>
+                <li><a href="memoir.html"> > Memoir Writing</a></li>
+              <li>
+                <li><a href="audiobook.html"> > Audio Book Services</a></li>
+                <li>
+                  <li><a href="manuscript.html"> > Manuscript Writing</a></li>
+                  <li>
+                    <li><a href="comicbook.html"> > Comic Book Services</a></li>
+              <li>
+            </ul>
+          </div>
+        </div>
+        <div
+          class="col-md-6 col-lg-3 mb-4 mb-lg-0"
+          data-aos="fade-up"
+          data-aos-duration="1000"
+          data-aos-delay="300"
+        >
+          <div class="footer___topV2__contact">
+            <div class="title">
+              <p>Contact Us</p>
+            </div>
+            <ul class="info">
+              <li>
+                <i class="icofont-google-map"></i
+                ><a href="#">Ohio CA 94107,US</a>
+              </li>
+              <li>
+                <i class="icofont-email"></i
+                ><a mailto="wonted@gmail.com"> info@iriseuppublishing.com</a>
+              </li>
+              <li>
+                <i class="icofont-phone"></i
+                ><a tel="+123 345123 556">+123 345123 556</a>
+              </li>
+            </ul>
+            <ul class="social-icon">
+              <li>
+                <a href="#"><i class="icofont-facebook"></i></a>
+              </li>
+              <li>
+                <a href="#"><i class="icofont-twitter"></i></a>
+              </li>
+              <li>
+                <a href="#"><i class="icofont-instagram"></i></a>
+              </li>
+              <li>
+                <a href="#"><i class="icofont-brand-whatsapp"></i></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div
+          class="col-md-6 col-lg-3"
+          data-aos="fade-up"
+          data-aos-duration="1000"
+          data-aos-delay="350"
+        >
+          <div class="footer___topV2__newsletter">
+            <div class="title">
+              <p>PAYMENT METHOD</p>
+            </div>
+            <br>
+            <img src="assets/images/payment.png" alt="iRiseup.html" />
+            <br>
+
+            <div class="text">
+              <p>
+                Feed your love for captivating tales! Subscribe now for an exclusive literary adventure!
+              </p>
+            </div>
+            <form action="assets/subscribe/subscribe.php" id="subscribe">
+              <div class="input-group aos-init aos-animate">
+                <input
+                  type="email"
+                  name="email"
+                  placeholder="Email"
+                  id="subscriber-email"
+                />
+                <button
+                  class="button button__primary"
+                  id="subscribe-button"
+                >
+                  <span>Subscribe</span>
+                </button>
+                <div
+                  data-lastpass-icon-root="true"
+                  style="
+                    position: relative !important;
+                    height: 0px !important;
+                    width: 0px !important;
+                    float: left !important;
+                  "
+                ></div>
+              </div>
+              <div class="result">
+                <p class="success-msg aos-init aos-animate">
+                  <i class="icofont-check"></i> Your email has been
+                  stored!
+                </p>
+                <p class="error-msg aos-init aos-animate">
+                  <i class="icofont-close"></i> Sorry! Something went
+                  wrong!
+                </p>
+              </div>
+            </form>
+            <!-- Mailchimp subscription form -->
+            <!-- <form action="#" id="subscribe-mailchimp" data-wow-duration="1.5s">
+              <div class="input-group" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="750">
+                <input type="email" name="email" placeholder="Email" id="subscriber-email" />
+                <button class="button button__primary" id="subscribe-button">
+                  <span>Subscribe</span>
+                </button>
+              </div>
+              <div class="result">
+                  <p class="success-msg" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="800"><i class="icofont-check"></i> You email has been stored!</p>
+                  <p class="error-msg" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="850"><i class="icofont-close"></i> Sorry! Something went wrong!</p>
+              </div>
+            </form> -->
+            <!-- subscription form end -->
+          </div>
+        </div>
+      </div>
+    </div>
+    <hr />
+    <div class="footer__copyright m-20px-t m-20px-b d-flex justify-content-between align-items-center">
+      <div>
+          <p class="m-0">
+              &copy; 2024 All rights reserved. Powered by: <a href="iRiseup.html">iRiseUp</a>
+          </p>
+      </div>
+      <div class="text-right">
+          <p class="m-0">
+              <a href="privacypolicy.html">Privacy Policy</a> | <a href="termsandcondition.html">Terms and Conditions</a>
+          </p>
+      </div>
+  </div>        
+    </div>
+    </div>
+    
+
+        
+      </div>
+    </div>
+  </div>
+</footer>
+<!-- ========== Footer section End ========== -->
+</div>
+<!--====== jquery js ======-->
+<script src="assets/js/jquery.min.js"></script>
+<!--====== Bootstrap js ======-->
+<script src="assets/js/bootstrap.bundle.min.js"></script>
+<!--====== One page nav ======-->
+<script src="assets/js/onepageNav.js"></script>
+<!--====== Ajaxchimp js ======-->
+<script src="assets/js/jquery.ajaxchimp.min.js"></script>
+<!--====== Glightbox js ======-->
+<script src="assets/js/glightbox.js"></script>
+<!--====== Glightbox js ======-->
+<script src="assets/js/swiper.min.js"></script>
+<!--====== Appear js ======-->
+<script src="assets/js/jquery.appear.min.js"></script>
+<!--====== Odometer js ======-->
+<script src="assets/js/odometer.min.js"></script>
+<!--====== Aos js ======-->
+<script src="assets/js/aos.js"></script>
+<!--====== Custom js ======-->
+<script src="assets/js/custom.js"></script>
+<script src="https://cdn.tailwindcss.com"></script>
+
+</body>
+</html>
