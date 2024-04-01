@@ -7,7 +7,7 @@
     <!--====== Title ======-->
     <title>Wonted - Book and publisher landing page</title>
     <!-- ========== Favicon Ico ========== -->
-    <link rel="icon" href="assets/images/favicon.ico" />
+    <link rel="icon" href="{% 'assets/images/favicon.ico' %}" />
     <!-- Headings font -->
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -20,51 +20,51 @@
       rel="stylesheet"
     />
     <!--====== Bootstrap css ======-->
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="{% 'assets/css/bootstrap.min.css' %}" />
     <!--====== IcoFont css ======-->
-    <link rel="stylesheet" href="assets/css/icofont.min.css" />
+    <link rel="stylesheet" href="{% 'assets/css/icofont.min.css' %}" />
     <!--====== Glightbox css ======-->
-    <link rel="stylesheet" href="assets/css/glightbox.css" />
+    <link rel="stylesheet" href="{% 'assets/css/glightbox.css' %}" />
     <!--====== swiper css ======-->
-    <link rel="stylesheet" href="assets/css/swiper.min.css" />
+    <link rel="stylesheet" href="{% 'assets/css/swiper.min.css' %}" />
     <!--====== Margins & Paddings css ======-->
-    <link rel="stylesheet" href="assets/css/margins-paddings.css" />
+    <link rel="stylesheet" href="{% 'assets/css/margins-paddings.css' %}" />
     <!--====== Aos & Paddings css ======-->
-    <link rel="stylesheet" href="assets/css/aos.css" />
+    <link rel="stylesheet" href="{% 'assets/css/aos.css' %}" />
     <!--====== Style css ======-->
-    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="{% 'assets/css/style.css' %}" />
     <!--====== Custom css ======-->
-    <!-- <link rel="stylesheet" href="assets/css/custom.css" /> -->
+    <!-- <link rel="stylesheet" href="{% 'assets/css/custom.css' %}" /> -->
     <!--====== Custom variants ======-->
     <link
       rel="stylesheet"
-      href="assets/css/colors/oldRose.css"
+      href="{% 'assets/css/colors/oldRose.css' %}"
       id="color-switch"
     />
     <!-- Default color version -->
     <link
       rel="stylesheet"
-      href="assets/css/fonts/philosopher-poppins.css"
+      href="{% 'assets/css/fonts/philosopher-poppins.css' %}"
       id="font-switch"
     />
     <!-- Default font version -->
     <!--  Template Flat BG -->
-    <!-- <link href="assets/css/colors/wildBlue.css" rel="stylesheet"> -->
-    <!-- <link href="assets/css/colors/nomad.css" rel="stylesheet"> -->
-    <!-- <link href="assets/css/colors/viridian.css" rel="stylesheet"> -->
-    <!-- <link href="assets/css/colors/pink.css" rel="stylesheet"> -->
-    <!-- <link href="assets/css/colors/coffee.css" rel="stylesheet"> -->
-    <!-- <link href="assets/css/colors/royal.css" rel="stylesheet"> -->
-    <!-- <link href="assets/css/colors/sky.css" rel="stylesheet"> -->
-    <!-- <link href="assets/css/colors/olive.css" rel="stylesheet"> -->
+    <!-- <link href="{% 'assets/css/colors/wildBlue.css' %}" rel="stylesheet"> -->
+    <!-- <link href="{% 'assets/css/colors/nomad.css' %}" rel="stylesheet"> -->
+    <!-- <link href="{% 'assets/css/colors/viridian.css' %}" rel="stylesheet"> -->
+    <!-- <link href="{% 'assets/css/colors/pink.css' %}" rel="stylesheet"> -->
+    <!-- <link href="{% 'assets/css/colors/coffee.css' %}" rel="stylesheet"> -->
+    <!-- <link href="{% 'assets/css/colors/royal.css' %}" rel="stylesheet"> -->
+    <!-- <link href="{% 'assets/css/colors/sky.css' %}" rel="stylesheet"> -->
+    <!-- <link href="{% 'assets/css/colors/olive.css' %}" rel="stylesheet"> -->
     <!--  Template Typography -->
-    <!-- <link href="assets/css/fonts/poppins-roboto.css" rel="stylesheet"> -->
-    <!-- <link href="assets/css/fonts/josepin-sourceSansPro.css" rel="stylesheet"> -->
-    <!-- <link href="assets/css/fonts/montserrat-lato.css" rel="stylesheet"> -->
-    <!-- <link href="assets/css/fonts/raleway-montserrat.css" rel="stylesheet"> -->
-    <!-- <link href="assets/css/fonts/avril-lato.css" rel="stylesheet"> -->
+    <!-- <link href="{% 'assets/css/fonts/poppins-roboto.css' %}" rel="stylesheet"> -->
+    <!-- <link href="{% 'assets/css/fonts/josepin-sourceSansPro.css' %}" rel="stylesheet"> -->
+    <!-- <link href="{% 'assets/css/fonts/montserrat-lato.css' %}" rel="stylesheet"> -->
+    <!-- <link href="{% 'assets/css/fonts/raleway-montserrat.css' %}" rel="stylesheet"> -->
+    <!-- <link href="{% 'assets/css/fonts/avril-lato.css' %}" rel="stylesheet"> -->
     <!--====== Custom css ======-->
-    <!-- <link rel="stylesheet" href="assets/css/custom.css" /> -->
+    <!-- <link rel="stylesheet" href="{% 'assets/css/custom.css' %}" /> -->
     
   </head>
 
@@ -78,9 +78,9 @@
       <div class="container">
         <div class="row">
           <nav class="navbar navbar-expand-lg">
-            <a class="navbar-brand" href="index.html">
+            <a class="navbar-brand" href="{% url 'index' %}">
               <!-- <h1 class="m-0">WONTED</h1> -->
-              <img src="assets/images/wonted-logo.png" alt="Wonted" />
+              <img src="{% 'assets/images/wonted-logo.png' %}" alt="Wonted" />
             </a>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
               <ul id="onepage-nav" class="navbar-nav menu ms-lg-auto">
@@ -103,22 +103,22 @@
                     </span>
                   <ul class="dropdown-menu">
                     <li class="nav-item">
-                      <a href="index.html" class="nav-link">Home One</a>
+                      <a href="{% url 'index' %}" class="nav-link">Home One</a>
                     </li>
                     <li class="nav-item">
                       <a href="index-2.html" class="nav-link">Home Two</a>
                     </li>
                     <li class="nav-item">
-                      <a href="index-3.html" class="nav-link">Home Three</a>
+                      <a href="{% url 'index-3' %}" class="nav-link">Home Three</a>
                     </li>
                     <li class="nav-item">
-                      <a href="index-4.html" class="nav-link">Home Four</a>
+                      <a href="{% url 'index-4' %}" class="nav-link">Home Four</a>
                     </li>
                     <li class="nav-item">
-                      <a href="index-5.html" class="nav-link">Home Five</a>
+                      <a href="{% url 'index-5' %}" class="nav-link">Home Five</a>
                     </li>
                     <li class="nav-item">
-                      <a href="index-6.html" class="nav-link">Home Six</a>
+                      <a href="{% url 'index-6' %}" class="nav-link">Home Six</a>
                     </li>
                   </ul>
                 </li>
@@ -141,10 +141,10 @@
                     </span>
                   <ul class="dropdown-menu">
                     <li class="nav-item">
-                      <a href="all-events.html" class="nav-link">All Events</a>
+                      <a href="{% url 'all-events' %}" class="nav-link">All Events</a>
                     </li>
                     <li class="nav-item">
-                      <a href="single-event.html" class="nav-link"
+                      <a href="{% url 'single-event' %}" class="nav-link"
                         >Single Event</a
                       >
                     </li>
@@ -172,17 +172,17 @@
                       <a href="404.html" class="nav-link">404 Page</a>
                     </li>
                     <li class="nav-item">
-                      <a href="page-without-sidebar.html" class="nav-link"
+                      <a href="{% url 'page-without-sidebar' %}" class="nav-link"
                         >Page Without Sidebar</a
                       >
                     </li>
                     <li class="nav-item">
-                      <a href="page-left-sidebar.html" class="nav-link"
+                      <a href="{% url 'page-left-sidebar' %}" class="nav-link"
                         >Page Left Sidebar</a
                       >
                     </li>
                     <li class="nav-item">
-                      <a href="page-right-sidebar.html" class="nav-link"
+                      <a href="{% url 'page-right-sidebar' %}" class="nav-link"
                         >Page Right Sidebar</a
                       >
                     </li>
@@ -210,30 +210,30 @@
                       <a href="blog-grid.html" class="nav-link">Blog Grid</a>
                     </li>
                     <li class="nav-item">
-                      <a href="blog-list.html" class="nav-link"
+                      <a href="{% url 'blog-list' %}" class="nav-link"
                         >Blog List</a
                       >
                     </li>
                     <li class="nav-item">
-                      <a href="left-sidebar.html" class="nav-link">Left Sidebar</a>
+                      <a href="{% url 'left-sidebar' %}" class="nav-link">Left Sidebar</a>
                     </li>
                     <li class="nav-item">
-                      <a href="right-sidebar.html" class="nav-link"
+                      <a href="{% url 'right-sidebar' %}" class="nav-link"
                         >Right Sidebar</a
                       >
                     </li>
                     <li class="nav-item">
-                      <a href="single-blog.html" class="nav-link"
+                      <a href="{% url 'single-blog' %}" class="nav-link"
                         >Details Without Sidebar</a
                       >
                     </li>
                     <li class="nav-item">
-                      <a href="blog-left-sidebar.html" class="nav-link"
+                      <a href="{% url 'blog-left-sidebar' %}" class="nav-link"
                         >Details Left Sidebar</a
                       >
                     </li>
                     <li class="nav-item">
-                      <a href="blog-right-sidebar.html" class="nav-link"
+                      <a href="{% url 'blog-right-sidebar' %}" class="nav-link"
                         >Details Right Sidebar</a
                       >
                     </li>
@@ -280,7 +280,7 @@
                 data-aos-duration="1000"
                 data-aos-delay="650"
               >
-                <a href="index.html">Home</a>
+                <a href="{% url 'index' %}">Home</a>
               </li>
               <li
                 data-aos="fade-up"
@@ -315,7 +315,7 @@
           <article>
             <img
               class="img-fluid"
-              src="assets/images/blog/single-blog.jpg"
+              src="{% 'assets/images/blog/single-blog.jpg' %}"
               alt="Image"
             />
             <ul class="single-blog__metainfo">
@@ -339,7 +339,7 @@
               </p>
               <p>
                 No sea takimata sanctus est Lorem
-                <a href="index.html">Ipsum</a> dolor sit amet. Lorem ipsum
+                <a href="{% url 'index' %}">Ipsum</a> dolor sit amet. Lorem ipsum
                 dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
                 eirmod tempor invidunt ut labore et.
               </p>
@@ -371,7 +371,7 @@
                   <div class="post-img">
                     <img
                       class="img-fluid"
-                      src="assets/images/blog/blog_01.jpg"
+                      src="{% 'assets/images/blog/blog_01.jpg' %}"
                       alt="Image"
                     />
                   </div>
@@ -380,7 +380,7 @@
                   <div class="post-img">
                     <img
                       class="img-fluid"
-                      src="assets/images/blog/blog_02.jpg"
+                      src="{% 'assets/images/blog/blog_02.jpg' %}"
                       alt="Image"
                     />
                   </div>
@@ -436,7 +436,7 @@
                 <strong>adipisicing</strong> elit, sed do eiusmod tempor quis
                 nostrud exercitation ullamco laboris nisi ut aliquip ex ea
                 commodo consequat. Duis aute irure dolor in reprehenderit in
-                <a href="index.html">sed</a> uia non numquam eius modi tempora
+                <a href="{% url 'index' %}">sed</a> uia non numquam eius modi tempora
                 incidunt ut labore dolor.
               </p>
             </div>
@@ -486,7 +486,7 @@
                 <div class="single-blog__comment__item__image">
                   <img
                     class="img-fluid"
-                    src="assets/images/user-1.png"
+                    src="{% 'assets/images/user-1.png' %}"
                     alt="mage"
                   />
                 </div>
@@ -523,7 +523,7 @@
                 <div class="single-blog__comment__item__image">
                   <img
                     class="img-fluid"
-                    src="assets/images/user-2.png"
+                    src="{% 'assets/images/user-2.png' %}"
                     alt="mage"
                   />
                 </div>
@@ -558,7 +558,7 @@
                 <div class="single-blog__comment__item__image">
                   <img
                     class="img-fluid"
-                    src="assets/images/user-1.png"
+                    src="{% 'assets/images/user-1.png' %}"
                     alt="mage"
                   />
                 </div>
@@ -687,7 +687,7 @@
                       <img
                         width="80"
                         height="80"
-                        src="assets/images/blog/sidebar-image-1.jpg"
+                        src="{% 'assets/images/blog/sidebar-image-1.jpg' %}"
                         class=""
                         alt="Sidebar Image 01"
                       />
@@ -708,7 +708,7 @@
                       <img
                         width="80"
                         height="80"
-                        src="assets/images/blog/sidebar-image-2.jpg"
+                        src="{% 'assets/images/blog/sidebar-image-2.jpg' %}"
                         class="#"
                         alt="Sidebar Image 02"
                       />
@@ -727,7 +727,7 @@
                       <img
                         width="80"
                         height="80"
-                        src="assets/images/blog/sidebar-image-3.jpg"
+                        src="{% 'assets/images/blog/sidebar-image-3.jpg' %}"
                         class="#"
                         alt="Sidebar Image 03"
                       />
@@ -746,7 +746,7 @@
                       <img
                         width="80"
                         height="80"
-                        src="assets/images/blog/sidebar-image-4.jpg"
+                        src="{% 'assets/images/blog/sidebar-image-4.jpg' %}"
                         class=""
                         alt="Sidebar Image 04"
                       />
@@ -831,8 +831,8 @@
               data-aos-duration="1000"
               data-aos-delay="150"
             >
-              <a href="index.html">
-                <img width="80" src="assets/images/book-note-icon.png" alt="" />
+              <a href="{% url 'index' %}">
+                <img width="80" src="{% 'assets/images/book-note-icon.png' %}" alt="" />
               </a>
             </div>
             <div
@@ -844,14 +844,14 @@
                   data-aos-duration="1000"
                   data-aos-delay="200"
                 >
-                  <a href="index.html">Home</a>
+                  <a href="{% url 'index' %}">Home</a>
                 </li>
                 <li
                   data-aos="fade-up"
                   data-aos-duration="1000"
                   data-aos-delay="250"
                 >
-                  <a href="all-events.html">Events</a>
+                  <a href="{% url 'all-events' %}">Events</a>
                 </li>
                 <li
                   data-aos="fade-up"
@@ -921,23 +921,23 @@
     <!-- ========== Footer section End ========== -->
     </div>
     <!--====== jquery js ======-->
-    <script src="assets/js/jquery.min.js"></script>
+    <script src="{% 'assets/js/jquery.min.js' %}"></script>
     <!--====== Bootstrap js ======-->
-    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="{% 'assets/js/bootstrap.bundle.min.js' %}"></script>
     <!--====== One page nav ======-->
-    <script src="assets/js/onepageNav.js"></script>
+    <script src="{% 'assets/js/onepageNav.js' %}"></script>
     <!--====== Glightbox js ======-->
-    <script src="assets/js/glightbox.js"></script>
+    <script src="{% 'assets/js/glightbox.js' %}"></script>
     <!--====== jquery Swiper js ======-->
-    <script src="assets/js/swiper.min.js"></script>
+    <script src="{% 'assets/js/swiper.min.js' %}"></script>
     <!--====== Ajaxchimp js ======-->
-    <script src="assets/js/jquery.ajaxchimp.min.js"></script>
+    <script src="{% 'assets/js/jquery.ajaxchimp.min.js' %}"></script>
     <!--====== Appear js ======-->
-    <script src="assets/js/jquery.appear.min.js"></script>
+    <script src="{% 'assets/js/jquery.appear.min.js' %}"></script>
     <!--====== Aos js ======-->
-    <script src="assets/js/aos.js"></script>
+    <script src="{% 'assets/js/aos.js' %}"></script>
     <!--====== Custom js ======-->
-    <script src="assets/js/custom.js"></script>
+    <script src="{% 'assets/js/custom.js' %}"></script>
     
   </body>
 </html>

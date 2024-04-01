@@ -7,7 +7,7 @@
     <!--====== Title ======-->
     <title>iRiseup - Book and publisher blog page</title>
     <!-- ========== Favicon Ico ========== -->
-    <link rel="icon" href="assets/images/logo1.png" />
+    <link rel="icon" href="{% static 'assets/images/logo1.png' %}" />
     <!-- Headings font -->
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -20,51 +20,51 @@
       rel="stylesheet"
     />
     <!--====== Bootstrap css ======-->
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="{% static 'assets/css/bootstrap.min.css' %}" />
     <!--====== IcoFont css ======-->
-    <link rel="stylesheet" href="assets/css/icofont.min.css" />
+    <link rel="stylesheet" href="{% static 'assets/css/icofont.min.css' %}" />
     <!--====== Glightbox css ======-->
-    <link rel="stylesheet" href="assets/css/glightbox.css" />
+    <link rel="stylesheet" href="{% static 'assets/css/glightbox.css' %}" />
     <!--====== swiper css ======-->
-    <link rel="stylesheet" href="assets/css/swiper.min.css" />
+    <link rel="stylesheet" href="{% static 'assets/css/swiper.min.css' %}" />
     <!--====== Margins & Paddings css ======-->
-    <link rel="stylesheet" href="assets/css/margins-paddings.css" />
+    <link rel="stylesheet" href="{% static 'assets/css/margins-paddings.css' %}" />
     <!--====== Aos & Paddings css ======-->
-    <link rel="stylesheet" href="assets/css/aos.css" />
+    <link rel="stylesheet" href="{% static 'assets/css/aos.css' %}" />
     <!--====== Style css ======-->
-    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="{% static 'assets/css/style.css' %}" />
     <!--====== Custom css ======-->
-    <!-- <link rel="stylesheet" href="assets/css/custom.css" /> -->
+    <!-- <link rel="stylesheet" href="{% static 'assets/css/custom.css' %}" /> -->
     <!--====== Custom variants ======-->
     <link
       rel="stylesheet"
-      href="assets/css/colors/oldRose.css"
+      href="{% static 'assets/css/colors/oldRose.css' %}"
       id="color-switch"
     />
     <!-- Default color version -->
     <link
       rel="stylesheet"
-      href="assets/css/fonts/philosopher-poppins.css"
+      href="{% static 'assets/css/fonts/philosopher-poppins.css' %}"
       id="font-switch"
     />
     <!-- Default font version -->
     <!--  Template Flat BG -->
-    <!-- <link href="assets/css/colors/wildBlue.css" rel="stylesheet"> -->
-    <!-- <link href="assets/css/colors/nomad.css" rel="stylesheet"> -->
-    <!-- <link href="assets/css/colors/viridian.css" rel="stylesheet"> -->
-    <!-- <link href="assets/css/colors/pink.css" rel="stylesheet"> -->
-    <!-- <link href="assets/css/colors/coffee.css" rel="stylesheet"> -->
-    <!-- <link href="assets/css/colors/royal.css" rel="stylesheet"> -->
-    <!-- <link href="assets/css/colors/sky.css" rel="stylesheet"> -->
-    <!-- <link href="assets/css/colors/olive.css" rel="stylesheet"> -->
+    <!-- <link href="{% static 'assets/css/colors/wildBlue.css' %}" rel="stylesheet"> -->
+    <!-- <link href="{% static 'assets/css/colors/nomad.css' %}" rel="stylesheet"> -->
+    <!-- <link href="{% static 'assets/css/colors/viridian.css' %}" rel="stylesheet"> -->
+    <!-- <link href="{% static 'assets/css/colors/pink.css' %}" rel="stylesheet"> -->
+    <!-- <link href="{% static 'assets/css/colors/coffee.css' %}" rel="stylesheet"> -->
+    <!-- <link href="{% static 'assets/css/colors/royal.css' %}" rel="stylesheet"> -->
+    <!-- <link href="{% static 'assets/css/colors/sky.css' %}" rel="stylesheet"> -->
+    <!-- <link href="{% static 'assets/css/colors/olive.css' %}" rel="stylesheet"> -->
     <!--  Template Typography -->
-    <!-- <link href="assets/css/fonts/poppins-roboto.css" rel="stylesheet"> -->
-    <!-- <link href="assets/css/fonts/josepin-sourceSansPro.css" rel="stylesheet"> -->
-    <!-- <link href="assets/css/fonts/montserrat-lato.css" rel="stylesheet"> -->
-    <!-- <link href="assets/css/fonts/raleway-montserrat.css" rel="stylesheet"> -->
-    <!-- <link href="assets/css/fonts/avril-lato.css" rel="stylesheet"> -->
+    <!-- <link href="{% static 'assets/css/fonts/poppins-roboto.css' %}" rel="stylesheet"> -->
+    <!-- <link href="{% static 'assets/css/fonts/josepin-sourceSansPro.css' %}" rel="stylesheet"> -->
+    <!-- <link href="{% static 'assets/css/fonts/montserrat-lato.css' %}" rel="stylesheet"> -->
+    <!-- <link href="{% static 'assets/css/fonts/raleway-montserrat.css' %}" rel="stylesheet"> -->
+    <!-- <link href="{% static 'assets/css/fonts/avril-lato.css' %}" rel="stylesheet"> -->
     <!--====== Custom css ======-->
-    <!-- <link rel="stylesheet" href="assets/css/custom.css" /> -->
+    <!-- <link rel="stylesheet" href="{% static 'assets/css/custom.css' %}" /> -->
   </head>
 
   <body>
@@ -77,35 +77,35 @@
         <div class="container">
           <div class="row">
             <nav class="navbar navbar-expand-lg">
-              <a class="navbar-brand" href="iRiseup.html">
+              <a class="navbar-brand" href="{% url 'home' %}">
                 <!-- <h1 class="m-0">WONTED</h1> -->
-                <img src="assets/images/logo1.png" alt="iRiseup.html" />
+                <img src="{% static 'assets/images/logo1.png' %}" alt="{% url 'home' %}" />
               </a>
               <div class="collapsed navbar-collapsed" id="navbarSupportedContent">
                 <ul id="onepage-nav" class="navbar-nav menu ms-lg-auto">
                   <li class="nav-item dropdown submenu">
                     <li class="nav-item">
-                      <a class="nav-link" href="iRiseup.html">Home</a>
+                      <a class="nav-link" href="{% url 'home' %}">Home</a>
                     </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="about.html">About</a>
+                    <a class="nav-link" href="{% url 'about' %}">About</a>
                   </li>
 
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="design.html">Design</a>
+                    <a class="nav-link" href="{% url 'design' %}">Design</a>
                   </li>
 
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="marketing.html">Marketing</a>
+                    <a class="nav-link" href="{% url 'marketing' %}">Marketing</a>
                   </li>
                   
                   <li class="nav-item">
-                    <a class="nav-link" href="bloglist.html">Blog</a>
+                    <a class="nav-link" href="{% url 'bloglist' %}">Blog</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="contact.html">Contact</a>
+                    <a class="nav-link" href="{% url 'contact' %}">Contact</a>
                   </li>
                 </ul>
               </div>
@@ -169,10 +169,10 @@
             >
               <article class="blog__single-post">
                 <div class="blog__single-post__image">
-                  <a href="single-blog.html">
+                  <a href="{% url 'single-blog' %}">
                     <img
                       class="img-fluid"
-                      src="assets/images/blog/blog_01.jpg"
+                      src="{% static 'assets/images/blog/blog_01.jpg' %}"
                       alt="Blog 01"
                     />
                   </a>
@@ -180,7 +180,7 @@
                 <div class="blog__single-post__body">
                   <div class="blog__single-post__content">
                     <h2 class="fs-4">
-                      <a href="single-blog.html"
+                      <a href="{% url 'single-blog' %}"
                         >Book News: Egypt Bans Ridley Scott’s ‘Exodus’ For
                         ‘Historical</a
                       >
@@ -212,10 +212,10 @@
             >
               <article class="blog__single-post">
                 <div class="blog__single-post__image">
-                  <a href="single-blog.html">
+                  <a href="{% url 'single-blog' %}">
                     <img
                       class="img-fluid"
-                      src="assets/images/blog/blog_01.jpg"
+                      src="{% static 'assets/images/blog/blog_01.jpg' %}"
                       alt="Blog 01"
                     />
                   </a>
@@ -223,7 +223,7 @@
                 <div class="blog__single-post__body">
                   <div class="blog__single-post__content">
                     <h2 class="fs-4">
-                      <a href="single-blog.html"
+                      <a href="{% url 'single-blog' %}"
                         >Book News: Egypt Bans Ridley Scott’s ‘Exodus’ For
                         ‘Historical</a
                       >
@@ -255,10 +255,10 @@
             >
               <article class="blog__single-post">
                 <div class="blog__single-post__image">
-                  <a href="single-blog.html">
+                  <a href="{% url 'single-blog' %}">
                     <img
                       class="img-fluid"
-                      src="assets/images/blog/blog_02.jpg"
+                      src="{% static 'assets/images/blog/blog_02.jpg' %}"
                       alt="Blog 02"
                     />
                   </a>
@@ -266,7 +266,7 @@
                 <div class="blog__single-post__body">
                   <div class="blog__single-post__content">
                     <h2 class="fs-4">
-                      <a href="single-blog.html"
+                      <a href="{% url 'single-blog' %}"
                         >Wyden, Eshoo question “big five” publishers over</a
                       >
                     </h2>
@@ -297,10 +297,10 @@
             >
               <article class="blog__single-post">
                 <div class="blog__single-post__image">
-                  <a href="single-blog.html">
+                  <a href="{% url 'single-blog' %}">
                     <img
                       class="img-fluid"
-                      src="assets/images/blog/blog_02.jpg"
+                      src="{% static 'assets/images/blog/blog_02.jpg' %}"
                       alt="Blog 02"
                     />
                   </a>
@@ -308,7 +308,7 @@
                 <div class="blog__single-post__body">
                   <div class="blog__single-post__content">
                     <h2 class="fs-4">
-                      <a href="single-blog.html"
+                      <a href="{% url 'single-blog' %}"
                         >Wyden, Eshoo question “big five” publishers over</a
                       >
                     </h2>
@@ -339,10 +339,10 @@
             >
               <article class="blog__single-post">
                 <div class="blog__single-post__image">
-                  <a href="single-blog.html">
+                  <a href="{% url 'single-blog' %}">
                     <img
                       class="img-fluid"
-                      src="assets/images/blog/blog_03.jpg"
+                      src="{% static 'assets/images/blog/blog_03.jpg' %}"
                       alt="Blog 03"
                     />
                   </a>
@@ -350,7 +350,7 @@
                 <div class="blog__single-post__body">
                   <div class="blog__single-post__content">
                     <h2 class="fs-4">
-                      <a href="single-blog.html"
+                      <a href="{% url 'single-blog' %}"
                         >There is a method to this book-buying madness</a
                       >
                     </h2>
@@ -381,10 +381,10 @@
             >
               <article class="blog__single-post">
                 <div class="blog__single-post__image">
-                  <a href="single-blog.html">
+                  <a href="{% url 'single-blog' %}">
                     <img
                       class="img-fluid"
-                      src="assets/images/blog/blog_03.jpg"
+                      src="{% static 'assets/images/blog/blog_03.jpg' %}"
                       alt="Blog 03"
                     />
                   </a>
@@ -392,7 +392,7 @@
                 <div class="blog__single-post__body">
                   <div class="blog__single-post__content">
                     <h2 class="fs-4">
-                      <a href="single-blog.html"
+                      <a href="{% url 'single-blog' %}"
                         >There is a method to this book-buying madness</a
                       >
                     </h2>
@@ -452,7 +452,7 @@
                 <div class="footer__topv2__about">
                   <div class="logo">
                     <img
-                      src="assets//images/logo1.png"
+                      src="{% static 'assets//images/logo1.png' %}"
                       alt="Footer Logo"
                     />
                   </div>
@@ -479,15 +479,15 @@
                   <ul class="link">
                     <li><a href="404.html"> > Book Marketing</a></li>
                     <li>
-                      <a href="page-without-sidebar.html"
+                      <a href="{% url 'page-without-sidebar' %}"
                         > > Book Cover</a
                       >
                     </li>
                     <li>
-                      <a href="page-left-sidebar.html"> > Book Publishing</a>
+                      <a href="{% url 'page-left-sidebar' %}"> > Book Publishing</a>
                     
                     <li>
-                      <a href="page-right-sidebar.html"> > Book Editing</a>
+                      <a href="{% url 'page-right-sidebar' %}"> > Book Editing</a>
                     </li>
                     <li><a href="404.html"> > Book Cover Design</a></li>
                     <li>
@@ -553,7 +553,7 @@
                     <p>PAYMENT METHOD</p>
                   </div>
                   <br>
-                  <img src="assets/images/payment.png" alt="iRiseup.html" />
+                  <img src="{% static 'assets/images/payment.png' %}" alt="{% url 'home' %}" />
                   <br>
 
                   <div class="text">
@@ -561,7 +561,7 @@
                       Feed your love for captivating tales! Subscribe now for an exclusive literary adventure!
                     </p>
                   </div>
-                  <form action="assets/subscribe/subscribe.php" id="subscribe">
+                  <form action="{% static 'assets/subscribe/subscribe.php' %}" id="subscribe">
                     <div class="input-group aos-init aos-animate">
                       <input
                         type="email"
@@ -639,22 +639,22 @@
       <!-- ========== Footer section End ========== -->
     </div>
     <!--====== jquery js ======-->
-    <script src="assets/js/jquery.min.js"></script>
+    <script src="{% static 'assets/js/jquery.min.js' %}"></script>
     <!--====== Bootstrap js ======-->
-    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="{% static 'assets/js/bootstrap.bundle.min.js' %}"></script>
     <!--====== One page nav ======-->
-    <script src="assets/js/onepageNav.js"></script>
+    <script src="{% static 'assets/js/onepageNav.js' %}"></script>
     <!--====== Glightbox js ======-->
-    <script src="assets/js/glightbox.js"></script>
+    <script src="{% static 'assets/js/glightbox.js' %}"></script>
     <!--====== jquery Swiper js ======-->
-    <script src="assets/js/swiper.min.js"></script>
+    <script src="{% static 'assets/js/swiper.min.js' %}"></script>
     <!--====== Ajaxchimp js ======-->
-    <script src="assets/js/jquery.ajaxchimp.min.js"></script>
+    <script src="{% static 'assets/js/jquery.ajaxchimp.min.js' %}"></script>
     <!--====== Appear js ======-->
-    <script src="assets/js/jquery.appear.min.js"></script>
+    <script src="{% static 'assets/js/jquery.appear.min.js' %}"></script>
     <!--====== Aos js ======-->
-    <script src="assets/js/aos.js"></script>
+    <script src="{% static 'assets/js/aos.js' %}"></script>
     <!--====== Custom js ======-->
-    <script src="assets/js/custom.js"></script>
+    <script src="{% static 'assets/js/custom.js' %}"></script>
   </body>
 </html>

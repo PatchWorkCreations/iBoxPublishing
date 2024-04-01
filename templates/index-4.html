@@ -7,7 +7,7 @@
     <!--====== Title ======-->
     <title>Wonted - Book and publisher landing page</title>
     <!-- ========== Favicon Ico ========== -->
-    <link rel="icon" href="assets/images/favicon.ico" />
+    <link rel="icon" href="{% static 'assets/images/favicon.ico' %}" />
     <!-- Headings font -->
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -20,51 +20,51 @@
       rel="stylesheet"
     />
     <!--====== Bootstrap css ======-->
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="{% static 'assets/css/bootstrap.min.css' %}" />
     <!--====== swiper css ======-->
-    <link rel="stylesheet" href="assets/css/swiper.min.css" />
+    <link rel="stylesheet" href="{% static 'assets/css/swiper.min.css' %}" />
     <!--====== IcoFont css ======-->
-    <link rel="stylesheet" href="assets/css/icofont.min.css" />
+    <link rel="stylesheet" href="{% static 'assets/css/icofont.min.css' %}" />
     <!--====== Odometer css ======-->
-    <link rel="stylesheet" href="assets/css/odometer-theme-default.css" />
+    <link rel="stylesheet" href="{% static 'assets/css/odometer-theme-default.css' %}" />
     <!--====== Glightbox css ======-->
-    <link rel="stylesheet" href="assets/css/glightbox.css" />
+    <link rel="stylesheet" href="{% static 'assets/css/glightbox.css' %}" />
     <!--====== Margubs & Paddings css ======-->
-    <link rel="stylesheet" href="assets/css/margins-paddings.css" />
+    <link rel="stylesheet" href="{% static 'assets/css/margins-paddings.css' %}" />
     <!--====== Aos & Paddings css ======-->
-    <link rel="stylesheet" href="assets/css/aos.css" />
+    <link rel="stylesheet" href="{% static 'assets/css/aos.css' %}" />
     <!--====== Style css ======-->
-    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="{% static 'assets/css/style.css' %}" />
     <!--====== Custom variants ======-->
     <link
       rel="stylesheet"
-      href="assets/css/colors/oldRose.css"
+      href="{% static 'assets/css/colors/oldRose.css' %}"
       id="color-switch"
     />
     <!-- Default color version -->
     <link
       rel="stylesheet"
-      href="assets/css/fonts/philosopher-poppins.css"
+      href="{% static 'assets/css/fonts/philosopher-poppins.css' %}"
       id="font-switch"
     />
     <!-- Default font version -->
     <!--  Template Flat BG -->
-    <!-- <link href="assets/css/colors/wildBlue.css" rel="stylesheet"> -->
-    <!-- <link href="assets/css/colors/nomad.css" rel="stylesheet"> -->
-    <!-- <link href="assets/css/colors/viridian.css" rel="stylesheet"> -->
-    <!-- <link href="assets/css/colors/pink.css" rel="stylesheet"> -->
-    <!-- <link href="assets/css/colors/coffee.css" rel="stylesheet"> -->
-    <!-- <link href="assets/css/colors/royal.css" rel="stylesheet"> -->
-    <!-- <link href="assets/css/colors/sky.css" rel="stylesheet"> -->
-    <!-- <link href="assets/css/colors/olive.css" rel="stylesheet"> -->
+    <!-- <link href="{% static 'assets/css/colors/wildBlue.css' %}" rel="stylesheet"> -->
+    <!-- <link href="{% static 'assets/css/colors/nomad.css' %}" rel="stylesheet"> -->
+    <!-- <link href="{% static 'assets/css/colors/viridian.css' %}" rel="stylesheet"> -->
+    <!-- <link href="{% static 'assets/css/colors/pink.css' %}" rel="stylesheet"> -->
+    <!-- <link href="{% static 'assets/css/colors/coffee.css' %}" rel="stylesheet"> -->
+    <!-- <link href="{% static 'assets/css/colors/royal.css' %}" rel="stylesheet"> -->
+    <!-- <link href="{% static 'assets/css/colors/sky.css' %}" rel="stylesheet"> -->
+    <!-- <link href="{% static 'assets/css/colors/olive.css' %}" rel="stylesheet"> -->
     <!--  Template Typography -->
-    <!-- <link href="assets/css/fonts/poppins-roboto.css" rel="stylesheet"> -->
-    <!-- <link href="assets/css/fonts/josepin-sourceSansPro.css" rel="stylesheet"> -->
-    <!-- <link href="assets/css/fonts/montserrat-lato.css" rel="stylesheet"> -->
-    <!-- <link href="assets/css/fonts/raleway-montserrat.css" rel="stylesheet"> -->
-    <!-- <link href="assets/css/fonts/avril-lato.css" rel="stylesheet"> -->
+    <!-- <link href="{% static 'assets/css/fonts/poppins-roboto.css' %}" rel="stylesheet"> -->
+    <!-- <link href="{% static 'assets/css/fonts/josepin-sourceSansPro.css' %}" rel="stylesheet"> -->
+    <!-- <link href="{% static 'assets/css/fonts/montserrat-lato.css' %}" rel="stylesheet"> -->
+    <!-- <link href="{% static 'assets/css/fonts/raleway-montserrat.css' %}" rel="stylesheet"> -->
+    <!-- <link href="{% static 'assets/css/fonts/avril-lato.css' %}" rel="stylesheet"> -->
     <!--====== Custom css ======-->
-    <!-- <link rel="stylesheet" href="assets/css/custom.css" /> -->
+    <!-- <link rel="stylesheet" href="{% static 'assets/css/custom.css' %}" /> -->
   </head>
 
   <body>
@@ -77,9 +77,9 @@
         <div class="container">
           <div class="row">
             <nav class="navbar navbar-expand-lg">
-              <a class="navbar-brand" href="index.html">
+              <a class="navbar-brand" href="{% url 'index' %}">
                 <!-- <h1 class="m-0">WONTED</h1> -->
-                <img src="assets/images/wonted-logo.png" alt="Wonted" />
+                <img src="{% static 'assets/images/wonted-logo.png' %}" alt="Wonted" />
               </a>
               <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul id="onepage-nav" class="navbar-nav menu ms-lg-auto">
@@ -102,22 +102,22 @@
                     </span>
                     <ul class="dropdown-menu">
                       <li class="nav-item">
-                        <a href="index.html" class="nav-link">Home One</a>
+                        <a href="{% url 'index' %}" class="nav-link">Home One</a>
                       </li>
                       <li class="nav-item">
                         <a href="index-2.html" class="nav-link">Home Two</a>
                       </li>
                       <li class="nav-item">
-                        <a href="index-3.html" class="nav-link">Home Three</a>
+                        <a href="{% url 'index-3' %}" class="nav-link">Home Three</a>
                       </li>
                       <li class="nav-item">
-                        <a href="index-4.html" class="nav-link">Home Four</a>
+                        <a href="{% url 'index-4' %}" class="nav-link">Home Four</a>
                       </li>
                       <li class="nav-item">
-                        <a href="index-5.html" class="nav-link">Home Five</a>
+                        <a href="{% url 'index-5' %}" class="nav-link">Home Five</a>
                       </li>
                       <li class="nav-item">
-                        <a href="index-6.html" class="nav-link">Home Six</a>
+                        <a href="{% url 'index-6' %}" class="nav-link">Home Six</a>
                       </li>
                     </ul>
                   </li>
@@ -149,12 +149,12 @@
                     </span>
                     <ul class="dropdown-menu">
                       <li class="nav-item">
-                        <a href="all-events.html" class="nav-link"
+                        <a href="{% url 'all-events' %}" class="nav-link"
                           >All Events</a
                         >
                       </li>
                       <li class="nav-item">
-                        <a href="single-event.html" class="nav-link"
+                        <a href="{% url 'single-event' %}" class="nav-link"
                           >Single Event</a
                         >
                       </li>
@@ -185,30 +185,30 @@
                         <a href="blog-grid.html" class="nav-link">Blog Grid</a>
                       </li>
                       <li class="nav-item">
-                        <a href="blog-list.html" class="nav-link">Blog List</a>
+                        <a href="{% url 'blog-list' %}" class="nav-link">Blog List</a>
                       </li>
                       <li class="nav-item">
-                        <a href="left-sidebar.html" class="nav-link"
+                        <a href="{% url 'left-sidebar' %}" class="nav-link"
                           >Left Sidebar</a
                         >
                       </li>
                       <li class="nav-item">
-                        <a href="right-sidebar.html" class="nav-link"
+                        <a href="{% url 'right-sidebar' %}" class="nav-link"
                           >Right Sidebar</a
                         >
                       </li>
                       <li class="nav-item">
-                        <a href="single-blog.html" class="nav-link"
+                        <a href="{% url 'single-blog' %}" class="nav-link"
                           >Details Without Sidebar</a
                         >
                       </li>
                       <li class="nav-item">
-                        <a href="blog-left-sidebar.html" class="nav-link"
+                        <a href="{% url 'blog-left-sidebar' %}" class="nav-link"
                           >Details Left Sidebar</a
                         >
                       </li>
                       <li class="nav-item">
-                        <a href="blog-right-sidebar.html" class="nav-link"
+                        <a href="{% url 'blog-right-sidebar' %}" class="nav-link"
                           >Details Right Sidebar</a
                         >
                       </li>
@@ -361,7 +361,7 @@
               <div class="authorv2__image">
                 <img
                   class="img-fluid"
-                  src="assets/images/achive3.jpg"
+                  src="{% static 'assets/images/achive3.jpg' %}"
                   alt="Author Image"
                 />
                 <a
@@ -607,13 +607,13 @@
                 <div
                   class="panel cover-panel active"
                   style="
-                    background-image: url('assets/images/chapter-preview/cover-1.jpg');
+                    background-image: url({% static 'assets/images/chapter-preview/cover-1.jpg' %});
                   "
                 >
                   <a
                     data-glightbox=" description: .custom-desc1; descPosition: right;"
                     class="glightbox2"
-                    href="assets/images/chapter-preview/cover-1.jpg"
+                    href="{% static 'assets/images/chapter-preview/cover-1.jpg' %}"
                   >
                   </a>
                   <h3>The King</h3>
@@ -665,13 +665,13 @@
                 <div
                   class="panel cover-panel"
                   style="
-                    background-image: url('assets/images/chapter-preview/cover-2.jpg');
+                    background-image: url({% static 'assets/images/chapter-preview/cover-2.jpg' %});
                   "
                 >
                   <a
                     data-glightbox=" description: .custom-desc2; descPosition: right;"
                     class="glightbox2"
-                    href="assets/images/chapter-preview/cover-2.jpg"
+                    href="{% static 'assets/images/chapter-preview/cover-2.jpg' %}"
                   >
                   </a>
                   <h3>Death & Dark</h3>
@@ -723,13 +723,13 @@
                 <div
                   class="panel cover-panel"
                   style="
-                    background-image: url('assets/images/chapter-preview/cover-3.jpg');
+                    background-image: url({% static 'assets/images/chapter-preview/cover-3.jpg' %});
                   "
                 >
                   <a
                     data-glightbox=" description: .custom-desc3; descPosition: right;"
                     class="glightbox2"
-                    href="assets/images/chapter-preview/cover-3.jpg"
+                    href="{% static 'assets/images/chapter-preview/cover-3.jpg' %}"
                   >
                   </a>
                   <h3>Chapter 03</h3>
@@ -781,13 +781,13 @@
                 <div
                   class="panel cover-panel"
                   style="
-                    background-image: url('assets/images/chapter-preview/cover-4.jpg');
+                    background-image: url({% static 'assets/images/chapter-preview/cover-4.jpg' %});
                   "
                 >
                   <a
                     data-glightbox=" description: .custom-desc4; descPosition: right;"
                     class="glightbox2"
-                    href="assets/images/chapter-preview/cover-4.jpg"
+                    href="{% static 'assets/images/chapter-preview/cover-4.jpg' %}"
                   >
                   </a>
                   <h3>Sing Souls</h3>
@@ -839,13 +839,13 @@
                 <div
                   class="panel cover-panel"
                   style="
-                    background-image: url('assets/images/chapter-preview/cover-5.jpg');
+                    background-image: url({% static 'assets/images/chapter-preview/cover-5.jpg' %});
                   "
                 >
                   <a
                     data-glightbox=" description: .custom-desc5; descPosition: right;"
                     class="glightbox2"
-                    href="assets/images/chapter-preview/cover-5.jpg"
+                    href="{% static 'assets/images/chapter-preview/cover-5.jpg' %}"
                   >
                   </a>
                   <h3>The Mermaid</h3>
@@ -897,13 +897,13 @@
                 <div
                   class="panel cover-panel"
                   style="
-                    background-image: url('assets/images/chapter-preview/cover-6.jpg');
+                    background-image: url({% static 'assets/images/chapter-preview/cover-6.jpg' %});
                   "
                 >
                   <a
                     data-glightbox=" description: .custom-desc6; descPosition: right;"
                     class="glightbox2"
-                    href="assets/images/chapter-preview/cover-6.jpg"
+                    href="{% static 'assets/images/chapter-preview/cover-6.jpg' %}"
                   >
                   </a>
                   <h3>The Worst</h3>
@@ -955,13 +955,13 @@
                 <div
                   class="panel cover-panel"
                   style="
-                    background-image: url('assets/images/chapter-preview/cover-1.jpg');
+                    background-image: url({% static 'assets/images/chapter-preview/cover-1.jpg' %});
                   "
                 >
                   <a
                     data-glightbox=" description: .custom-desc7; descPosition: right;"
                     class="glightbox2"
-                    href="assets/images/chapter-preview/cover-1.jpg"
+                    href="{% static 'assets/images/chapter-preview/cover-1.jpg' %}"
                   >
                   </a>
                   <h3>Drug Lord</h3>
@@ -1013,13 +1013,13 @@
                 <div
                   class="panel cover-panel"
                   style="
-                    background-image: url('assets/images/chapter-preview/cover-3.jpg');
+                    background-image: url({% static 'assets/images/chapter-preview/cover-3.jpg' %});
                   "
                 >
                   <a
                     data-glightbox=" description: .custom-desc8; descPosition: right;"
                     class="glightbox2"
-                    href="assets/images/chapter-preview/cover-3.jpg"
+                    href="{% static 'assets/images/chapter-preview/cover-3.jpg' %}"
                   >
                   </a>
                   <h3>White Bird</h3>
@@ -1115,7 +1115,7 @@
                   <div class="col mt-0">
                     <img
                       class="img-fluid"
-                      src="assets/images/awards/1.jpg"
+                      src="{% static 'assets/images/awards/1.jpg' %}"
                       alt=""
                     />
                   </div>
@@ -1145,7 +1145,7 @@
                   <div class="col mt-0">
                     <img
                       class="img-fluid"
-                      src="assets/images/awards/2.jpg"
+                      src="{% static 'assets/images/awards/2.jpg' %}"
                       alt=""
                     />
                   </div>
@@ -1175,7 +1175,7 @@
                   <div class="col mt-0">
                     <img
                       class="img-fluid"
-                      src="assets/images/awards/3.jpg"
+                      src="{% static 'assets/images/awards/3.jpg' %}"
                       alt=""
                     />
                   </div>
@@ -1205,7 +1205,7 @@
                   <div class="col mt-0">
                     <img
                       class="img-fluid"
-                      src="assets/images/awards/4.jpg"
+                      src="{% static 'assets/images/awards/4.jpg' %}"
                       alt=""
                     />
                   </div>
@@ -1235,7 +1235,7 @@
                   <div class="col mt-0">
                     <img
                       class="img-fluid"
-                      src="assets/images/awards/5.jpg"
+                      src="{% static 'assets/images/awards/5.jpg' %}"
                       alt=""
                     />
                   </div>
@@ -1265,7 +1265,7 @@
                   <div class="col mt-0">
                     <img
                       class="img-fluid"
-                      src="assets/images/awards/1.jpg"
+                      src="{% static 'assets/images/awards/1.jpg' %}"
                       alt=""
                     />
                   </div>
@@ -1400,7 +1400,7 @@
                     ipsam! Repellendus, voluptatibus soluta!
                   </p>
                 </div>
-                <a href="single-event.html" class="link"
+                <a href="{% url 'single-event' %}" class="link"
                   >Read more<i class="icofont-rounded-right"></i
                 ></a>
               </div>
@@ -1422,7 +1422,7 @@
                     Labore quas voluptatibus porro quod quo
                   </p>
                 </div>
-                <a href="single-event.html" class="link"
+                <a href="{% url 'single-event' %}" class="link"
                   >Read more<i class="icofont-rounded-right"></i
                 ></a>
               </div>
@@ -1445,7 +1445,7 @@
                     ipsam! Repellendus, voluptatibus soluta!
                   </p>
                 </div>
-                <a href="single-event.html" class="link"
+                <a href="{% url 'single-event' %}" class="link"
                   >Read more<i class="icofont-rounded-right"></i
                 ></a>
               </div>
@@ -1468,7 +1468,7 @@
                     ipsam! Repellendus, voluptatibus soluta!
                   </p>
                 </div>
-                <a href="single-event.html" class="link"
+                <a href="{% url 'single-event' %}" class="link"
                   >Read more<i class="icofont-rounded-right"></i
                 ></a>
               </div>
@@ -1517,11 +1517,11 @@
                 <a
                   data-glightbox=" description: .custom-desc1; descPosition: right;"
                   class="glightbox2"
-                  href="assets/images/book3.png"
+                  href="{% static 'assets/images/book3.png' %}"
                 >
                   <img
                     class="img-fluid"
-                    src="assets/images/book3.png"
+                    src="{% static 'assets/images/book3.png' %}"
                     alt="Book 3"
                   />
                 </a>
@@ -1529,7 +1529,7 @@
                 <a
                   data-glightbox=" description: .custom-desc1; descPosition: right;"
                   class="glightbox2"
-                  href="assets/images/book3.png"
+                  href="{% static 'assets/images/book3.png' %}"
                 >
                   <h3 class="books__book__title">Think & grow rich</h3>
                 </a>
@@ -1599,11 +1599,11 @@
                 <a
                   data-glightbox=" description: .custom-desc2; descPosition: right;"
                   class="glightbox2"
-                  href="assets/images/book7.png"
+                  href="{% static 'assets/images/book7.png' %}"
                 >
                   <img
                     class="img-fluid"
-                    src="assets/images/book7.png"
+                    src="{% static 'assets/images/book7.png' %}"
                     alt="Book 7"
                   />
                 </a>
@@ -1611,7 +1611,7 @@
                 <a
                   data-glightbox=" description: .custom-desc2; descPosition: right;"
                   class="glightbox2"
-                  href="assets/images/book7.png"
+                  href="{% static 'assets/images/book7.png' %}"
                 >
                   <h3 class="books__book__title">Rich dad, poor dad</h3>
                 </a>
@@ -1681,11 +1681,11 @@
                 <a
                   data-glightbox=" description: .custom-desc3; descPosition: right;"
                   class="glightbox2"
-                  href="assets/images/book3.png"
+                  href="{% static 'assets/images/book3.png' %}"
                 >
                   <img
                     class="img-fluid"
-                    src="assets/images/book5.png"
+                    src="{% static 'assets/images/book5.png' %}"
                     alt="Book 5"
                   />
                 </a>
@@ -1693,7 +1693,7 @@
                 <a
                   data-glightbox=" description: .custom-desc3; descPosition: right;"
                   class="glightbox2"
-                  href="assets/images/book3.png"
+                  href="{% static 'assets/images/book3.png' %}"
                 >
                   <h3 class="books__book__title">Eat that frog</h3>
                 </a>
@@ -1763,11 +1763,11 @@
                 <a
                   data-glightbox=" description: .custom-desc4; descPosition: right;"
                   class="glightbox2"
-                  href="assets/images/book6.png"
+                  href="{% static 'assets/images/book6.png' %}"
                 >
                   <img
                     class="img-fluid"
-                    src="assets/images/book6.png"
+                    src="{% static 'assets/images/book6.png' %}"
                     alt="Book 6"
                   />
                 </a>
@@ -1775,7 +1775,7 @@
                 <a
                   data-glightbox=" description: .custom-desc4; descPosition: right;"
                   class="glightbox2"
-                  href="assets/images/book3.png"
+                  href="{% static 'assets/images/book3.png' %}"
                 >
                   <h3 class="books__book__title">Design Patterns</h3>
                 </a>
@@ -1893,7 +1893,7 @@
                         <div class="testi-card__user-info pt-4">
                           <div class="testimonial__user-info__image">
                             <img
-                              src="assets/images/user-2.png"
+                              src="{% static 'assets/images/user-2.png' %}"
                               alt="User Image"
                             />
                           </div>
@@ -1926,7 +1926,7 @@
                         <div class="testi-card__user-info pt-4">
                           <div class="testimonial__user-info__image">
                             <img
-                              src="assets/images/user-1.png"
+                              src="{% static 'assets/images/user-1.png' %}"
                               alt="User Image"
                             />
                           </div>
@@ -1959,7 +1959,7 @@
                         <div class="testi-card__user-info pt-4">
                           <div class="testimonial__user-info__image">
                             <img
-                              src="assets/images/user-2.png"
+                              src="{% static 'assets/images/user-2.png' %}"
                               alt="User Image"
                             />
                           </div>
@@ -1992,7 +1992,7 @@
                         <div class="testi-card__user-info pt-4">
                           <div class="testimonial__user-info__image">
                             <img
-                              src="assets/images/user-1.png"
+                              src="{% static 'assets/images/user-1.png' %}"
                               alt="User Image"
                             />
                           </div>
@@ -2050,10 +2050,10 @@
             >
               <article class="blog__single-post h-100 translateEffect1">
                 <div class="blog__single-post__image">
-                  <a href="single-blog.html">
+                  <a href="{% url 'single-blog' %}">
                     <img
                       class="img-fluid"
-                      src="assets/images/blog/blog_01.jpg"
+                      src="{% static 'assets/images/blog/blog_01.jpg' %}"
                       alt="Blog 01"
                     />
                   </a>
@@ -2061,7 +2061,7 @@
                 <div class="blog__single-post__body">
                   <div class="blog__single-post__content">
                     <h2 class="fs-4">
-                      <a href="single-blog.html"
+                      <a href="{% url 'single-blog' %}"
                         >Book News: Egypt Bans Ridley Scott’s ‘Exodus’ For
                         ‘Historical</a
                       >
@@ -2096,7 +2096,7 @@
                   <a href="#">
                     <img
                       class="img-fluid"
-                      src="assets/images/blog/blog_02.jpg"
+                      src="{% static 'assets/images/blog/blog_02.jpg' %}"
                       alt="Blog 02"
                     />
                   </a>
@@ -2135,10 +2135,10 @@
             >
               <article class="blog__single-post h-100 translateEffect1">
                 <div class="blog__single-post__image">
-                  <a href="single-blog.html">
+                  <a href="{% url 'single-blog' %}">
                     <img
                       class="img-fluid"
-                      src="assets/images/blog/blog_03.jpg"
+                      src="{% static 'assets/images/blog/blog_03.jpg' %}"
                       alt="Blog 03"
                     />
                   </a>
@@ -2146,7 +2146,7 @@
                 <div class="blog__single-post__body">
                   <div class="blog__single-post__content">
                     <h2 class="fs-4">
-                      <a href="single-blog.html"
+                      <a href="{% url 'single-blog' %}"
                         >There is a method to this book-buying madness</a
                       >
                     </h2>
@@ -2272,11 +2272,11 @@
               data-aos-delay="200"
             >
               <div class="contact-form-box">
-                <form id="contact-form" method="post" action="php/sendmail.php">
+                <form id="contact-form" method="post" action="php/sendmail.php' %}">
                   <div class="message col">
                     <p class="email-loading alert alert-warning">
                       <img
-                        src="assets/images/loading.gif"
+                        src="{% static 'assets/images/loading.gif' %}"
                         alt=""
                       />&nbsp;&nbsp;&nbsp;Sending...
                     </p>
@@ -2390,7 +2390,7 @@
               </div>
               <div class="cta-form-box">
                 <!-- subscription form start -->
-                <form action="assets/subscribe/subscribe.php" id="subscribe2">
+                <form action="{% static 'assets/subscribe/subscribe.php' %}" id="subscribe2">
                   <div
                     class="mb13"
                     data-aos="fade-up"
@@ -2528,10 +2528,10 @@
                 data-aos-duration="1000"
                 data-aos-delay="150"
               >
-                <a href="index.html">
+                <a href="{% url 'index' %}">
                   <img
                     width="80"
-                    src="assets/images/book-note-icon.png"
+                    src="{% static 'assets/images/book-note-icon.png' %}"
                     alt=""
                   />
                 </a>
@@ -2657,24 +2657,24 @@
       <!-- ========== Footer section End ========== -->
     </div>
     <!--====== jquery js ======-->
-    <script src="assets/js/jquery.min.js"></script>
+    <script src="{% static 'assets/js/jquery.min.js' %}"></script>
     <!--====== Bootstrap js ======-->
-    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="{% static 'assets/js/bootstrap.bundle.min.js' %}"></script>
     <!--====== One page nav ======-->
-    <script src="assets/js/onepageNav.js"></script>
+    <script src="{% static 'assets/js/onepageNav.js' %}"></script>
     <!--====== Ajaxchimp js ======-->
-    <script src="assets/js/jquery.ajaxchimp.min.js"></script>
+    <script src="{% static 'assets/js/jquery.ajaxchimp.min.js' %}"></script>
     <!--====== Glightbox js ======-->
-    <script src="assets/js/glightbox.js"></script>
+    <script src="{% static 'assets/js/glightbox.js' %}"></script>
     <!--====== Glightbox js ======-->
-    <script src="assets/js/swiper.min.js"></script>
+    <script src="{% static 'assets/js/swiper.min.js' %}"></script>
     <!--====== Appear js ======-->
-    <script src="assets/js/jquery.appear.min.js"></script>
+    <script src="{% static 'assets/js/jquery.appear.min.js' %}"></script>
     <!--====== Odometer js ======-->
-    <script src="assets/js/odometer.min.js"></script>
+    <script src="{% static 'assets/js/odometer.min.js' %}"></script>
     <!--====== Aos js ======-->
-    <script src="assets/js/aos.js"></script>
+    <script src="{% static 'assets/js/aos.js' %}"></script>
     <!--====== Custom js ======-->
-    <script src="assets/js/custom.js"></script>
+    <script src="{% static 'assets/js/custom.js' %}"></script>
   </body>
 </html>

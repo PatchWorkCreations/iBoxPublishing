@@ -7,7 +7,7 @@
     <!--====== Title ======-->
     <title>iRiseup - Book and publisher landing page</title>
     <!-- ========== Favicon Ico ========== -->
-    <link rel="icon" href="assets/images/logo1.png" />
+    <link rel="icon" href="{% static 'assets/images/logo1.png' %}" />
     <!-- Headings font -->
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -20,49 +20,49 @@
       rel="stylesheet"
     />
     <!--====== Bootstrap css ======-->
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="{% static 'assets/css/bootstrap.min.css' %}" />
     <!--====== IcoFont css ======-->
-    <link rel="stylesheet" href="assets/css/icofont.min.css" />
+    <link rel="stylesheet" href="{% static 'assets/css/icofont.min.css' %}" />
     <!--====== Glightbox css ======-->
-    <link rel="stylesheet" href="assets/css/glightbox.css" />
+    <link rel="stylesheet" href="{% static 'assets/css/glightbox.css' %}" />
     <!--====== swiper css ======-->
-    <link rel="stylesheet" href="assets/css/swiper.min.css" />
+    <link rel="stylesheet" href="{% static 'assets/css/swiper.min.css' %}" />
     <!--====== Margins & Paddings css ======-->
-    <link rel="stylesheet" href="assets/css/margins-paddings.css" />
+    <link rel="stylesheet" href="{% static 'assets/css/margins-paddings.css' %}" />
     <!--====== Aos & Paddings css ======-->
-    <link rel="stylesheet" href="assets/css/aos.css" />
+    <link rel="stylesheet" href="{% static 'assets/css/aos.css' %}" />
     <!--====== Style css ======-->
-    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="{% static 'assets/css/style.css' %}" />
     <!--====== Custom variants ======-->
     <link
       rel="stylesheet"
-      href="assets/css/colors/oldRose.css"
+      href="{% static 'assets/css/colors/oldRose.css' %}"
       id="color-switch"
     />
     <!-- Default color version -->
     <link
       rel="stylesheet"
-      href="assets/css/fonts/philosopher-poppins.css"
+      href="{% static 'assets/css/fonts/philosopher-poppins.css' %}"
       id="font-switch"
     />
     <!-- Default font version -->
     <!--  Template Flat BG -->
-    <!-- <link href="assets/css/colors/wildBlue.css" rel="stylesheet"> -->
-    <!-- <link href="assets/css/colors/nomad.css" rel="stylesheet"> -->
-    <!-- <link href="assets/css/colors/viridian.css" rel="stylesheet"> -->
-    <!-- <link href="assets/css/colors/pink.css" rel="stylesheet"> -->
-    <!-- <link href="assets/css/colors/coffee.css" rel="stylesheet"> -->
-    <!-- <link href="assets/css/colors/royal.css" rel="stylesheet"> -->
-    <!-- <link href="assets/css/colors/sky.css" rel="stylesheet"> -->
-    <!-- <link href="assets/css/colors/olive.css" rel="stylesheet"> -->
+    <!-- <link href="{% static 'assets/css/colors/wildBlue.css' %}" rel="stylesheet"> -->
+    <!-- <link href="{% static 'assets/css/colors/nomad.css' %}" rel="stylesheet"> -->
+    <!-- <link href="{% static 'assets/css/colors/viridian.css' %}" rel="stylesheet"> -->
+    <!-- <link href="{% static 'assets/css/colors/pink.css' %}" rel="stylesheet"> -->
+    <!-- <link href="{% static 'assets/css/colors/coffee.css' %}" rel="stylesheet"> -->
+    <!-- <link href="{% static 'assets/css/colors/royal.css' %}" rel="stylesheet"> -->
+    <!-- <link href="{% static 'assets/css/colors/sky.css' %}" rel="stylesheet"> -->
+    <!-- <link href="{% static 'assets/css/colors/olive.css' %}" rel="stylesheet"> -->
     <!--  Template Typography -->
-    <!-- <link href="assets/css/fonts/poppins-roboto.css" rel="stylesheet"> -->
-    <!-- <link href="assets/css/fonts/josepin-sourceSansPro.css" rel="stylesheet"> -->
-    <!-- <link href="assets/css/fonts/montserrat-lato.css" rel="stylesheet"> -->
-    <!-- <link href="assets/css/fonts/raleway-montserrat.css" rel="stylesheet"> -->
-    <!-- <link href="assets/css/fonts/avril-lato.css" rel="stylesheet"> -->
+    <!-- <link href="{% static 'assets/css/fonts/poppins-roboto.css' %}" rel="stylesheet"> -->
+    <!-- <link href="{% static 'assets/css/fonts/josepin-sourceSansPro.css' %}" rel="stylesheet"> -->
+    <!-- <link href="{% static 'assets/css/fonts/montserrat-lato.css' %}" rel="stylesheet"> -->
+    <!-- <link href="{% static 'assets/css/fonts/raleway-montserrat.css' %}" rel="stylesheet"> -->
+    <!-- <link href="{% static 'assets/css/fonts/avril-lato.css' %}" rel="stylesheet"> -->
     <!--====== Custom css ======-->
-    <!-- <link rel="stylesheet" href="assets/css/custom.css" /> -->
+    <!-- <link rel="stylesheet" href="{% static 'assets/css/custom.css' %}" /> -->
     
   </head>
 
@@ -381,7 +381,7 @@
   <body>
     <div class="floating-btn">
       <div class="logo-container">
-        <img src="assets/images/chatlogo10.png" alt="Logo" class="logobox">
+        <img src="{% static 'assets/images/chatlogo10.png' %}" alt="Logo" class="logobox">
       </div>
       <div class="floating-content">
         <!-- Content to display when hovered -->
@@ -394,7 +394,7 @@
 
   <div class="floating-btn floating-btn-2">
     <div class="logo-container">
-      <img src="assets/images/2.png" alt="Logo 2" class="logobox">
+      <img src="{% static 'assets/images/2.png' %}" alt="Logo 2" class="logobox">
     </div>
 
     <div class="floating-content">
@@ -427,18 +427,18 @@
         <div class="container">
           <div class="row">
             <nav class="navbar navbar-expand-lg">
-              <a class="navbar-brand" href="iRiseup.html">
+              <a class="navbar-brand" href="{% url 'home' %}">
                 <!-- <h1 class="m-0">WONTED</h1> -->
-                <img src="assets/images/logo1.png" alt="iRiseup.html" />
+                <img src="{% static 'assets/images/logo1.png' %}" alt="{% url 'home' %}" />
               </a>
               <div class="collapsed navbar-collapsed" id="navbarSupportedContent">
                 <ul id="onepage-nav" class="navbar-nav menu ms-lg-auto">
                   <li class="nav-item dropdown submenu">
                     <li class="nav-item">
-                      <a class="nav-link" href="iRiseup.html">Home</a>
+                      <a class="nav-link" href="{% url 'home' %}">Home</a>
                     </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="about.html">About</a>
+                    <a class="nav-link" href="{% url 'about' %}">About</a>
                   </li>
 
                   <div class="collapsed navbar-collapsed" id="navbarSupportedContent">
@@ -462,34 +462,34 @@
                         </span>
                         <ul class="dropdown-menu row">
                           <li class="nav-item col-6 col-md-2">
-                              <a href="biography.html" class="nav-link"> > BIOGRAPHY WRITING</a>
+                              <a href="{% url 'biography' %}" class="nav-link"> > BIOGRAPHY WRITING</a>
                           </li>
                           <li class="nav-item col-6 col-md-2">
-                              <a href="memoir.html" class="nav-link"> > MEMOIR WRITING</a>
+                              <a href="{% url 'memoir' %}" class="nav-link"> > MEMOIR WRITING</a>
                           </li>
                           <li class="nav-item col-6 col-md-2">
-                              <a href="manuscript.html" class="nav-link"> > MANUSCRIPT WRITING</a>
+                              <a href="{% url 'manuscript' %}" class="nav-link"> > MANUSCRIPT WRITING</a>
                           </li>
                           <li class="nav-item col-6 col-md-2">
-                              <a href="comicbook.html" class="nav-link"> > COMIC BOOK WRITING</a>
+                              <a href="{% url 'comic-book' %}" class="nav-link"> > COMIC BOOK WRITING</a>
                           </li>
                           <li class="nav-item col-6 col-md-2">
-                              <a href="childrensbook.html" class="nav-link"> > CHILDRENS BOOK WRITING</a>
+                              <a href="{% url 'childrens-book' %}" class="nav-link"> > CHILDRENS BOOK WRITING</a>
                           </li>
                           <li class="nav-item col-6 col-md-2">
-                              <a href="nonfiction.html" class="nav-link"> > NON-FICTION WRITING</a>
+                              <a href="{% url 'non-fiction' %}" class="nav-link"> > NON-FICTION WRITING</a>
                           </li>
                           <li class="nav-item col-6 col-md-2">
-                              <a href="screenwriting.html" class="nav-link"> > SCREENWRITING SERVICES</a>
+                              <a href="{% url 'screen-writing' %}" class="nav-link"> > SCREENWRITING SERVICES</a>
                           </li>
                           <li class="nav-item col-6 col-md-2">
-                              <a href="horrorwriting.html" class="nav-link"> > HORRORWRITING SERVICES</a>
+                              <a href="{% url 'horror-writing' %}" class="nav-link"> > HORRORWRITING SERVICES</a>
                           </li>
                           <li class="nav-item col-6 col-md-2">
-                              <a href="audiobook.html" class="nav-link"> > AUDIO BOOK SERVICES</a>
+                              <a href="{% url 'audiobook' %}" class="nav-link"> > AUDIO BOOK SERVICES</a>
                           </li>
                           <li class="nav-item col-6 col-md-2">
-                              <a href="booktrailer.html" class="nav-link"> > BOOK TRAILER SERVICES</a>
+                              <a href="{% url 'book-trailer' %}" class="nav-link"> > BOOK TRAILER SERVICES</a>
                           </li>
                       </ul>
                       
@@ -497,25 +497,25 @@
                   
 
                   <li class="nav-item">
-                    <a class="nav-link" href="editing.html">Editing</a>
+                    <a class="nav-link" href="{% url 'editing' %}">Editing</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="publishing.html"> Publishing</a>
+                    <a class="nav-link" href="{% url 'publishing' %}"> Publishing</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="design.html">Design</a>
+                    <a class="nav-link" href="{% url 'design' %}">Design</a>
                   </li>
 
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="marketing.html">Marketing</a>
+                    <a class="nav-link" href="{% url 'marketing' %}">Marketing</a>
                   </li>
                   
                   <li class="nav-item">
-                    <a class="nav-link" href="bloglist.html">Blog</a>
+                    <a class="nav-link" href="{% url 'blog' %}">Blog</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="contact.html">Contact</a>
+                    <a class="nav-link" href="{% url 'contact' %}">Contact</a>
                   </li>
                 </ul>
               </div>
@@ -564,13 +564,13 @@
             
               <div class="row">
                 <div class="col-3">
-                  <img src="assets/images/goodfirms.png" class="img-fluid" alt="GoodFirms">
+                  <img src="{% static 'assets/images/goodfirms.png' %}" class="img-fluid" alt="GoodFirms">
                 </div>
                 <div class="col-3">
-                  <img src="assets/images/clutch.png" class="img-fluid" alt="Clutch">
+                  <img src="{% static 'assets/images/clutch.png' %}" class="img-fluid" alt="Clutch">
                 </div>
                 <div class="col-3">
-                  <img src="assets/images/pilot.png" class="img-fluid" alt="Pilot">
+                  <img src="{% static 'assets/images/pilot.png' %}" class="img-fluid" alt="Pilot">
                 </div>
               </div>
               <div class="button-container">
@@ -613,12 +613,12 @@
             <div class="row">
                 <div class="col-12">
                     <div class="owl-carousel owl-banner-logo owl-theme d-flex justify-content-center align-items-center">
-                        <div class="item"><img src="assets/images/banner1.png" class="img-fluid" alt="LT-writing "></div>
-                        <div class="item"><img src="assets/images/banner2.png" class="img-fluid" alt="LT-writing "></div>
-                        <div class="item"><img src="assets/images/banner3.png" class="img-fluid" alt="LT-writing "></div>
-                        <div class="item"><img src="assets/images/banner4.png" class="img-fluid" alt="LT-writing "></div>
-                        <div class="item"><img src="assets/images/banner5.png" class="img-fluid" alt="LT-writing "></div>
-                        <div class="item"><img src="assets/images/banner6.png" class="img-fluid" alt="LT-writing "></div>
+                        <div class="item"><img src="{% static 'assets/images/banner1.png' %}" class="img-fluid" alt="LT-writing "></div>
+                        <div class="item"><img src="{% static 'assets/images/banner2.png' %}" class="img-fluid" alt="LT-writing "></div>
+                        <div class="item"><img src="{% static 'assets/images/banner3.png' %}" class="img-fluid" alt="LT-writing "></div>
+                        <div class="item"><img src="{% static 'assets/images/banner4.png' %}" class="img-fluid" alt="LT-writing "></div>
+                        <div class="item"><img src="{% static 'assets/images/banner5.png' %}" class="img-fluid" alt="LT-writing "></div>
+                        <div class="item"><img src="{% static 'assets/images/banner6.png' %}" class="img-fluid" alt="LT-writing "></div>
                     </div>
                 </div>
             </div>
@@ -658,7 +658,7 @@
             <div class="author-image">
               <img
                 class="img-fluid"
-                src="assets/images/author4.png"
+                src="{% static 'assets/images/author4.png' %}"
                 alt=""
               />
             </div>
@@ -867,56 +867,56 @@
             <!-- Fiction -->
             <div class="flex flex-col items-center">
               
-                <img src="fiction.png" alt="Placeholder image for the book 'Three Cowboys Baby' by Kate Pearce" class="mb-4">
+                <img src="fiction.png' %}" alt="Placeholder image for the book 'Three Cowboys Baby' by Kate Pearce" class="mb-4">
                 <h2 class="text-xl font-bold mb-2">Fiction</h2>
                 <p class="text-gray-600 text-center">Unleash your plot's potential with our online book writers. Elevate your story with our expertise!</p>
             </div>
 
             <!-- Nonfiction -->
             <div class="flex flex-col items-center">
-                <img src="nonfiction.png" alt="Placeholder image for the book 'Essays 2023' by Alexander Chee" class="mb-4">
+                <img src="nonfiction.png' %}" alt="Placeholder image for the book 'Essays 2023' by Alexander Chee" class="mb-4">
                 <h2 class="text-xl font-bold mb-2">Nonfiction</h2>
                 <p class="text-gray-600 text-center">Partner with our top nonfiction writers to bring your ideas to life! Contact us today!</p>
             </div>
 
             <!-- Fantasy -->
             <div class="flex flex-col items-center">
-                <img src="fantasy.png" alt="Placeholder image for the fantasy book" class="mb-4">
+                <img src="fantasy.png' %}" alt="Placeholder image for the fantasy book" class="mb-4">
                 <h2 class="text-xl font-bold mb-2">Fantasy</h2>
                 <p class="text-gray-600 text-center">Writing's tough! Let our fantasy wizards create captivating tales. Get in touch!</p>
             </div>
 
             <!-- Autobiography -->
             <div class="flex flex-col items-center">
-                <img src="autobiography.png" alt="Placeholder image for the book 'The Secret Lives of Royal Women'" class="mb-4">
+                <img src="autobiography.png' %}" alt="Placeholder image for the book 'The Secret Lives of Royal Women'" class="mb-4">
                 <h2 class="text-xl font-bold mb-2">Autobiography</h2>
                 <p class="text-gray-600 text-center">Seeking to inspire others with your life story? Let iRise Up Publisher make it happen for you! Reach out today!</p>
             </div>
 
             <!-- Memoirs -->
             <div class="flex flex-col items-center">
-                <img src="memoirs.png" alt="Placeholder image for the book 'Anxiously Ever After' by Clint Edwards" class="mb-4">
+                <img src="memoirs.png' %}" alt="Placeholder image for the book 'Anxiously Ever After' by Clint Edwards" class="mb-4">
                 <h2 class="text-xl font-bold mb-2">Memoirs</h2>
                 <p class="text-gray-600 text-center">Crafting memoirs? Consult with our experts today!</p>
             </div>
 
             <!-- Children's Book -->
             <div class="flex flex-col items-center">
-                <img src="childrensbook.png" alt="Placeholder image for the children's book 'ABC Dot-to-Dots'" class="mb-4">
+                <img src="childrensbook.png' %}" alt="Placeholder image for the children's book 'ABC Dot-to-Dots'" class="mb-4">
                 <h2 class="text-xl font-bold mb-2">Children's Book</h2>
                 <p class="text-gray-600 text-center">iRiseup crafts captivating children's books.</p>
             </div>
 
             <!-- Self-Help -->
             <div class="flex flex-col items-center">
-                <img src="selfhelp.png" alt="Placeholder image for the self-help book 'Grief Therapy'" class="mb-4">
+                <img src="selfhelp.png' %}" alt="Placeholder image for the self-help book 'Grief Therapy'" class="mb-4">
                 <h2 class="text-xl font-bold mb-2">Self-Help</h2>
                 <p class="text-gray-600 text-center">Unlock self-help strategies for a better world.</p>
             </div>
 
             <!-- Research-Based -->
             <div class="flex flex-col items-center">
-                <img src="researchbased.png" alt="Placeholder image for the research-based book 'Documentary Narrative Film'" class="mb-4">
+                <img src="researchbased.png' %}" alt="Placeholder image for the research-based book 'Documentary Narrative Film'" class="mb-4">
                 <h2 class="text-xl font-bold mb-2">Research-Based</h2>
                 <p class="text-gray-600 text-center">Ready to publish your research? We're here to assist! Contact us.</p>
             </div>
@@ -966,13 +966,13 @@
                 <div
                   class="panel active"
                   style="
-                    background-image: url('assets/images/fiction2.png');
+                    background-image: url({% static 'assets/images/fiction2.png' %});
                   "
                 >
                   <a
                     data-glightbox=" description: .custom-desc1; descPosition: right;"
                     class="glightbox2"
-                    href="assets/images/bestsellerbook/4.png"
+                    href="{% static 'assets/images/bestsellerbook/4.png' %}"
                   >
                   </a>
                   <h3>FICTION</h3>
@@ -1008,13 +1008,13 @@
                 <div
                   class="panel"
                   style="
-                    background-image: url('assets/images/bio1.png');
+                    background-image: url({% static 'assets/images/bio1.png' %});
                   "
                 >
                   <a
                     data-glightbox=" description: .custom-desc2; descPosition: right;"
                     class="glightbox2"
-                    href="assets/images/bestsellerbook/3.png"
+                    href="{% static 'assets/images/bestsellerbook/3.png' %}"
                   >
                   </a>
                   <h3>BIOGRAPHY</h3>
@@ -1050,13 +1050,13 @@
                 <div
                   class="panel"
                   style="
-                    background-image: url('assets/images/nonfiction2.png');
+                    background-image: url({% static 'assets/images/nonfiction2.png' %});
                   "
                 >
                   <a
                     data-glightbox=" description: .custom-desc3; descPosition: right;"
                     class="glightbox2"
-                    href="assets/images/bestsellerbook/1.png"
+                    href="{% static 'assets/images/bestsellerbook/1.png' %}"
                   >
                   </a>
                   <h3>NON-FICTION</h3>
@@ -1078,13 +1078,13 @@
                 <div
                   class="panel"
                   style="
-                    background-image: url('assets/images/romance7.png');
+                    background-image: url({% static 'assets/images/romance7.png' %});
                   "
                 >
                   <a
                     data-glightbox=" description: .custom-desc4; descPosition: right;"
                     class="glightbox2"
-                    href="assets/images/bestsellerbook/2.png"
+                    href="{% static 'assets/images/bestsellerbook/2.png' %}"
                   >
                   </a>
                   <h3>ROMANCE</h3>
@@ -1107,13 +1107,13 @@
                 <div
                   class="panel"
                   style="
-                    background-image: url('assets/images/thrill4.png');
+                    background-image: url({% static 'assets/images/thrill4.png' %});
                   "
                 >
                   <a
                     data-glightbox=" description: .custom-desc5; descPosition: right;"
                     class="glightbox2"
-                    href="assets/images/thriller.png"
+                    href="{% static 'assets/images/thriller.png' %}"
                   >
                   </a>
                   <h3>THRILLER</h3>
@@ -1146,12 +1146,12 @@
             <div class="row">
                 <div class="col-12">
                     <div class="owl-carousel owl-banner-logo owl-theme d-flex justify-content-center align-items-center">
-                        <div class="item"><img src="assets/images/banner1.png" class="img-fluid" alt="LT-writing "></div>
-                        <div class="item"><img src="assets/images/banner2.png" class="img-fluid" alt="LT-writing "></div>
-                        <div class="item"><img src="assets/images/banner3.png" class="img-fluid" alt="LT-writing "></div>
-                        <div class="item"><img src="assets/images/banner4.png" class="img-fluid" alt="LT-writing "></div>
-                        <div class="item"><img src="assets/images/banner5.png" class="img-fluid" alt="LT-writing "></div>
-                        <div class="item"><img src="assets/images/banner6.png" class="img-fluid" alt="LT-writing "></div>
+                        <div class="item"><img src="{% static 'assets/images/banner1.png' %}" class="img-fluid" alt="LT-writing "></div>
+                        <div class="item"><img src="{% static 'assets/images/banner2.png' %}" class="img-fluid" alt="LT-writing "></div>
+                        <div class="item"><img src="{% static 'assets/images/banner3.png' %}" class="img-fluid" alt="LT-writing "></div>
+                        <div class="item"><img src="{% static 'assets/images/banner4.png' %}" class="img-fluid" alt="LT-writing "></div>
+                        <div class="item"><img src="{% static 'assets/images/banner5.png' %}" class="img-fluid" alt="LT-writing "></div>
+                        <div class="item"><img src="{% static 'assets/images/banner6.png' %}" class="img-fluid" alt="LT-writing "></div>
                     </div>
                 </div>
             </div>
@@ -1188,7 +1188,7 @@
               </div>
               <div class="cta-form-box">
                 <!-- subscription form start -->
-                <form action="assets/subscribe/subscribe.php" id="subscribe">
+                <form action="{% static 'assets/subscribe/subscribe.php' %}" id="subscribe">
                   <div
                     class="mb13"
                     data-aos="fade-up"
@@ -1282,12 +1282,12 @@
             <div class="row">
                 <div class="col-12">
                     <div class="owl-carousel owl-banner-logo owl-theme d-flex justify-content-center align-items-center">
-                        <div class="item"><img src="assets/images/banner1.png" class="img-fluid" alt="LT-writing "></div>
-                        <div class="item"><img src="assets/images/banner2.png" class="img-fluid" alt="LT-writing "></div>
-                        <div class="item"><img src="assets/images/banner3.png" class="img-fluid" alt="LT-writing "></div>
-                        <div class="item"><img src="assets/images/banner4.png" class="img-fluid" alt="LT-writing "></div>
-                        <div class="item"><img src="assets/images/banner5.png" class="img-fluid" alt="LT-writing "></div>
-                        <div class="item"><img src="assets/images/banner6.png" class="img-fluid" alt="LT-writing "></div>
+                        <div class="item"><img src="{% static 'assets/images/banner1.png' %}" class="img-fluid" alt="LT-writing "></div>
+                        <div class="item"><img src="{% static 'assets/images/banner2.png' %}" class="img-fluid" alt="LT-writing "></div>
+                        <div class="item"><img src="{% static 'assets/images/banner3.png' %}" class="img-fluid" alt="LT-writing "></div>
+                        <div class="item"><img src="{% static 'assets/images/banner4.png' %}" class="img-fluid" alt="LT-writing "></div>
+                        <div class="item"><img src="{% static 'assets/images/banner5.png' %}" class="img-fluid" alt="LT-writing "></div>
+                        <div class="item"><img src="{% static 'assets/images/banner6.png' %}" class="img-fluid" alt="LT-writing "></div>
                     </div>
                 </div>
             </div>
@@ -1409,10 +1409,10 @@
             >
               <article class="events__single-event h-100 translateEffect1">
                 <div class="events__single-event__image">
-                  <a href="single-event.html">
+                  <a href="{% url 'single-event' %}">
                     <img
                       class="img-fluid"
-                      src="assets/images/event1.png"
+                      src="{% static 'assets/images/event1.png' %}"
                       alt="events 01"
                     />
                   </a>
@@ -1420,7 +1420,7 @@
                 <div class="events__single-event__body">
                   <div class="events__single-event__content">
                     <h2 class="fs-4">
-                      <a href="single-event.html"
+                      <a href="{% url 'single-event' %}"
                         >Discussion</a
                       >
                     </h2>
@@ -1450,10 +1450,10 @@
             >
               <article class="events__single-event h-100 translateEffect1">
                 <div class="events__single-event__image">
-                  <a href="single-event.html">
+                  <a href="{% url 'single-event' %}">
                     <img
                       class="img-fluid"
-                      src="assets/images/event1.png"
+                      src="{% static 'assets/images/event1.png' %}"
                       alt="events 01"
                     />
                   </a>
@@ -1461,7 +1461,7 @@
                 <div class="events__single-event__body">
                   <div class="events__single-event__content">
                     <h2 class="fs-4">
-                      <a href="single-event.html"
+                      <a href="{% url 'single-event' %}"
                         >Discussion</a
                       >
                     </h2>
@@ -1492,10 +1492,10 @@
             >
               <article class="events__single-event h-100 translateEffect1">
                 <div class="events__single-event__image">
-                  <a href="single-event.html">
+                  <a href="{% url 'single-event' %}">
                     <img
                       class="img-fluid"
-                      src="assets/images/event1.png"
+                      src="{% static 'assets/images/event1.png' %}"
                       alt="events 02"
                     />
                   </a>
@@ -1503,7 +1503,7 @@
                 <div class="events__single-event__body">
                   <div class="events__single-event__content">
                     <h2 class="fs-4">
-                      <a href="single-event.html"
+                      <a href="{% url 'single-event' %}"
                         >Discussion</a
                       >
                     </h2>
@@ -1574,7 +1574,7 @@
                   >
                     <div class="testi-card card h-100 translateEffect1">
                       <div class="card-body text-center p-4">
-                        <img src="assets/images/user-2.png" alt="User Image" />
+                        <img src="{% static 'assets/images/user-2.png' %}" alt="User Image" />
                         <h2 class="testimonialv2__card-title">
                           John D. :
                         </h2>
@@ -1596,7 +1596,7 @@
                   >
                     <div class="testi-card card h-100 translateEffect1">
                       <div class="card-body text-center p-4">
-                        <img src="assets/images/user-1.png" alt="User Image" />
+                        <img src="{% static 'assets/images/user-1.png' %}" alt="User Image" />
                         <h2 class="testimonialv2__card-title">
                           Sarah K.:
                         </h2>
@@ -1619,7 +1619,7 @@
                   >
                     <div class="testi-card card h-100 translateEffect1">
                       <div class="card-body text-center p-4">
-                        <img src="assets/images/user-2.png" alt="User Image" />
+                        <img src="{% static 'assets/images/user-2.png' %}" alt="User Image" />
                         <h2 class="testimonialv2__card-title">
                           Michael R.:
                         </h2>
@@ -1641,7 +1641,7 @@
                   >
                     <div class="testi-card card h-100 translateEffect1">
                       <div class="card-body text-center p-4">
-                        <img src="assets/images/user-1.png" alt="User Image" />
+                        <img src="{% static 'assets/images/user-1.png' %}" alt="User Image" />
                         <h2 class="testimonialv2__card-title">
                           David H.:
                         </h2>
@@ -1703,10 +1703,10 @@
             >
               <article class="blog__single-post h-100 translateEffect1">
                 <div class="blog__single-post__image">
-                  <a href="single-blog.html">
+                  <a href="{% url 'single-blog' %}">
                     <img
                       class="img-fluid"
-                      src="assets/images/blog/blog.png"
+                      src="{% static 'assets/images/blog/blog.png' %}"
                       alt="Blog 01"
                     />
                   </a>
@@ -1714,7 +1714,7 @@
                 <div class="blog__single-post__body">
                   <div class="blog__single-post__content">
                     <h2 class="fs-4">
-                      <a href="single-blog.html"
+                      <a href="{% url 'single-blog' %}"
                         >The Evolution of Genre Fiction: Trends and Predictions</a
                       >
                     </h2>
@@ -1748,7 +1748,7 @@
                   <a href="#">
                     <img
                       class="img-fluid"
-                      src="assets/images/blog/blog1.png"
+                      src="{% static 'assets/images/blog/blog1.png' %}"
                       alt="Blog 02"
                     />
                   </a>
@@ -1787,10 +1787,10 @@
             >
               <article class="blog__single-post h-100 translateEffect1">
                 <div class="blog__single-post__image">
-                  <a href="single-blog.html">
+                  <a href="{% url 'single-blog' %}">
                     <img
                       class="img-fluid"
-                      src="assets/images/blog/blog2.png"
+                      src="{% static 'assets/images/blog/blog2.png' %}"
                       alt="Blog 03"
                     />
                   </a>
@@ -1798,7 +1798,7 @@
                 <div class="blog__single-post__body">
                   <div class="blog__single-post__content">
                     <h2 class="fs-4">
-                      <a href="single-blog.html"
+                      <a href="{% url 'single-blog' %}"
                         >There is a method to this book-buying madness</a
                       >
                     </h2>
@@ -1908,11 +1908,11 @@
               data-aos-delay="200"
             >
               <div class="contact-form-box">
-                <form id="contact-form" method="post" action="php/sendmail.php">
+                <form id="contact-form" method="post" action="php/sendmail.php' %}">
                   <div class="message col">
                     <p class="email-loading alert alert-warning">
                       <img
-                        src="assets/images/loading.gif"
+                        src="{% static 'assets/images/loading.gif' %}"
                         alt=""
                       />&nbsp;&nbsp;&nbsp;Sending...
                     </p>
@@ -2029,7 +2029,7 @@
                 <div class="footer__topv2__about">
                   <div class="logo">
                     <img
-                      src="assets//images/logo1.png"
+                      src="{% static 'assets//images/logo1.png' %}"
                       alt="Footer Logo"
                     />
                   </div>
@@ -2056,15 +2056,15 @@
                   <ul class="link">
                     <li><a href="404.html"> > Book Marketing</a></li>
                     <li>
-                      <a href="page-without-sidebar.html"
+                      <a href="{% url 'page-without-sidebar' %}"
                         > > Book Cover</a
                       >
                     </li>
                     <li>
-                      <a href="page-left-sidebar.html"> > Book Publishing</a>
+                      <a href="{% url 'page-left-sidebar' %}"> > Book Publishing</a>
                     
                     <li>
-                      <a href="page-right-sidebar.html"> > Book Editing</a>
+                      <a href="{% url 'page-right-sidebar' %}"> > Book Editing</a>
                     </li>
                     <li><a href="404.html"> > Book Cover Design</a></li>
                     <li>
@@ -2130,7 +2130,7 @@
                     <p>PAYMENT METHOD</p>
                   </div>
                   <br>
-                  <img src="assets/images/payment.png" alt="iRiseup.html" />
+                  <img src="{% static 'assets/images/payment.png' %}" alt="{% url 'home' %}" />
                   <br>
 
                   <div class="text">
@@ -2138,7 +2138,7 @@
                       Feed your love for captivating tales! Subscribe now for an exclusive literary adventure!
                     </p>
                   </div>
-                  <form action="assets/subscribe/subscribe.php" id="subscribe">
+                  <form action="{% static 'assets/subscribe/subscribe.php' %}" id="subscribe">
                     <div class="input-group aos-init aos-animate">
                       <input
                         type="email"
@@ -2200,7 +2200,7 @@
             </div>
             <div class="text-right">
                 <p class="m-0">
-                    <a href="privacypolicy.html">Privacy Policy</a> | <a href="termsandcondition.html">Terms and Conditions</a>
+                    <a href="{% url 'privacy-policy' %}">Privacy Policy</a> | <a href="{% url 'terms-and-condition' %}">Terms and Conditions</a>
                 </p>
             </div>
         </div>        
@@ -2216,25 +2216,25 @@
       <!-- ========== Footer section End ========== -->
     </div>
     <!--====== jquery js ======-->
-    <script src="assets/js/jquery.min.js"></script>
+    <script src="{% static 'assets/js/jquery.min.js' %}"></script>
     <!--====== Bootstrap js ======-->
-    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="{% static 'assets/js/bootstrap.bundle.min.js' %}"></script>
     <!--====== One page nav ======-->
-    <script src="assets/js/onepageNav.js"></script>
+    <script src="{% static 'assets/js/onepageNav.js' %}"></script>
     <!--====== Ajaxchimp js ======-->
-    <script src="assets/js/jquery.ajaxchimp.min.js"></script>
+    <script src="{% static 'assets/js/jquery.ajaxchimp.min.js' %}"></script>
     <!--====== Glightbox js ======-->
-    <script src="assets/js/glightbox.js"></script>
+    <script src="{% static 'assets/js/glightbox.js' %}"></script>
     <!--====== Glightbox js ======-->
-    <script src="assets/js/swiper.min.js"></script>
+    <script src="{% static 'assets/js/swiper.min.js' %}"></script>
     <!--====== Appear js ======-->
-    <script src="assets/js/jquery.appear.min.js"></script>
+    <script src="{% static 'assets/js/jquery.appear.min.js' %}"></script>
     <!--====== Odometer js ======-->
-    <script src="assets/js/odometer.min.js"></script>
+    <script src="{% static 'assets/js/odometer.min.js' %}"></script>
     <!--====== Aos js ======-->
-    <script src="assets/js/aos.js"></script>
+    <script src="{% static 'assets/js/aos.js' %}"></script>
     <!--====== Custom js ======-->
-    <script src="assets/js/custom.js"></script>
+    <script src="{% static 'assets/js/custom.js' %}"></script>
     <script src="https://cdn.tailwindcss.com"></script>
     
   </body>

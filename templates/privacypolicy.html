@@ -7,7 +7,7 @@
     <!--====== Title ======-->
     <title>iRiseup - Book and publisher landing page</title>
     <!-- ========== Favicon Ico ========== -->
-    <link rel="icon" href="assets/images/logo1.png" />
+    <link rel="icon" href="{% static 'assets/images/logo1.png' %}" />
     <!-- Headings font -->
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -20,49 +20,49 @@
       rel="stylesheet"
     />
     <!--====== Bootstrap css ======-->
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="{% static 'assets/css/bootstrap.min.css' %}" />
     <!--====== IcoFont css ======-->
-    <link rel="stylesheet" href="assets/css/icofont.min.css" />
+    <link rel="stylesheet" href="{% static 'assets/css/icofont.min.css' %}" />
     <!--====== Glightbox css ======-->
-    <link rel="stylesheet" href="assets/css/glightbox.css" />
+    <link rel="stylesheet" href="{% static 'assets/css/glightbox.css' %}" />
     <!--====== swiper css ======-->
-    <link rel="stylesheet" href="assets/css/swiper.min.css" />
+    <link rel="stylesheet" href="{% static 'assets/css/swiper.min.css' %}" />
     <!--====== Margins & Paddings css ======-->
-    <link rel="stylesheet" href="assets/css/margins-paddings.css" />
+    <link rel="stylesheet" href="{% static 'assets/css/margins-paddings.css' %}" />
     <!--====== Aos & Paddings css ======-->
-    <link rel="stylesheet" href="assets/css/aos.css" />
+    <link rel="stylesheet" href="{% static 'assets/css/aos.css' %}" />
     <!--====== Style css ======-->
-    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="{% static 'assets/css/style.css' %}" />
     <!--====== Custom variants ======-->
     <link
       rel="stylesheet"
-      href="assets/css/colors/oldRose.css"
+      href="{% static 'assets/css/colors/oldRose.css' %}"
       id="color-switch"
     />
     <!-- Default color version -->
     <link
       rel="stylesheet"
-      href="assets/css/fonts/philosopher-poppins.css"
+      href="{% static 'assets/css/fonts/philosopher-poppins.css' %}"
       id="font-switch"
     />
     <!-- Default font version -->
     <!--  Template Flat BG -->
-    <!-- <link href="assets/css/colors/wildBlue.css" rel="stylesheet"> -->
-    <!-- <link href="assets/css/colors/nomad.css" rel="stylesheet"> -->
-    <!-- <link href="assets/css/colors/viridian.css" rel="stylesheet"> -->
-    <!-- <link href="assets/css/colors/pink.css" rel="stylesheet"> -->
-    <!-- <link href="assets/css/colors/coffee.css" rel="stylesheet"> -->
-    <!-- <link href="assets/css/colors/royal.css" rel="stylesheet"> -->
-    <!-- <link href="assets/css/colors/sky.css" rel="stylesheet"> -->
-    <!-- <link href="assets/css/colors/olive.css" rel="stylesheet"> -->
+    <!-- <link href="{% static 'assets/css/colors/wildBlue.css' %}" rel="stylesheet"> -->
+    <!-- <link href="{% static 'assets/css/colors/nomad.css' %}" rel="stylesheet"> -->
+    <!-- <link href="{% static 'assets/css/colors/viridian.css' %}" rel="stylesheet"> -->
+    <!-- <link href="{% static 'assets/css/colors/pink.css' %}" rel="stylesheet"> -->
+    <!-- <link href="{% static 'assets/css/colors/coffee.css' %}" rel="stylesheet"> -->
+    <!-- <link href="{% static 'assets/css/colors/royal.css' %}" rel="stylesheet"> -->
+    <!-- <link href="{% static 'assets/css/colors/sky.css' %}" rel="stylesheet"> -->
+    <!-- <link href="{% static 'assets/css/colors/olive.css' %}" rel="stylesheet"> -->
     <!--  Template Typography -->
-    <!-- <link href="assets/css/fonts/poppins-roboto.css" rel="stylesheet"> -->
-    <!-- <link href="assets/css/fonts/josepin-sourceSansPro.css" rel="stylesheet"> -->
-    <!-- <link href="assets/css/fonts/montserrat-lato.css" rel="stylesheet"> -->
-    <!-- <link href="assets/css/fonts/raleway-montserrat.css" rel="stylesheet"> -->
-    <!-- <link href="assets/css/fonts/avril-lato.css" rel="stylesheet"> -->
+    <!-- <link href="{% static 'assets/css/fonts/poppins-roboto.css' %}" rel="stylesheet"> -->
+    <!-- <link href="{% static 'assets/css/fonts/josepin-sourceSansPro.css' %}" rel="stylesheet"> -->
+    <!-- <link href="{% static 'assets/css/fonts/montserrat-lato.css' %}" rel="stylesheet"> -->
+    <!-- <link href="{% static 'assets/css/fonts/raleway-montserrat.css' %}" rel="stylesheet"> -->
+    <!-- <link href="{% static 'assets/css/fonts/avril-lato.css' %}" rel="stylesheet"> -->
     <!--====== Custom css ======-->
-    <!-- <link rel="stylesheet" href="assets/css/custom.css" /> -->
+    <!-- <link rel="stylesheet" href="{% static 'assets/css/custom.css' %}" /> -->
     
   </head>
 
@@ -348,7 +348,7 @@
   <body>
     <div class="floating-btn">
       <div class="logo-container">
-        <img src="assets/images/chatlogo10.png" alt="Logo" class="logobox">
+        <img src="{% static 'assets/images/chatlogo10.png' %}" alt="Logo" class="logobox">
       </div>
       <div class="floating-content">
         <!-- Content to display when hovered -->
@@ -361,7 +361,7 @@
 
   <div class="floating-btn floating-btn-2">
     <div class="logo-container">
-      <img src="assets/images/2.png" alt="Logo 2" class="logobox">
+      <img src="{% static 'assets/images/2.png' %}" alt="Logo 2" class="logobox">
     </div>
 
     <div class="floating-content">
@@ -394,9 +394,9 @@
         <div class="container">
           <div class="row">
             <nav class="navbar navbar-expand-lg">
-              <a class="navbar-brand" href="iRiseup.html">
+              <a class="navbar-brand" href="{% url 'home' %}">
                 <!-- <h1 class="m-0">WONTED</h1> -->
-                <img src="assets/images/logo1.png" alt="iRiseup.html" />
+                <img src="{% static 'assets/images/logo1.png' %}" alt="{% url 'home' %}" />
               </a>
               <div class="collapsed navbar-collapsed" id="navbarSupportedContent">
                 <ul id="onepage-nav" class="navbar-nav menu ms-lg-auto">
@@ -419,7 +419,7 @@
                     </span>
                     <ul class="dropdown-menu">
                       <li class="nav-item">
-                        <a href="index.html" class="nav-link">Home One</a>
+                        <a href="{% url 'index' %}" class="nav-link">Home One</a>
                       </li>
                       <li class="nav-item">
                         <a href="index-2.html" class="nav-link">Home Two</a>
@@ -428,7 +428,7 @@
                   </li>
 
                   <li class="nav-item">
-                    <a class="nav-link" href="iRiseup.html">About</a>
+                    <a class="nav-link" href="{% url 'home' %}">About</a>
                   </li>
 
                   <div class="collapsed navbar-collapsed" id="navbarSupportedContent">
@@ -452,34 +452,34 @@
                         </span>
                         <ul class="dropdown-menu row">
                           <li class="nav-item col-6 col-md-2">
-                              <a href="biography.html" class="nav-link"> > BIOGRAPHY WRITING</a>
+                              <a href="{% url 'biography' %}" class="nav-link"> > BIOGRAPHY WRITING</a>
                           </li>
                           <li class="nav-item col-6 col-md-2">
-                              <a href="memoir.html" class="nav-link"> > MEMOIR WRITING</a>
+                              <a href="{% url 'memoir' %}" class="nav-link"> > MEMOIR WRITING</a>
                           </li>
                           <li class="nav-item col-6 col-md-2">
-                              <a href="manuscript.html" class="nav-link"> > MANUSCRIPT WRITING</a>
+                              <a href="{% url 'manuscript' %}" class="nav-link"> > MANUSCRIPT WRITING</a>
                           </li>
                           <li class="nav-item col-6 col-md-2">
-                              <a href="comicbook.html" class="nav-link"> > COMIC BOOK WRITING</a>
+                              <a href="{% url 'comic-book' %}" class="nav-link"> > COMIC BOOK WRITING</a>
                           </li>
                           <li class="nav-item col-6 col-md-2">
-                              <a href="childrensbook.html" class="nav-link"> > CHILDRENS BOOK WRITING</a>
+                              <a href="{% url 'childrens-book' %}" class="nav-link"> > CHILDRENS BOOK WRITING</a>
                           </li>
                           <li class="nav-item col-6 col-md-2">
-                              <a href="nonfiction.html" class="nav-link"> > NON-FICTION WRITING</a>
+                              <a href="{% url 'non-fiction' %}" class="nav-link"> > NON-FICTION WRITING</a>
                           </li>
                           <li class="nav-item col-6 col-md-2">
-                              <a href="screenwriting.html" class="nav-link"> > SCREENWRITING SERVICES</a>
+                              <a href="{% url 'screen-writing' %}" class="nav-link"> > SCREENWRITING SERVICES</a>
                           </li>
                           <li class="nav-item col-6 col-md-2">
-                              <a href="horrorwriting.html" class="nav-link"> > HORRORWRITING SERVICES</a>
+                              <a href="{% url 'horror-writing' %}" class="nav-link"> > HORRORWRITING SERVICES</a>
                           </li>
                           <li class="nav-item col-6 col-md-2">
-                              <a href="audiobook.html" class="nav-link"> > AUDIO BOOK SERVICES</a>
+                              <a href="{% url 'audiobook' %}" class="nav-link"> > AUDIO BOOK SERVICES</a>
                           </li>
                           <li class="nav-item col-6 col-md-2">
-                              <a href="booktrailer.html" class="nav-link"> > BOOK TRAILER SERVICES</a>
+                              <a href="{% url 'book-trailer' %}" class="nav-link"> > BOOK TRAILER SERVICES</a>
                           </li>
                       </ul>
                       
@@ -511,12 +511,12 @@
                     </span>
                     <ul class="dropdown-menu">
                       <li class="nav-item">
-                        <a href="all-events.html" class="nav-link"
+                        <a href="{% url 'all-events' %}" class="nav-link"
                           > > Book Cover Design</a
                         >
                       </li>
                       <li class="nav-item">
-                        <a href="single-event.html" class="nav-link"
+                        <a href="{% url 'single-event' %}" class="nav-link"
                           > > Other Design</a
                         >
                       </li>
@@ -547,30 +547,30 @@
                         <a href="blog-grid.html" class="nav-link">Blog Grid</a>
                       </li>
                       <li class="nav-item">
-                        <a href="blog-list.html" class="nav-link">Blog List</a>
+                        <a href="{% url 'blog-list' %}" class="nav-link">Blog List</a>
                       </li>
                       <li class="nav-item">
-                        <a href="left-sidebar.html" class="nav-link"
+                        <a href="{% url 'left-sidebar' %}" class="nav-link"
                           >Left Sidebar</a
                         >
                       </li>
                       <li class="nav-item">
-                        <a href="right-sidebar.html" class="nav-link"
+                        <a href="{% url 'right-sidebar' %}" class="nav-link"
                           >Right Sidebar</a
                         >
                       </li>
                       <li class="nav-item">
-                        <a href="single-blog.html" class="nav-link"
+                        <a href="{% url 'single-blog' %}" class="nav-link"
                           >Details Without Sidebar</a
                         >
                       </li>
                       <li class="nav-item">
-                        <a href="blog-left-sidebar.html" class="nav-link"
+                        <a href="{% url 'blog-left-sidebar' %}" class="nav-link"
                           >Details Left Sidebar</a
                         >
                       </li>
                       <li class="nav-item">
-                        <a href="blog-right-sidebar.html" class="nav-link"
+                        <a href="{% url 'blog-right-sidebar' %}" class="nav-link"
                           >Details Right Sidebar</a
                         >
                       </li>
@@ -606,7 +606,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Privacy Policy</title>
-    <link rel="stylesheet" href="styles.css"> <!-- Your CSS file link -->
+    <link rel="stylesheet" href="styles.css' %}"> <!-- Your CSS file link -->
 </head>
 
 <body class="bg-gray-100 text-gray-800">
@@ -759,11 +759,11 @@
                       data-aos-delay="200"
                     >
                       <div class="contact-form-box">
-                        <form id="contact-form" method="post" action="php/sendmail.php">
+                        <form id="contact-form" method="post" action="php/sendmail.php' %}">
                           <div class="message col">
                             <p class="email-loading alert alert-warning">
                               <img
-                                src="assets/images/loading.gif"
+                                src="{% static 'assets/images/loading.gif' %}"
                                 alt=""
                               />&nbsp;&nbsp;&nbsp;Sending...
                             </p>
@@ -880,7 +880,7 @@
                         <div class="footer__topv2__about">
                           <div class="logo">
                             <img
-                              src="assets//images/logo1.png"
+                              src="{% static 'assets//images/logo1.png' %}"
                               alt="Footer Logo"
                             />
                           </div>
@@ -907,15 +907,15 @@
                           <ul class="link">
                             <li><a href="404.html"> > Book Marketing</a></li>
                             <li>
-                              <a href="page-without-sidebar.html"
+                              <a href="{% url 'page-without-sidebar' %}"
                                 > > Book Cover</a
                               >
                             </li>
                             <li>
-                              <a href="page-left-sidebar.html"> > Book Publishing</a>
+                              <a href="{% url 'page-left-sidebar' %}"> > Book Publishing</a>
                             
                             <li>
-                              <a href="page-right-sidebar.html"> > Book Editing</a>
+                              <a href="{% url 'page-right-sidebar' %}"> > Book Editing</a>
                             </li>
                             <li><a href="404.html"> > Book Cover Design</a></li>
                             <li>
@@ -981,7 +981,7 @@
                             <p>PAYMENT METHOD</p>
                           </div>
                           <br>
-                          <img src="assets/images/payment.png" alt="iRiseup.html" />
+                          <img src="{% static 'assets/images/payment.png' %}" alt="{% url 'home' %}" />
                           <br>
         
                           <div class="text">
@@ -989,7 +989,7 @@
                               Feed your love for captivating tales! Subscribe now for an exclusive literary adventure!
                             </p>
                           </div>
-                          <form action="assets/subscribe/subscribe.php" id="subscribe">
+                          <form action="{% static 'assets/subscribe/subscribe.php' %}" id="subscribe">
                             <div class="input-group aos-init aos-animate">
                               <input
                                 type="email"
@@ -1051,7 +1051,7 @@
                     </div>
                     <div class="text-right">
                         <p class="m-0">
-                            <a href="privacypolicy.html">Privacy Policy</a> | <a href="termsandcondition.html">Terms and Conditions</a>
+                            <a href="{% url 'privacy-policy' %}">Privacy Policy</a> | <a href="{% url 'terms-and-condition' %}">Terms and Conditions</a>
                         </p>
                     </div>
                 </div>        
@@ -1067,25 +1067,25 @@
               <!-- ========== Footer section End ========== -->
             </div>
             <!--====== jquery js ======-->
-            <script src="assets/js/jquery.min.js"></script>
+            <script src="{% static 'assets/js/jquery.min.js' %}"></script>
             <!--====== Bootstrap js ======-->
-            <script src="assets/js/bootstrap.bundle.min.js"></script>
+            <script src="{% static 'assets/js/bootstrap.bundle.min.js' %}"></script>
             <!--====== One page nav ======-->
-            <script src="assets/js/onepageNav.js"></script>
+            <script src="{% static 'assets/js/onepageNav.js' %}"></script>
             <!--====== Ajaxchimp js ======-->
-            <script src="assets/js/jquery.ajaxchimp.min.js"></script>
+            <script src="{% static 'assets/js/jquery.ajaxchimp.min.js' %}"></script>
             <!--====== Glightbox js ======-->
-            <script src="assets/js/glightbox.js"></script>
+            <script src="{% static 'assets/js/glightbox.js' %}"></script>
             <!--====== Glightbox js ======-->
-            <script src="assets/js/swiper.min.js"></script>
+            <script src="{% static 'assets/js/swiper.min.js' %}"></script>
             <!--====== Appear js ======-->
-            <script src="assets/js/jquery.appear.min.js"></script>
+            <script src="{% static 'assets/js/jquery.appear.min.js' %}"></script>
             <!--====== Odometer js ======-->
-            <script src="assets/js/odometer.min.js"></script>
+            <script src="{% static 'assets/js/odometer.min.js' %}"></script>
             <!--====== Aos js ======-->
-            <script src="assets/js/aos.js"></script>
+            <script src="{% static 'assets/js/aos.js' %}"></script>
             <!--====== Custom js ======-->
-            <script src="assets/js/custom.js"></script>
+            <script src="{% static 'assets/js/custom.js' %}"></script>
             <script src="https://cdn.tailwindcss.com"></script>
             
           </body>

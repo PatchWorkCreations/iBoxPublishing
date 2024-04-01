@@ -71,7 +71,7 @@
         <div class="container">
           <div class="row">
             <nav class="navbar navbar-expand-lg">
-              <a class="navbar-brand" href="index.html">
+              <a class="navbar-brand" href="{% url 'index' %}">
                 <!-- <h1 class="m-0">WONTED</h1> -->
                 <img src="{% static 'assets/images/wonted-logo.png' %}" alt="Wonted" />
               </a>
@@ -96,22 +96,22 @@
                     </span>
                     <ul class="dropdown-menu">
                       <li class="nav-item">
-                        <a href="index.html" class="nav-link">Home One</a>
+                        <a href="{% url 'index' %}" class="nav-link">Home One</a>
                       </li>
                       <li class="nav-item">
                         <a href="index-2.html" class="nav-link">Home Two</a>
                       </li>
                       <li class="nav-item">
-                        <a href="index-3.html" class="nav-link">Home Three</a>
+                        <a href="{% url 'index-3' %}" class="nav-link">Home Three</a>
                       </li>
                       <li class="nav-item">
-                        <a href="index-4.html" class="nav-link">Home Four</a>
+                        <a href="{% url 'index-4' %}" class="nav-link">Home Four</a>
                       </li>
                       <li class="nav-item">
-                        <a href="index-5.html" class="nav-link">Home Five</a>
+                        <a href="{% url 'index-5' %}" class="nav-link">Home Five</a>
                       </li>
                       <li class="nav-item">
-                        <a href="index-6.html" class="nav-link">Home Six</a>
+                        <a href="{% url 'index-6' %}" class="nav-link">Home Six</a>
                       </li>
                     </ul>
                   </li>
@@ -146,12 +146,12 @@
                     </span>
                     <ul class="dropdown-menu">
                       <li class="nav-item">
-                        <a href="all-events.html" class="nav-link"
+                        <a href="{% url 'all-events' %}" class="nav-link"
                           >All Events</a
                         >
                       </li>
                       <li class="nav-item">
-                        <a href="single-event.html" class="nav-link"
+                        <a href="{% url 'single-event' %}" class="nav-link"
                           >Single Event</a
                         >
                       </li>
@@ -182,30 +182,30 @@
                         <a href="blog-grid.html" class="nav-link">Blog Grid</a>
                       </li>
                       <li class="nav-item">
-                        <a href="blog-list.html" class="nav-link">Blog List</a>
+                        <a href="{% url 'blog-list' %}" class="nav-link">Blog List</a>
                       </li>
                       <li class="nav-item">
-                        <a href="left-sidebar.html" class="nav-link"
+                        <a href="{% url 'left-sidebar' %}" class="nav-link"
                           >Left Sidebar</a
                         >
                       </li>
                       <li class="nav-item">
-                        <a href="right-sidebar.html" class="nav-link"
+                        <a href="{% url 'right-sidebar' %}" class="nav-link"
                           >Right Sidebar</a
                         >
                       </li>
                       <li class="nav-item">
-                        <a href="single-blog.html" class="nav-link"
+                        <a href="{% url 'single-blog' %}" class="nav-link"
                           >Details Without Sidebar</a
                         >
                       </li>
                       <li class="nav-item">
-                        <a href="blog-left-sidebar.html" class="nav-link"
+                        <a href="{% url 'blog-left-sidebar' %}" class="nav-link"
                           >Details Left Sidebar</a
                         >
                       </li>
                       <li class="nav-item">
-                        <a href="blog-right-sidebar.html" class="nav-link"
+                        <a href="{% url 'blog-right-sidebar' %}" class="nav-link"
                           >Details Right Sidebar</a
                         >
                       </li>
@@ -2204,7 +2204,7 @@
             >
               <article class="events__single-event h-100 translateEffect1">
                 <div class="events__single-event__image">
-                  <a href="single-event.html">
+                  <a href="{% url 'single-event' %}">
                     <img
                       class="img-fluid"
                       src="{% static 'assets/images/events/1.jpg' %}"
@@ -2215,7 +2215,7 @@
                 <div class="events__single-event__body">
                   <div class="events__single-event__content">
                     <h2 class="fs-4">
-                      <a href="single-event.html"
+                      <a href="{% url 'single-event' %}"
                         >Discussion On Horror Thriller</a
                       >
                     </h2>
@@ -2245,7 +2245,7 @@
             >
               <article class="events__single-event h-100 translateEffect1">
                 <div class="events__single-event__image">
-                  <a href="single-event.html">
+                  <a href="{% url 'single-event' %}">
                     <img
                       class="img-fluid"
                       src="{% static 'assets/images/events/2.jpg' %}"
@@ -2256,7 +2256,7 @@
                 <div class="events__single-event__body">
                   <div class="events__single-event__content">
                     <h2 class="fs-4">
-                      <a href="single-event.html"
+                      <a href="{% url 'single-event' %}"
                         >Discussion On Horror Thriller</a
                       >
                     </h2>
@@ -2287,7 +2287,7 @@
             >
               <article class="events__single-event h-100 translateEffect1">
                 <div class="events__single-event__image">
-                  <a href="single-event.html">
+                  <a href="{% url 'single-event' %}">
                     <img
                       class="img-fluid"
                       src="{% static 'assets/images/events/3.jpg' %}"
@@ -2298,7 +2298,7 @@
                 <div class="events__single-event__body">
                   <div class="events__single-event__content">
                     <h2 class="fs-4">
-                      <a href="single-event.html"
+                      <a href="{% url 'single-event' %}"
                         >Discussion On Horror Thriller</a
                       >
                     </h2>
@@ -2606,7 +2606,7 @@
             >
               <article class="blog__single-post h-100 translateEffect1">
                 <div class="blog__single-post__image">
-                  <a href="single-blog.html">
+                  <a href="{% url 'single-blog' %}">
                     <img
                       class="img-fluid"
                       src="{% static 'assets/images/blog/blog_01.jpg' %}"
@@ -2617,7 +2617,7 @@
                 <div class="blog__single-post__body">
                   <div class="blog__single-post__content">
                     <h2 class="fs-4">
-                      <a href="single-blog.html"
+                      <a href="{% url 'single-blog' %}"
                         >Book News: Egypt Bans Ridley Scott’s ‘Exodus’ For
                         ‘Historical</a
                       >
@@ -2691,7 +2691,7 @@
             >
               <article class="blog__single-post h-100 translateEffect1">
                 <div class="blog__single-post__image">
-                  <a href="single-blog.html">
+                  <a href="{% url 'single-blog' %}">
                     <img
                       class="img-fluid"
                       src="{% static 'assets/images/blog/blog_03.jpg' %}"
@@ -2702,7 +2702,7 @@
                 <div class="blog__single-post__body">
                   <div class="blog__single-post__content">
                     <h2 class="fs-4">
-                      <a href="single-blog.html"
+                      <a href="{% url 'single-blog' %}"
                         >There is a method to this book-buying madness</a
                       >
                     </h2>
@@ -2953,15 +2953,15 @@
                   <ul class="link">
                     <li><a href="404.html">404 Page</a></li>
                     <li>
-                      <a href="page-without-sidebar.html"
+                      <a href="{% url 'page-without-sidebar' %}"
                         >Page Without Sidebar</a
                       >
                     </li>
                     <li>
-                      <a href="page-left-sidebar.html">Page Left Sidebar</a>
+                      <a href="{% url 'page-left-sidebar' %}">Page Left Sidebar</a>
                     </li>
                     <li>
-                      <a href="page-right-sidebar.html">Page Right Sidebar</a>
+                      <a href="{% url 'page-right-sidebar' %}">Page Right Sidebar</a>
                     </li>
                   </ul>
                 </div>

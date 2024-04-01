@@ -394,9 +394,9 @@
         <div class="container">
           <div class="row">
             <nav class="navbar navbar-expand-lg">
-              <a class="navbar-brand" href="iRiseup.html">
+              <a class="navbar-brand" href="{% url 'home' %}">
                 <!-- <h1 class="m-0">WONTED</h1> -->
-                <img src="{% static 'assets/images/logo1.png' %}" alt="iRiseup.html" />
+                <img src="{% static 'assets/images/logo1.png' %}" alt="{% url 'home' %}" />
               </a>
               <div class="collapsed navbar-collapsed" id="navbarSupportedContent">
                 <ul id="onepage-nav" class="navbar-nav menu ms-lg-auto">
@@ -429,34 +429,34 @@
                         </span>
                         <ul class="dropdown-menu row">
                           <li class="nav-item col-6 col-md-2">
-                              <a href="biography.html" class="nav-link"> > BIOGRAPHY WRITING</a>
+                              <a href="{% url 'biography' %}" class="nav-link"> > BIOGRAPHY WRITING</a>
                           </li>
                           <li class="nav-item col-6 col-md-2">
-                              <a href="memoir.html" class="nav-link"> > MEMOIR WRITING</a>
+                              <a href="{% url 'memoir' %}" class="nav-link"> > MEMOIR WRITING</a>
                           </li>
                           <li class="nav-item col-6 col-md-2">
-                              <a href="manuscript.html" class="nav-link"> > MANUSCRIPT WRITING</a>
+                              <a href="{% url 'manuscript' %}" class="nav-link"> > MANUSCRIPT WRITING</a>
                           </li>
                           <li class="nav-item col-6 col-md-2">
-                              <a href="comicbook.html" class="nav-link"> > COMIC BOOK WRITING</a>
+                              <a href="{% url 'comic-book' %}" class="nav-link"> > COMIC BOOK WRITING</a>
                           </li>
                           <li class="nav-item col-6 col-md-2">
-                              <a href="childrensbook.html" class="nav-link"> > CHILDRENS BOOK WRITING</a>
+                              <a href="{% url 'childrens-book' %}" class="nav-link"> > CHILDRENS BOOK WRITING</a>
                           </li>
                           <li class="nav-item col-6 col-md-2">
-                              <a href="nonfiction.html" class="nav-link"> > NON-FICTION WRITING</a>
+                              <a href="{% url 'non-fiction' %}" class="nav-link"> > NON-FICTION WRITING</a>
                           </li>
                           <li class="nav-item col-6 col-md-2">
-                              <a href="screenwriting.html" class="nav-link"> > SCREENWRITING SERVICES</a>
+                              <a href="{% url 'screen-writing' %}" class="nav-link"> > SCREENWRITING SERVICES</a>
                           </li>
                           <li class="nav-item col-6 col-md-2">
-                              <a href="horrorwriting.html" class="nav-link"> > HORRORWRITING SERVICES</a>
+                              <a href="{% url 'horror-writing' %}" class="nav-link"> > HORRORWRITING SERVICES</a>
                           </li>
                           <li class="nav-item col-6 col-md-2">
-                              <a href="audiobook.html" class="nav-link"> > AUDIO BOOK SERVICES</a>
+                              <a href="{% url 'audiobook' %}" class="nav-link"> > AUDIO BOOK SERVICES</a>
                           </li>
                           <li class="nav-item col-6 col-md-2">
-                              <a href="booktrailer.html" class="nav-link"> > BOOK TRAILER SERVICES</a>
+                              <a href="{% url 'book-trailer' %}" class="nav-link"> > BOOK TRAILER SERVICES</a>
                           </li>
                       </ul>
                       
@@ -1468,7 +1468,7 @@
             >
               <article class="events__single-event h-100 translateEffect1">
                 <div class="events__single-event__image">
-                  <a href="single-event.html">
+                  <a href="{% url 'single-event' %}">
                     <img
                       class="img-fluid"
                       src="{% static 'assets/images/event1.png' %}"
@@ -1479,7 +1479,7 @@
                 <div class="events__single-event__body">
                   <div class="events__single-event__content">
                     <h2 class="fs-4">
-                      <a href="single-event.html"
+                      <a href="{% url 'single-event' %}"
                         >Discussion</a
                       >
                     </h2>
@@ -1509,7 +1509,7 @@
             >
               <article class="events__single-event h-100 translateEffect1">
                 <div class="events__single-event__image">
-                  <a href="single-event.html">
+                  <a href="{% url 'single-event' %}">
                     <img
                       class="img-fluid"
                       src="{% static 'assets/images/event1.png' %}"
@@ -1520,7 +1520,7 @@
                 <div class="events__single-event__body">
                   <div class="events__single-event__content">
                     <h2 class="fs-4">
-                      <a href="single-event.html"
+                      <a href="{% url 'single-event' %}"
                         >Discussion</a
                       >
                     </h2>
@@ -1551,7 +1551,7 @@
             >
               <article class="events__single-event h-100 translateEffect1">
                 <div class="events__single-event__image">
-                  <a href="single-event.html">
+                  <a href="{% url 'single-event' %}">
                     <img
                       class="img-fluid"
                       src="{% static 'assets/images/event1.png' %}"
@@ -1562,7 +1562,7 @@
                 <div class="events__single-event__body">
                   <div class="events__single-event__content">
                     <h2 class="fs-4">
-                      <a href="single-event.html"
+                      <a href="{% url 'single-event' %}"
                         >Discussion</a
                       >
                     </h2>
@@ -1762,7 +1762,7 @@
             >
               <article class="blog__single-post h-100 translateEffect1">
                 <div class="blog__single-post__image">
-                  <a href="single-blog.html">
+                  <a href="{% url 'single-blog' %}">
                     <img
                       class="img-fluid"
                       src="{% static 'assets/images/blog/blog.png' %}"
@@ -1773,7 +1773,7 @@
                 <div class="blog__single-post__body">
                   <div class="blog__single-post__content">
                     <h2 class="fs-4">
-                      <a href="single-blog.html"
+                      <a href="{% url 'single-blog' %}"
                         >The Evolution of Genre Fiction: Trends and Predictions</a
                       >
                     </h2>
@@ -1846,7 +1846,7 @@
             >
               <article class="blog__single-post h-100 translateEffect1">
                 <div class="blog__single-post__image">
-                  <a href="single-blog.html">
+                  <a href="{% url 'single-blog' %}">
                     <img
                       class="img-fluid"
                       src="{% static 'assets/images/blog/blog2.png' %}"
@@ -1857,7 +1857,7 @@
                 <div class="blog__single-post__body">
                   <div class="blog__single-post__content">
                     <h2 class="fs-4">
-                      <a href="single-blog.html"
+                      <a href="{% url 'single-blog' %}"
                         >There is a method to this book-buying madness</a
                       >
                     </h2>
@@ -2113,27 +2113,27 @@
                     <p>SERVICES</p>
                   </div>
                   <ul class="link">
-                    <li><a href="marketing.html"> > Book Marketing</a></li>
+                    <li><a href="{% url 'marketing' %}"> > Book Marketing</a></li>
                     <li>
-                      <a href="page-without-sidebar.html"
+                      <a href="{% url 'page-without-sidebar' %}"
                         > > Book Cover</a
                       >
                     </li>
                     <li>
-                      <a href="publishing.html"> > Book Publishing</a>
+                      <a href="{% url 'publishing' %}"> > Book Publishing</a>
                     
                     <li>
-                      <a href="editing.html"> > Book Editing</a>
+                      <a href="{% url 'editing' %}"> > Book Editing</a>
                     </li>
                     <li><a href="cover.html"> > Book Cover Design</a></li>
                     <li>
-                      <li><a href="memoir.html"> > Memoir Writing</a></li>
+                      <li><a href="{% url 'memoir' %}"> > Memoir Writing</a></li>
                     <li>
-                      <li><a href="audiobook.html"> > Audio Book Services</a></li>
+                      <li><a href="{% url 'audiobook' %}"> > Audio Book Services</a></li>
                       <li>
-                        <li><a href="manuscript.html"> > Manuscript Writing</a></li>
+                        <li><a href="{% url 'manuscript' %}"> > Manuscript Writing</a></li>
                         <li>
-                          <li><a href="comicbook.html"> > Comic Book Services</a></li>
+                          <li><a href="{% url 'comic-book' %}"> > Comic Book Services</a></li>
                     <li>
                   </ul>
                 </div>
@@ -2189,7 +2189,7 @@
                     <p>PAYMENT METHOD</p>
                   </div>
                   <br>
-                  <img src="{% static 'assets/images/payment.png' %}" alt="iRiseup.html" />
+                  <img src="{% static 'assets/images/payment.png' %}" alt="{% url 'home' %}" />
                   <br>
 
                   <div class="text">
@@ -2254,12 +2254,12 @@
           <div class="footer__copyright m-20px-t m-20px-b d-flex justify-content-between align-items-center">
             <div>
                 <p class="m-0">
-                    &copy; 2024 All rights reserved. Powered by: <a href="iRiseup.html">iRiseUp</a>
+                    &copy; 2024 All rights reserved. Powered by: <a href="{% url 'home' %}">iRiseUp</a>
                 </p>
             </div>
             <div class="text-right">
                 <p class="m-0">
-                    <a href="privacypolicy.html">Privacy Policy</a> | <a href="termsandcondition.html">Terms and Conditions</a>
+                    <a href="{% url 'privacy-policy' %}">Privacy Policy</a> | <a href="{% url 'terms-and-condition' %}">Terms and Conditions</a>
                 </p>
             </div>
         </div>        
