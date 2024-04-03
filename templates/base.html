@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 {% load static %}
-<html1 lang="en">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>iRiseup - Book and publisher</title>
 
@@ -37,17 +37,9 @@
     <!-- Default color version -->
     <link rel="stylesheet" href="{% static 'assets/css/fonts/philosopher-poppins.css' %}" id="font-switch"/>
 </head>
-<body1>
-<div class="container">
-    <nav class="navbar bg-light mb-3">
-        <div class="container-fluid">
-            <span class="navbar-brand text-success mx-auto mb-0 h1 fw-bold">ANXEDEP: STRESS MONITORING</span>
-        </div>
-    </nav>
-    <div class="mx-2">
-        {% block content %}{% endblock %}
-    </div>
-</div>
+<body>
+
+{% block content %}{% endblock %}
 
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <!--====== jquery js ======-->
@@ -73,5 +65,5 @@
 <!--====== tailwind js ======-->
 <script src="https://cdn.tailwindcss.com"></script>
 
-</body1>
-</html1>
+</body>
+</html>
