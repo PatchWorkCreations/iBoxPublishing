@@ -3,12 +3,7 @@
 {% block content %}
 
 
-
-
-    
-
-
-  <style>
+<style>
 
 
 .input-border-focus {
@@ -317,135 +312,144 @@
 .btn-form-primary-unique:hover {
   background-color: #cfac4d; }
 
-  </style>
 
 
-
-    <div class="floating-btn">
-      <div class="logo-container">
-        <img src="{% static 'assets/images/chatlogo10.png' %}" alt="Logo" class="logobox">
-      </div>
-      <div class="floating-content">
-        <!-- Content to display when hovered -->
-        <p> |  CHAT US NOW</p>
-        <p></p>
-      </div>
-    </div>
-  
+</style>
 
 
-  <div class="floating-btn floating-btn-2">
+<div class="floating-btn">
     <div class="logo-container">
-      <img src="{% static 'assets/images/2.png' %}" alt="Logo 2" class="logobox">
+        <img src="{% static 'assets/images/chatlogo10.png' %}" alt="Logo" class="logobox">
+    </div>
+    <div class="floating-content">
+        <!-- Content to display when hovered -->
+        <p> | CHAT US NOW</p>
+        <p></p>
+    </div>
+</div>
+
+
+<div class="floating-btn floating-btn-2">
+    <div class="logo-container">
+        <img src="{% static 'assets/images/2.png' %}" alt="Logo 2" class="logobox">
     </div>
 
     <div class="floating-content">
-      <!-- Content to display when hovered -->
-    <span>  | Phone:</span><a href="tel:1124447900"> 112 444 7900</a>
-          
+        <!-- Content to display when hovered -->
+        <span>  | Phone:</span><a href="tel:1124447900"> 112 444 7900</a>
+
     </div>
-  </div>
+</div>
 
 
-
-    <div class="floatbutton">
-      <div class="clickbutton">
-        <p class="content2">LETS GET STARTED</p> </div>
-        <div class="crossbar"></div>
-      </div>
-    </div>
-  
-  
+<div class="floatbutton">
+    <div class="clickbutton">
+        <p class="content2">LETS GET STARTED</p></div>
+    <div class="crossbar"></div>
+</div>
+</div>
 
 
+<div class="section-wrapper">
+    <!-- Tmb loader end -->
+    <div id="preLoader"></div>
+    <!-- Tmb loader end -->
 
-  
-    <div class="section-wrapper">
-      <!-- Tmb loader end -->
-      <div id="preLoader"></div>
-      <!-- Tmb loader end -->
-
-{% include 'header.html' %}
+    {% include 'header.html' %}
 
 
-      <!-- ========== Hero section start ========== -->
-      <section
-        id="hero"
-        class="hero hero__padding overflow-hidden position-relative bg-one"
-      >
+    <!-- ========== Hero section start ========== -->
+    <section
+            id="hero"
+            class="hero hero__padding overflow-hidden position-relative bg-one"
+    >
         <div class="circle x1"></div>
         <div class="circle x2"></div>
         <div class="circle x3"></div>
         <div class="circle x4"></div>
         <div class="circle x5"></div>
         <div class="container">
-          <div class="row gx-5 align-items-left">
-            <div class="col-md-7 mb-4 mb-md-0 p-10" data-aos="zoom-in-up" data-aos-duration="1000" data-aos-delay="850">
-              <div class="hero__content position-relative">
-                <h1 class="display-4 mb-4 text-capitalize" style="font-size: 52px;"  >
-                  THE BEST MEMOIR WRITING SERVICE YOU CAN FIND NATIONWIDE
-                </h1> 
-                <p class="text-muted mb-5 fs-5" style="font-size: 5px;">
-                  Our memoir writer for hire can help you share a legendary tale worldwide. Click below for more details
-              </div>
-            
-              <div class="row">
-                <div class="col-3">
-                  <img src="{% static 'assets/images/goodfirms.png' %}" class="img-fluid" alt="GoodFirms">
-                </div>
-                <div class="col-3">
-                  <img src="{% static 'assets/images/clutch.png' %}" class="img-fluid" alt="Clutch">
-                </div>
-                <div class="col-3">
-                  <img src="{% static 'assets/images/pilot.png' %}" class="img-fluid" alt="Pilot">
-                </div>
-              </div>
-              <div class="button-container">
-                <a href="#" class="chat-now" style="margin-top: 30px;">CHAT NOW</a>
-                <a href="#" class="get-a-quote" style="margin-top: 30px;">GET A QUOTE</a>
-                <a href="#" class="contact-us-now" style="margin-top: 30px;">CONTACT US NOW</a>
-              </div>
-            </div>
-            <div class="col-md-5 text-center form-container-unique" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="850" >
-              <div class="form-wrapper-unique" style="padding-right: 20px;">
-                <h2 class="form-heading-unique" style="font-size: 30px; font-style:italic;">Take Control of Your Writing Journey!</h2>
-                <p>Fill out the form now to consult our book experts.</p>
-                <form id="contact-form" method="post" action="#">
-                  <div class="form-group-unique">
-                    <input type="text" class="form-control-unique" id="name" name="name_1" placeholder="Name" required>
-                  </div>
-                  <div class="form-group-unique">
-                    <input type="email" class="form-control-unique" id="email" name="email" placeholder="Email Address" required>
-                  </div>
-                  <div class="form-group-unique">
-                    <input type="tel" class="form-control-unique" id="phone" name="phone_1" placeholder="Phone Number" required>
-                  </div>
-                  <div class="form-group-unique">
-                    <textarea class="form-control-unique" id="project-details" name="project_details_1" rows="3" placeholder="Project Details" required></textarea>
-                  </div>
-                  <button type="submit" class="btn-form-primary-unique">SEND MESSAGE</button>
-                </form>
-              </div>
-            </div>
-            
-          </div>
-          
-      </section>
-      <!-- ========== Hero section end ========== -->
+            <div class="row gx-5 align-items-left">
+                <div class="col-md-7 mb-4 mb-md-0 p-10" data-aos="zoom-in-up" data-aos-duration="1000"
+                     data-aos-delay="850">
+                    <div class="hero__content position-relative">
+                        <h1 class="display-4 mb-4 text-capitalize" style="font-size: 52px;">
+                            THE BEST MEMOIR WRITING SERVICE YOU CAN FIND NATIONWIDE
+                        </h1>
+                        <p class="text-muted mb-5 fs-5" style="font-size: 5px;">
+                            Our memoir writer for hire can help you share a legendary tale worldwide. Click below for
+                            more details
+                    </div>
 
-      <!-- Banner Logo Start -->
+                    <div class="row">
+                        <div class="col-3">
+                            <img src="{% static 'assets/images/goodfirms.png' %}" class="img-fluid" alt="GoodFirms">
+                        </div>
+                        <div class="col-3">
+                            <img src="{% static 'assets/images/clutch.png' %}" class="img-fluid" alt="Clutch">
+                        </div>
+                        <div class="col-3">
+                            <img src="{% static 'assets/images/pilot.png' %}" class="img-fluid" alt="Pilot">
+                        </div>
+                    </div>
+                    <div class="button-container">
+                        <a href="#" class="chat-now" style="margin-top: 30px;">CHAT NOW</a>
+                        <a href="#" class="get-a-quote" style="margin-top: 30px;">GET A QUOTE</a>
+                        <a href="#" class="contact-us-now" style="margin-top: 30px;">CONTACT US NOW</a>
+                    </div>
+                </div>
+                <div class="col-md-5 text-center form-container-unique" data-aos="fade-up" data-aos-duration="1000"
+                     data-aos-delay="850">
+                    <div class="form-wrapper-unique" style="padding-right: 20px;">
+                        <h2 class="form-heading-unique" style="font-size: 30px; font-style:italic;">Take Control of Your
+                            Writing Journey!</h2>
+                        <p>Fill out the form now to consult our book experts.</p>
+                        <form id="contact-form" method="post" action="#">
+                            <div class="form-group-unique">
+                                <input type="text" class="form-control-unique" id="name" name="name_1"
+                                       placeholder="Name" required>
+                            </div>
+                            <div class="form-group-unique">
+                                <input type="email" class="form-control-unique" id="email" name="email"
+                                       placeholder="Email Address" required>
+                            </div>
+                            <div class="form-group-unique">
+                                <input type="tel" class="form-control-unique" id="phone" name="phone_1"
+                                       placeholder="Phone Number" required>
+                            </div>
+                            <div class="form-group-unique">
+                                <textarea class="form-control-unique" id="project-details" name="project_details_1"
+                                          rows="3" placeholder="Project Details" required></textarea>
+                            </div>
+                            <button type="submit" class="btn-form-primary-unique">SEND MESSAGE</button>
+                        </form>
+                    </div>
+                </div>
 
-      <section class="banner-logo-bg">
+            </div>
+
+    </section>
+    <!-- ========== Hero section end ========== -->
+
+    <!-- Banner Logo Start -->
+
+    <section class="banner-logo-bg">
         <div class="container">
             <div class="row">
                 <div class="col-12">
                     <div class="owl-carousel owl-banner-logo owl-theme d-flex justify-content-center align-items-center">
-                        <div class="item"><img src="{% static 'assets/images/banner1.png' %}" class="img-fluid" alt="LT-writing "></div>
-                        <div class="item"><img src="{% static 'assets/images/banner2.png' %}" class="img-fluid" alt="LT-writing "></div>
-                        <div class="item"><img src="{% static 'assets/images/banner3.png' %}" class="img-fluid" alt="LT-writing "></div>
-                        <div class="item"><img src="{% static 'assets/images/banner4.png' %}" class="img-fluid" alt="LT-writing "></div>
-                        <div class="item"><img src="{% static 'assets/images/banner5.png' %}" class="img-fluid" alt="LT-writing "></div>
-                        <div class="item"><img src="{% static 'assets/images/banner6.png' %}" class="img-fluid" alt="LT-writing "></div>
+                        <div class="item"><img src="{% static 'assets/images/banner1.png' %}" class="img-fluid"
+                                               alt="LT-writing "></div>
+                        <div class="item"><img src="{% static 'assets/images/banner2.png' %}" class="img-fluid"
+                                               alt="LT-writing "></div>
+                        <div class="item"><img src="{% static 'assets/images/banner3.png' %}" class="img-fluid"
+                                               alt="LT-writing "></div>
+                        <div class="item"><img src="{% static 'assets/images/banner4.png' %}" class="img-fluid"
+                                               alt="LT-writing "></div>
+                        <div class="item"><img src="{% static 'assets/images/banner5.png' %}" class="img-fluid"
+                                               alt="LT-writing "></div>
+                        <div class="item"><img src="{% static 'assets/images/banner6.png' %}" class="img-fluid"
+                                               alt="LT-writing "></div>
                     </div>
                 </div>
             </div>
@@ -453,31 +457,31 @@
     </section>
 
 
-<section>
-    
-  <div class="bg-gray-100 flex items-center justify-center">
-    <div class="bg-white p-7 rounded-lg shadow-lg" data-aos="zoom-in-up"
-    data-aos-duration="1000"
-    data-aos-delay="200">
-        <form class="flex flex-wrap gap-4 justify-center items-center">
-            <input type="text" name="name" placeholder="Name" class="input-border-focus flex-1 min-w-[140px] px-4 py-2 border rounded border-gray-300 focus:outline-none focus:ring focus:border-blue-300">
-            <input type="email" name="email" placeholder="Email" class="input-border-focus flex-1 min-w-[140px] px-4 py-2 border rounded border-gray-300 focus:outline-none focus:ring focus:border-blue-300">
-            <input type="tel" name="phone" placeholder="Number" class="input-border-focus flex-1 min-w-[140px] px-4 py-2 border rounded border-gray-300 focus:outline-none focus:ring focus:border-blue-300">
-            <button type="submit" class="btn-hover px-6 py-2 text-white bg-green-400 rounded shadow-lg hover:bg-teal-500 focus:outline-none focus:ring-2 focus:ring-teal-400 focus:ring-opacity-50">
-                LET'S START
-            </button>
-        </form>
-    </div>
-  </div>
-</section>
+    <section>
 
-
-
-
-
-
-{% include 'footer.html' %}
+        <div class="bg-gray-100 flex items-center justify-center">
+            <div class="bg-white p-7 rounded-lg shadow-lg" data-aos="zoom-in-up"
+                 data-aos-duration="1000"
+                 data-aos-delay="200">
+                <form class="flex flex-wrap gap-4 justify-center items-center">
+                    <input type="text" name="name" placeholder="Name"
+                           class="input-border-focus flex-1 min-w-[140px] px-4 py-2 border rounded border-gray-300 focus:outline-none focus:ring focus:border-blue-300">
+                    <input type="email" name="email" placeholder="Email"
+                           class="input-border-focus flex-1 min-w-[140px] px-4 py-2 border rounded border-gray-300 focus:outline-none focus:ring focus:border-blue-300">
+                    <input type="tel" name="phone" placeholder="Number"
+                           class="input-border-focus flex-1 min-w-[140px] px-4 py-2 border rounded border-gray-300 focus:outline-none focus:ring focus:border-blue-300">
+                    <button type="submit"
+                            class="btn-hover px-6 py-2 text-white bg-green-400 rounded shadow-lg hover:bg-teal-500 focus:outline-none focus:ring-2 focus:ring-teal-400 focus:ring-opacity-50">
+                        LET'S START
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+    {% include 'footer.html' %}
 </div>
+
+{% endblock %}
 
 
 
