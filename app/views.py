@@ -34,7 +34,7 @@ def contact(request):
 
 
 def all_events(request):
-    return render(request, 'all_events.html')
+    return render(request, 'all-events.html')
 
 
 def audiobook(request):
