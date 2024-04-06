@@ -185,6 +185,9 @@ body {
 .section-title-center p {
   margin: 0 auto; }
 
+  .section-title-center  {
+    padding-top: 8px; }
+
 .section-divider {
   margin-top: 20px; }
 
@@ -483,78 +486,6 @@ body {
   .rotate:hover {
       transform: rotate(360deg);
   }
-  /*flip box 
-
-  .flip-box {
-    perspective: 1000px;
-    height: 100%;
-}
-
-.flip-box-inner {
-    width: 100%;
-    height: 100%;
-    transition: transform 0.6s;
-    transform-style: preserve-3d;
-}
-
-.flip-box:hover .flip-box-inner {
-    transform: rotateY(180deg);
-}
-
-.flip-box-front,
-.flip-box-back {
-    width: 100%;
-    height: 100%;
-    backface-visibility: hidden;
-    position: absolute;
-}
-
-.flip-box-back {
-    transform: rotateY(180deg);
-    background-color: #947979;
-}
-
-
-.flip-boxx {
-  perspective: 1000px;
-  height: 100%;
-}
-
-.flip-boxx-inner {
-  width: 100%;
-  height: 100%;
-  transition: transform 0.6s;
-  transform-style: preserve-3d;
-}
-
-.flip-boxx:hover .flip-box-inner {
-  transform: rotateY(180deg);
-}
-
-.flip-boxx-front,
-.flip-boxx-back {
-  width: 100%;
-  height: 100%;
-  backface-visibility: hidden;
-  position: absolute;
-}
-
-.flip-boxx-back {
-  transform: rotateY(180deg);
-  background-color: #947979;
-}
-Change color on hover 
-
-.flip-box:hover .flip-box-front .achieve3__item {
-    background-color: #947979;} /* Change to desired color */
-    
-    .flip-box{
-      background-color: #f8f9fa; /* Example background color */
-      border: 1px solid #dee2e6; /* Example border */
-      padding: 20px; /* Example padding */
-      margin-bottom: 20px; /* Example margin */
-      min-height: 200px; /* Example minimum height */
-    }
 
 .not-found h1 {
   font-size: 150px;
@@ -2923,19 +2854,31 @@ body {
     .theme-dark .ask.bg-one .no-question-found {
       background-color: var(--color-dark-primary); }
 
+
+      
       .card-container {
         display: flex;
         justify-content: center;
-        margin-top: 20px; /* Add margin at the top */
-      }
-      .card {
+        flex-wrap: wrap;
+        margin-top: 20px;
+    }
+    
+    .card {
         width: 270px;
         height: 200px;
         perspective: 1000px;
         border-radius: 10px;
-        margin: 20px;
+        margin: 0 10px 20px 10px; /* Add margin to the right and bottom of each card */
         box-shadow: -20px 7px 18px -7px rgba(87, 184, 151, .09), 0 0 40px #00000026;
-      }
+    }
+    
+    @media (max-width: 768px) {
+        .card {
+            width: calc(50% - 20px); /* Adjust width for smaller screens */
+        }
+    }
+    
+    
       .card-inner {
         width: 100%;
         height: 100%;
@@ -2979,74 +2922,5 @@ body {
     width: calc(50% - 40px); /* Adjust width for smaller screens */
     margin: 10px;
   }
-}
-
-
-.dropdown-menu ul {
-  list-style: none;
-  padding: 0;
-}
-
-.dropdown-menu.show {
-  display: flex !important;
-}
-
-.dropdown-menu li .dropdown-item {
-  color: whitesmoke;
-  font-size: 1em;
-  padding: 0.5em 1em;
-}
-
-.dropdown-menu {
-  border: none;
-  border-radius: 5px;
-  padding: 0.7em;
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
-  background-color: #6e5c5c;
-}
-
-@media only screen and (min-width: 992px) {
-  .dropdown:hover .dropdown-menu {
-    display: flex !important;
-  }
-  .dropdown-menu.show {
-    display: flex !important;
-  }
-}
-
-.navbar-dark .navbar-nav a.nav-link {
-  color: #010101;
-  font-size: 1.1em;
-}
-
-.navbar-dark .navbar-nav .nav-link:hover {
-  color: #ffffff; /* Font color when link is hovered over */
-  background-color: #c27b7f; /* Background color when link is hovered over */
-  border-radius: 5px;
-  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
-}
-
-
-
-@media only screen and (max-width: 992px) {
-  .dropdown:hover .dropdown-menu {
-    max-height: 350px;
-    overflow-y: scroll;
-  }
-}
-
-.navbar-dark .navbar-nav .nav-link.active {
-  color: #c27b7f; /* Font color when link is active */
-}
-
-.dropdown-menu a.dropdown-item:hover {
-  color: #ffffff; /* Font color when dropdown item is hovered over */
-  background-color: #c27b7f; /* Background color when dropdown item is hovered over */
-  border-radius: 5px;
-  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
-}
-
-.navbar-brand {
-  max-width: 50px; /* Adjust the max-width as needed */
 }
 
