@@ -199,7 +199,8 @@ body {
   border-color: #c27b7f;
   opacity: 0.4;
   position: relative;
-  display: inline-block; }
+  display: inline-block; 
+}
 
 .divider-traingle:before {
   position: absolute;
@@ -502,8 +503,8 @@ blockquote {
     
 
 .hero__padding {
-  padding-top: 180px;
-  padding-bottom: 100px; }
+  padding-top: 80px;
+  padding-bottom: 8px; }
 
 .hero__content {
   z-index: 9; }

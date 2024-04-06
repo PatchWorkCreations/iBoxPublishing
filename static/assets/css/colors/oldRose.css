@@ -5,8 +5,7 @@
 }
 
 ::selection,
-.divider-traingle:before,
-.divider-traingle:after,
+
 .menu > .nav-item a::after,
 .button,
 .button__primary::before,
@@ -119,7 +118,7 @@
 .hero__author--inner3--wrapper::before,
 blockquote,
 .testi-row .testi-card__user-info, .hero__images3::after, .circle {
-  border-color: var(--primary);
+  border-color: var(--secondary) !important;
 }
 
 .contact-form-box input:focus,

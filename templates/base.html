@@ -75,4 +75,41 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     
 </body>
+
+<style>
+    /* You may need to adjust z-index and other properties if the second button overlaps with other content */
+.rectangle {
+    border-radius: 10px;
+    padding: 20px; /* Reduced padding for smaller screens */
+    max-width: 100%; /* Adjusted max-width for smaller screens */
+    margin: 20px auto; /* Centered the rectangle */
+    box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.1); /* Shadow effect with all around */
+    max-height: none; /* Removed max-height for responsiveness */
+}
+
+.rectangle form input[type="text"],
+.rectangle form input[type="email"] {
+    font-size: 16px; /* Reduced font size for smaller screens */
+}
+
+.rectangle form .btn {
+    font-size: 16px; /* Reduced button font size for smaller screens */
+}
+
+@media (min-width: 768px) {
+    .rectangle {
+        padding: 30px; /* Increased padding for larger screens */
+        max-width: 900px; /* Restored max-width for larger screens */
+    }
+
+    .rectangle form input[type="text"],
+    .rectangle form input[type="email"] {
+        font-size: 20px; /* Restored font size for larger screens */
+    }
+
+    .rectangle form .btn {
+        font-size: 20px; /* Restored button font size for larger screens */
+    }
+}
+</style>
 </html>
