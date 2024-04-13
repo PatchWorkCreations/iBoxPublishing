@@ -267,6 +267,24 @@
 /* You may need to adjust z-index and other properties if the second button overlaps with other content */
 
 
+#formContainer {
+    position: fixed;
+    top: 50%;  /* Center vertically */
+    right: 0;  /* Align to the right side of the window */
+    transform: translateY(-50%); /* Center vertically */
+    width: 300px; /* Width of the form */
+    display: none; /* Initially hide the form */
+    transition: right 0.5s ease; /* Smooth transition for sliding effect */
+    z-index: 1000; /* Ensure it's above other content */
+}
+
+#formContainer.show {
+    display: block;
+    right: 20px; /* Space from the right edge */
+}
+
+
+
 
 </style>
 
@@ -297,11 +315,32 @@
 
 
 <div class="floatbutton">
-    <div class="clickbutton">
+    <div class="clickbutton" id="toggleButton">
         <p class="content2">LETS GET STARTED</p></div>
     <div class="crossbar"></div>
 </div>
 
+<section id="formContainer" style="display:none;"> <!-- Initially hide the form -->
+    <div class="bg-gray-100 flex items-center justify-center">
+        <div class="bg-white p-7 rounded-lg shadow-lg">
+            <p style="font-size: 20px;">Sign up now and get started</p>
+            <form method="post" class="mt-2">
+                <input type="name" class="form-control" placeholder="Enter your name">
+                <br>
+                <input type="email" class="form-control" placeholder="Enter your email">
+                <br>
+                <input type="phone" class="form-control" placeholder="Enter your contact">
+                <br>
+                <textarea type="name" class="form-control" placeholder="Talk about your project"></textarea>
+                <br>
+                <div class="d-grid">
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </div>
+            </form>
+
+        </div>
+    </div>
+</section>
 
 </div>
 
@@ -355,11 +394,56 @@
                         </div>
                     </div>
                     <div class="button-container">
-                        <a href="#" class="chat-now" style="margin-top: 30px;">CHAT NOW</a>
-                        <a href="#" class="get-a-quote" style="margin-top: 30px;">GET A QUOTE</a>
+                        <button type="button" class="chat-now" data-bs-toggle="modal" data-bs-target="#chatNowModal"
+                           style="margin-top: 30px;">CHAT NOW</button>
+                        <button type="button" class="get-a-quote" data-bs-toggle="modal"
+                           data-bs-target="#getAQuoteModal" style="margin-top: 30px;">GET A QUOTE</button>
                         <a href="#" class="contact-us-now" style="margin-top: 30px;">CONTACT US NOW</a>
                     </div>
 
+                    <!-- Chat Now Modal -->
+                    <div class="modal fade" id="chatNowModal" tabindex="-1" aria-labelledby="chatNowModalLabel"
+                         aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="chatNowModalLabel">Modal title</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                            aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    ...
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close
+                                    </button>
+                                    <button type="button" class="btn btn-primary">Save changes</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--  Get a Quote Modal -->
+                    <div class="modal fade" id="getAQuoteModal" tabindex="-1" aria-labelledby="getAQuoteModalLabel"
+                         aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="getAQuoteModalLabel">Modal title</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                            aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    ...
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close
+                                    </button>
+                                    <button type="button" class="btn btn-primary">Save changes</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
                 </div>
                 <div class="col-md-5 text-center" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="850">
@@ -2019,6 +2103,20 @@
 
         {% include 'footer.html' %}
 </div>
+
+
+<script>
+document.getElementById("toggleButton").addEventListener("click", function() {
+    var formContainer = document.getElementById("formContainer");
+    if (formContainer.style.display === "none" || formContainer.style.display === "") {
+        formContainer.style.display = "block";
+    } else {
+        formContainer.style.display = "none";
+    }
+});
+
+
+</script>
 
 
 {% endblock %}
