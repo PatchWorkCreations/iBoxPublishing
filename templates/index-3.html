@@ -405,22 +405,29 @@
 
     <section>
 
-        <div class="bg-gray-100 flex items-center justify-center">
-            <div class="bg-white p-7 rounded-lg shadow-lg">
-                <form class="flex flex-wrap gap-4 justify-center items-center">
-                    <input type="text" name="name" placeholder="Name"
-                           class="input-border-focus flex-1 min-w-[140px] px-4 py-2 border rounded border-gray-300 focus:outline-none focus:ring focus:border-blue-300">
-                    <input type="email" name="email" placeholder="Email"
-                           class="input-border-focus flex-1 min-w-[140px] px-4 py-2 border rounded border-gray-300 focus:outline-none focus:ring focus:border-blue-300">
-                    <input type="tel" name="phone" placeholder="Number"
-                           class="input-border-focus flex-1 min-w-[140px] px-4 py-2 border rounded border-gray-300 focus:outline-none focus:ring focus:border-blue-300">
-                    <button type="submit"
-                            class="btn-hover px-6 py-2 text-white bg-green-400 rounded shadow-lg hover:bg-teal-500 focus:outline-none focus:ring-2 focus:ring-teal-400 focus:ring-opacity-50">
-                        LET'S START
-                    </button>
+        <div class="container">
+            <div class="rectangle bg-white" data-aos="fade-up"
+            data-aos-duration="1000"
+            data-aos-delay="150">
+                <form>
+                    <div class="form-row align-items-center">
+                        <div class="col">
+                            <input type="text" class="form-control form-control-lg" id="name" placeholder="Name">
+                        </div>
+                        <div class="col">
+                            <input type="email" class="form-control form-control-lg" id="email" placeholder="Email">
+                        </div>
+                        <div class="col">
+                            <input type="text" class="form-control form-control-lg" id="number" placeholder="Number">
+                        </div>
+                        <div class="col">
+                            <button type="submit" class="btn btn-success btn-lg">Let's Start</button>
+                        </div>
+                    </div>
                 </form>
             </div>
         </div>
+        
     </section>
 
 
@@ -649,7 +656,7 @@
                     <meta charset="UTF-8">
                     <meta name="viewport" content="width=device-width, initial-scale=1.0">
                     <title>Book Genres</title>
-                    <script src="https://cdn.tailwindcss.com"></script>
+                    
 
                     <body class="bg-gray-100">
                     <div class="container mx-auto px-4 py-8">

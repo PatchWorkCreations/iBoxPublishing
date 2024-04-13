@@ -260,9 +260,47 @@
 }
 
 /* You may need to adjust z-index and other properties if the second button overlaps with other content */
+.rectangle {
+    border-radius: 10px;
+    padding: 20px; /* Reduced padding for smaller screens */
+    max-width: 100%; /* Adjusted max-width for smaller screens */
+    margin: 20px auto; /* Centered the rectangle */
+    box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.1); /* Shadow effect with all around */
+    max-height: none; /* Removed max-height for responsiveness */
+}
 
+.rectangle form input[type="text"],
+.rectangle form input[type="email"] {
+    font-size: 16px; /* Reduced font size for smaller screens */
+}
 
+.rectangle form .btn {
+    font-size: 16px; /* Reduced button font size for smaller screens */
+}
 
+@media (min-width: 768px) {
+    .rectangle {
+        padding: 30px; /* Increased padding for larger screens */
+        max-width: 900px; /* Restored max-width for larger screens */
+    }
+
+    .rectangle form input[type="text"],
+    .rectangle form input[type="email"] {
+        font-size: 20px; /* Restored font size for larger screens */
+    }
+
+    .rectangle form .btn {
+        font-size: 20px; /* Restored button font size for larger screens */
+    }
+}
+
+section.position-relative h2.display-2.font-weight-bold {
+            color: white !important;
+        }
+
+        .custom-h2 {
+        font-size: 1.8rem; /* Adjust the font size as per your preference */
+    }
 </style>
 
 
@@ -309,71 +347,29 @@
     {% include 'header.html' %}
 
 
-    <!-- ========== Hero section start ========== -->
-    <section class="relative block h-screen">
-        <div class="absolute top-0 w-full h-full z-0"
-             data-aos="fade-up"
-             data-aos-duration="1000"
-             data-aos-delay="150">
-            <div class="bg-center bg-no-repeat bg-cover h-full"
-                 style="background-image: url({% static 'assets/images/contact.jpg' %});">
-                <!-- Add an overlay to the image to make the text stand out -->
-                <span id="blackOverlay" class="w-full h-full absolute opacity-50 bg-black"></span>
-                <div class="absolute inset-0 flex justify-center items-center">
-                    <div class="text-white text-center"
-                         data-aos="fade-up"
-                         data-aos-duration="1000"
-                         data-aos-delay="150">
-                        <h2 class="text-5xl font-semibold text-white">CONTACT US</h2>
-                        <div class="w-16 h-1 bg-white inline-block my-4"></div>
-
-
-                        <!-- Additional content can go here -->
-                    </div>
+<!-- Hero section start -->
+<section class="position-relative" style="height: 80vh;">
+    <div class="position-absolute top-0 w-100 h-100" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="150">
+        <div class="bg-center bg-no-repeat bg-cover h-100" style="background-image: url(/static/assets/images/contact.jpg);">
+            <!-- Add an overlay to the image to make the text stand out -->
+            <div class="position-absolute w-100 h-100 bg-black opacity-50"></div>
+            <div class="position-absolute top-50 start-50 translate-middle text-white" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="150">
+                <div class="text-center">
+                    <h2 class="display-2 font-weight-bold" style="color: white;">CONTACT US</h2>
+                    <div class="w-25 bg-white my-4 mx-auto"></div>
+                    <!-- Additional content can go here -->
                 </div>
             </div>
         </div>
+    </div>
+    <svg class="position-absolute bottom-0 overflow-hidden" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" version="1.1" viewBox="0 0 2560 100" style="height: 70px;">
+        <polygon class="text-gray-300 fill-current" points="2560 0 2560 100 0 100"></polygon>
+    </svg>
+</section>
 
-        <svg class="absolute bottom-0 overflow-hidden z-0" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none"
-             version="1.1" viewBox="0 0 2560 100" x="0" y="0" style="height: 70px;">
-            <polygon class="text-gray-300 fill-current" points="2560 0 2560 100 0 100"></polygon>
-        </svg>
-    </section>
 
-    <!-- End of Contact Us Section -->
+<!-- End of Hero section -->
 
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-          theme: {
-            extend: {
-              colors: {
-                teal: {
-                  500: '#64ffda',
-                }
-              }
-            }
-          }
-        }
-
-    </script>
-    <!-- End of Contact Us Section -->
-
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-          theme: {
-            extend: {
-              colors: {
-                teal: {
-                  500: '#64ffda',
-                }
-              }
-            }
-          }
-        }
-
-    </script>
     <!-- ========== Hero section end ========== -->
 
     <!-- Banner Logo Start -->
@@ -402,26 +398,31 @@
     </section>
 
 
-    <section>
+    <section class=" bg-one">
 
-        <div class="bg-gray-100 flex items-center justify-center">
-            <div class="bg-white p-7 rounded-lg shadow-lg" data-aos="zoom-in-up"
-                 data-aos-duration="1000"
-                 data-aos-delay="200">
-                <form class="flex flex-wrap gap-4 justify-center items-center">
-                    <input type="text" name="name" placeholder="Name"
-                           class="input-border-focus flex-1 min-w-[140px] px-4 py-2 border rounded border-gray-300 focus:outline-none focus:ring focus:border-green-300">
-                    <input type="email" name="email" placeholder="Email"
-                           class="input-border-focus flex-1 min-w-[140px] px-4 py-2 border rounded border-gray-300 focus:outline-none focus:ring focus:border-green-300">
-                    <input type="tel" name="phone" placeholder="Number"
-                           class="input-border-focus flex-1 min-w-[140px] px-4 py-2 border rounded border-gray-300 focus:outline-none focus:ring focus:border-green-300">
-                    <button type="submit"
-                            class="btn-hover px-6 py-2 text-white bg-green-400 rounded shadow-lg hover:bg-green-500 focus:outline-none focus:ring-2 focus:ring-teal-400 focus:ring-opacity-50">
-                        LET'S START
-                    </button>
+        <div class="container">
+            <div class="rectangle bg-white" data-aos="fade-up"
+            data-aos-duration="1000"
+            data-aos-delay="150">
+                <form>
+                    <div class="form-row align-items-center">
+                        <div class="col">
+                            <input type="text" class="form-control form-control-lg" id="name" placeholder="Name">
+                        </div>
+                        <div class="col">
+                            <input type="email" class="form-control form-control-lg" id="email" placeholder="Email">
+                        </div>
+                        <div class="col">
+                            <input type="text" class="form-control form-control-lg" id="number" placeholder="Number">
+                        </div>
+                        <div class="col">
+                            <button type="submit" class="btn btn-success btn-lg">Let's Start</button>
+                        </div>
+                    </div>
                 </form>
             </div>
         </div>
+        
     </section>
 
     <!-- ========== Contact section start ========== -->
@@ -437,14 +438,14 @@
                 >Contact Us</span
                 >
                         <h2
-                                class="display-6"
+                                class="display-6 custom-h2"
                                 data-aos="zoom-in-up"
                                 data-aos-duration="1000"
                                 data-aos-delay="200"
                         >
                             Write Your Dream Book with Us!
                         </h2>
-                        <h2
+                        <h4
                                 data-aos="zoom-in-up"
                                 data-aos-duration="1000"
                                 data-aos-delay="250"
