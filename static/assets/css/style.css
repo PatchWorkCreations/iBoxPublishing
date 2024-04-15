@@ -2865,6 +2865,7 @@ body {
     }
     
     .card {
+        position: center;
         width: 270px;
         height: 200px;
         perspective: 1000px;
@@ -2874,10 +2875,18 @@ body {
     }
     
     @media (max-width: 768px) {
-        .card {
-            width: calc(50% - 20px); /* Adjust width for smaller screens */
-        }
-    }
+      .card-container {
+          display: flex;
+          justify-content: center; /* Center the cards horizontally */
+          gap: 20px; /* Add some space between the cards */
+      }
+  
+      .card {
+          width: calc(50% - 20px); /* Adjust width for smaller screens */
+      }
+  }
+  
+  
     
     
       .card-inner {
@@ -2891,7 +2900,7 @@ body {
       }
       .card-front, .card-back {
         box-shadow: 0 8px 14px 0 rgba(0,0,0,0.2);
-        position: absolute;
+        position: center;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -2901,7 +2910,7 @@ body {
         -webkit-backface-visibility: hidden;
         backface-visibility: hidden;
         border: 1px solid rgb(115, 94, 94);
-        border-radius: 1rem;
+        border-radius: 0rem;
         padding: 20px;
         background: linear-gradient(120deg, rgb(196, 160, 160) 60%, rgb(255, 231, 222) 88%, rgb(255, 211, 195) 40%, rgba(255, 212, 212, 0.603) 48%);
         color: whitesmoke;
@@ -2914,14 +2923,17 @@ body {
      /* Media query for smaller screens */
 @media (max-width: 768px) {
   .card-container {
+    position: center;
     flex-wrap: wrap; /* Allow cards to wrap to next row */
     justify-content: center; /* Center elements horizontally */
     align-items: center; /* Center elements vertically */
     margin-top: 10px; /* Decrease margin at the top */
   }
   .card {
-    width: calc(50% - 40px); /* Adjust width for smaller screens */
+    width: calc(50% - 50px); /* Adjust width for smaller screens */
     margin: 10px;
+    position: center;
+    justify-content: center;
   }
 }
 

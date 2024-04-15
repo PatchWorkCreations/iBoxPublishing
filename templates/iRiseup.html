@@ -116,7 +116,7 @@
     .floatbutton {
       position: fixed;
       right: 0px;
-      bottom: 200px;
+      bottom: 100px;
       z-index: 9999;
 
     }
@@ -145,7 +145,9 @@
 
     .content2 {
   position: absolute;
+  text-align: center;
   top: 50%;
+  bottom: 50%;
   left: 50%;
   transform: translate(-50%, -50%) rotate(-90deg);
   white-space: nowrap;
@@ -164,8 +166,8 @@
 
 .floating-btn {
   position: fixed;
-  top: 20%;
-  right: 20px; /* Adjust right positioning */
+  top: 30%;
+  right: 15px; /* Adjust right positioning */
   transform: translateY(-50%);
   width: 230px; /* Adjust width */
   height: 70px; /* Adjust height */
@@ -190,6 +192,7 @@
   position: absolute;
   right: 130px;
   left:10px;
+  text-align: center;
 }
 .logobox {
   width: 60px; /* Adjust logo width */
@@ -204,10 +207,12 @@
   background-color: #F3E9D2;
   padding: 20px;
   display: none;
+  text-align: center ;
 }
 
 .floating-btn:hover .floating-content {
   display: block; /* Show content on hover */
+  text-align: center;
 }
 
 .floating-btn:hover {
@@ -224,11 +229,12 @@
 /* Second Floating Button */
 .floating-btn-2 {
   position: fixed;/* Adjust positioning */
-  top: 32%; /* Adjust top positioning */
+  top: 42%; /* Adjust top positioning */
   right: 20px; /* Adjust right positioning */
   padding: 0px;
   font-weight: bold;
   color: #D9BF77;
+  text-align: center;
 }
 
 /* You can customize the styles for the second button as needed */
@@ -244,6 +250,7 @@
   background-color: #F3E9D2;
   padding: 20px;
   display: none;
+  text-align: center;
 }
 
 /* You may need to adjust z-index and other properties if the second button overlaps with other content */
@@ -276,10 +283,10 @@
     <div class="logo-container">
         <img src="{% static 'assets/images/chatlogo10.png' %}" alt="Logo" class="logobox">
     </div>
-    <div class="floating-content">
+    <div class="floating-content ">
         <!-- Content to display when hovered -->
-        <p> | CHAT US NOW</p>
-        <p></p>
+        <a href="">| CHAT NOW</a>
+        
     </div>
 </div>
 
@@ -305,7 +312,7 @@
 
 <section id="formContainer" style="display:none;"> <!-- Initially hide the form -->
     <div class="bg-gray-100 flex items-center justify-center">
-        <div class="bg-white p-7 rounded-lg shadow-lg">
+        <div class="bg-white p-10 rounded-lg shadow-lg">
             <p style="font-size: 20px;">Sign up now and get started</p>
             <form method="post" class="mt-2">
                 <input type="name" class="form-control" placeholder="Enter your name">
@@ -604,76 +611,78 @@
         </div>
 
         <div class="container">
-            <div class="row card-container">
-              <div class="col-md-3">
-                <div class="card">
-                  <div class="card-inner">
-                    <div class="card-front text-center">
-                      <h3 class="title text-white text-sm font-semibold mt-2 mb-3">Order Details & Outline</h3>
-                      <p class="text-white text-sm mt-2 mb-4">________</p>
+            <div class="row card-container justify-content-center">
+                <div class="col-lg-3 col-md-6 ">
+                    <div class="card">
+                        <div class="card-inner">
+                            <div class="card-front text-center">
+                                <h3 class="title text-white text-sm font-semibold mt-2 mb-3">Order Details & Outline</h3>
+                                <p class="text-white text-sm mt-2 mb-4">________</p>
+                            </div>
+                            <div class="card-back text-center">
+                                <h3 class="title text-white font-bold" style="font-size: 20px;">"Call us now and give us the details of your
+                                    book. Our experts will create an outline accordingly."</h3>
+                                <a href="https://example.com">Learn More</a>
+                            </div>
+                        </div>
                     </div>
-                    <div class="card-back text-center">
-                        <h3 class="title text-white font-bold" style="font-size: 20px;">"Call us now and give us the details of your
-                            book. Our experts will create an outline accordingly."</h3>                                              
-                      <a href="https://example.com">Learn More</a>
-                    </div>
-                  </div>
                 </div>
-              </div>
-              <div class="col-md-3">
-                <div class="card">
-                  <div class="card-inner">
-                    <div class="card-front text-center">
-                      <h3 class="title text-white text-sm font-semibold mt-2 mb-3">Chapters Delivery</h3>
-                      <p class="text-white text-sm mt-2 mb-4">________</p>
+                <div class="col-lg-3 col-md-6">
+                    <div class="card">
+                        <div class="card-inner">
+                            <div class="card-front text-center">
+                                <h3 class="title text-white text-sm font-semibold mt-2 mb-3">Chapters Delivery</h3>
+                                <p class="text-white text-sm mt-2 mb-4">________</p>
+                            </div>
+                            <div class="card-back text-center">
+                                <h3 class="title text-white font-bold" style="font-size: 20px;">"Next, we will begin drafting the chapters as
+                                    per the outline, and send them to you for feedback."</h3>
+                                <a href="https://example.com">Learn More</a>
+                            </div>
+                        </div>
                     </div>
-                    <div class="card-back text-center">
-                      <h3 class="title text-white font-bold" style="font-size: 20px;">"Next, we will begin drafting the chapters as
-                        per the outline, and send them to you for feedback."</h3>
-                      <a href="https://example.com">Learn More</a>
-                    </div>
-                  </div>
                 </div>
-              </div>
-              <div class="col-md-3">
-                <div class="card">
-                  <div class="card-inner">
-                    <div class="card-front text-center">
-                      <h3 class="title text-white text-sm font-semibold mt-2 mb-3">Feedback & Approval</h3>
-                      <p class="text-white text-sm mt-2 mb-4">________</p>
+                <div class="col-lg-3 col-md-6">
+                    <div class="card">
+                        <div class="card-inner">
+                            <div class="card-front text-center">
+                                <h3 class="title text-white text-sm font-semibold mt-2 mb-3">Feedback & Approval</h3>
+                                <p class="text-white text-sm mt-2 mb-4">________</p>
+                            </div>
+                            <div class="card-back text-center">
+                                <h3 class="title text-white font-bold" style="font-size: 20px;">"Our book writers will cater to your comments
+                                    and feedback and revise the content accordingly."</h3>
+                                <a href="https://example.com">Learn More</a>
+                            </div>
+                        </div>
                     </div>
-                    <div class="card-back text-center">
-                      <h3 class="title text-white font-bold" style="font-size: 20px;">"Our book writers will cater to your comments
-                        and feedback and revise the content accordingly."</h3>
-                      <a href="https://example.com">Learn More</a>
-                    </div>
-                  </div>
                 </div>
-              </div>
-              <div class="col-md-3">
-                <div class="card">
-                  <div class="card-inner">
-                    <div class="card-front text-center">
-                      <h3 class="title text-white text-sm font-semibold mt-2 mb-3">Publication</h3>
-                      <p class="text-white text-sm mt-2 mb-4">________</p>
+                <div class="col-lg-3 col-md-6">
+                    <div class="card">
+                        <div class="card-inner">
+                            <div class="card-front text-center">
+                                <h3 class="title text-white text-sm font-semibold mt-2 mb-3">Publication</h3>
+                                <p class="text-white text-sm mt-2 mb-4">________</p>
+                            </div>
+                            <div class="card-back text-center">
+                                <h3 class="title text-white font-bold" style="font-size: 20px;">"iRiseup will then publish the book & promote
+                                    it to boost sales."</h3>
+                                <a href="https://example.com">Learn More</a>
+                            </div>
+                        </div>
                     </div>
-                    <div class="card-back text-center">
-                      <h3 class="title text-white font-bold" style="font-size: 20px;">"iRiseup will then publish the book & promote
-                        it to boost sales."</h3>
-                      <a href="https://example.com">Learn More</a>
-                    </div>
-                  </div>
                 </div>
-              </div>
             </div>
-          </div>
+        </div>
+        
+        
         
 
         <!-- ========== Chapter section start ========== -->
         <section id="chapters" class="section-padding chapter bg-one">
             <div class="container">
                 <div class="row">
-                    <div class="col-xl-6 offset-xl-3 col-lg-10 offset-lg-1">
+                    <div class="col-xl-6 offset-xl-3 col-lg-5 offset-lg-1">
                         <div class="section-title-center text-center">
                 <span
                         data-aos="fade-up"
@@ -703,7 +712,9 @@
                         <!-- Fiction -->
                         <div class="col-md-3">
                             <div class="flex flex-col items-center">
+                                <div class="d-flex justify-content-center">
                                 <img src="{% static 'fiction.png' %}" alt="Placeholder image for the book 'Three Cowboys Baby' by Kate Pearce" class="mb-4">
+                            </div>
                                 <h2 class="text-xl font-bold mb-2 text-center">Fiction</h2>
                                 <p class="text-gray-600 text-center">Unleash your plot's potential with our online book writers. Elevate your story with our expertise!</p>
                             </div>
@@ -712,7 +723,9 @@
                         <!-- Nonfiction -->
                         <div class="col-md-3">
                             <div class="flex flex-col items-center">
+                                <div class="d-flex justify-content-center">
                                 <img src="{% static 'nonfiction.png' %}" alt="Placeholder image for the book 'Essays 2023' by Alexander Chee" class="mb-4">
+                            </div>
                                 <h2 class="text-xl font-bold mb-2 text-center">Nonfiction</h2>
                                 <p class="text-gray-600 text-center">Partner with our top nonfiction writers to bring your ideas to life! Contact us today!</p>
                             </div>
@@ -721,7 +734,9 @@
                         <!-- Fantasy -->
                         <div class="col-md-3">
                             <div class="flex flex-col items-center">
+                                <div class="d-flex justify-content-center">
                                 <img src="{% static 'fantasy.png' %}" alt="Placeholder image for the fantasy book" class="mb-4">
+                            </div>
                                 <h2 class="text-xl font-bold mb-2 text-center">Fantasy</h2>
                                 <p class="text-gray-600 text-center">Writing's tough! Let our fantasy wizards create captivating tales. Get in touch!</p>
                             </div>
@@ -730,16 +745,21 @@
                         <!-- Autobiography -->
                         <div class="col-md-3">
                             <div class="flex flex-col items-center">
-                                <img src="{% static 'autobiography.png' %}" alt="Placeholder image for the book 'The Secret Lives of Royal Women'" class="mb-4">
+                                <div class="d-flex justify-content-center"> <!-- Center the image horizontally -->
+                                    <img src="{% static 'autobiography.png' %}" alt="Placeholder image for the book 'The Secret Lives of Royal Women'" class="mb-4">
+                                </div>
                                 <h2 class="text-xl font-bold mb-2 text-center">Autobiography</h2>
                                 <p class="text-gray-600 text-center">Seeking to inspire others with your life story? Let iRise Up Publisher make it happen for you! Reach out today!</p>
                             </div>
                         </div>
+                        
                 
                         <!-- Memoirs -->
                         <div class="col-md-3">
                             <div class="flex flex-col items-center">
+                                <div class="d-flex justify-content-center">
                                 <img src="{% static 'memoirs.png' %}" alt="Placeholder image for the book 'Anxiously Ever After' by Clint Edwards" class="mb-4">
+                            </div>
                                 <h2 class="text-xl font-bold mb-2 text-center">Memoirs</h2>
                                 <p class="text-gray-600 text-center">Crafting memoirs? Consult with our experts today!</p>
                             </div>
@@ -748,7 +768,9 @@
                         <!-- Children's Book -->
                         <div class="col-md-3">
                             <div class="flex flex-col items-center">
+                                <div class="d-flex justify-content-center">
                                 <img src="{% static 'childrensbook.png' %}" alt="Placeholder image for the children's book 'ABC Dot-to-Dots'" class="mb-4">
+                            </div>
                                 <h2 class="text-xl font-bold mb-2 text-center">Children's Book</h2>
                                 <p class="text-gray-600 text-center">iRiseup crafts captivating children's books.</p>
                             </div>
@@ -757,7 +779,9 @@
                         <!-- Self-Help -->
                         <div class="col-md-3">
                             <div class="flex flex-col items-center">
+                                <div class="d-flex justify-content-center">
                                 <img src="{% static 'selfhelp.png' %}" alt="Placeholder image for the self-help book 'Grief Therapy'" class="mb-4">
+                            </div>
                                 <h2 class="text-xl font-bold mb-2 text-center">Self-Help</h2>
                                 <p class="text-gray-600 text-center">Unlock self-help strategies for a better world.</p>
                             </div>
@@ -766,7 +790,9 @@
                         <!-- Research-Based -->
                         <div class="col-md-3">
                             <div class="flex flex-col items-center">
+                                <div class="d-flex justify-content-center">
                                 <img src="{% static 'researchbased.png' %}" alt="Placeholder image for the research-based book 'Documentary Narrative Film'" class="mb-4">
+                            </div>
                                 <h2 class="text-xl font-bold mb-2 text-center">Research-Based</h2>
                                 <p class="text-gray-600 text-center">Ready to publish your research? We're here to assist! Contact us.</p>
                             </div>
