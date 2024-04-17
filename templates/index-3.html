@@ -181,7 +181,8 @@
                     </div>
                     <div class="button-container">
                         <a href="#" class="chat-now" style="margin-top: 30px;">CHAT NOW</a>
-                        <a href="#" class="get-a-quote" style="margin-top: 30px;">GET A QUOTE</a>
+                        <a href="#" class="get-a-quote" style="margin-top: 30px;" onclick="openModal()"
+                        >GET A QUOTE</a>
                         <a href="#" class="contact-us-now" style="margin-top: 30px;">CONTACT US NOW</a>
                     </div>
 
@@ -306,9 +307,9 @@
                             now!
                         </p>
 
-
+                        {% include 'modal.html' %}
                         <div class="button-container">
-                            <a href="#" class="get-started-btn" style="margin-bottom: 20px;">Get Started</a>
+                            <a href="#" class="get-started-btn" style="margin-bottom: 20px;" onclick="openModal()">Get Started</a>
                             <a href="#" class="live-chat-btn" style="margin-bottom: 20px;">Live Chat</a>
                         </div>
 
@@ -1355,7 +1356,8 @@
 
                         <div class="button-container flex justify-center">
                             <a href="#" class="chat-now" style="margin-top: 30px;">CHAT NOW</a>
-                            <a href="#" class="get-a-quote" style="margin-top: 30px;">GET A QUOTE</a>
+                            <a href="#" class="get-a-quote" style="margin-top: 30px;" onclick="openModal()"
+                            >GET A QUOTE</a>
                             <a href="#" class="contact-us-now" style="margin-top: 30px;">CONTACT US NOW</a>
                         </div>
 

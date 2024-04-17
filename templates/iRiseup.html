@@ -138,6 +138,7 @@
 </style>
 
 {% include 'header.html' %}
+{% include 'modal.html' %}
 
 <section id="formContainer" style="display:none;"> <!-- Initially hide the form -->
     <div class="bg-gray-100 flex items-center justify-center">
@@ -221,7 +222,7 @@
                         <button type="button" class="chat-now" data-bs-toggle="modal" data-bs-target="#chatNowModal"
                             style="margin-top: 30px;">CHAT NOW</button>
                         <button type="button" class="get-a-quote" data-bs-toggle="modal"
-                            data-bs-target="#getAQuoteModal" style="margin-top: 30px;">GET A QUOTE</button>
+                            data-bs-target="#getAQuoteModal" style="margin-top: 30px;" onclick="openModal()">GET A QUOTE</button>
                         <a href="#" class="contact-us-now" style="margin-top: 30px;">CONTACT US NOW</a>
                     </div>
                     
@@ -349,7 +350,7 @@
 
 
                         <div class="button-container">
-                            <a href="#" class="get-started-btn" style="margin-bottom: 20px;">Get Started</a>
+                            <a href="#" class="get-started-btn" style="margin-bottom: 20px;" onclick="openModal()">Get Started</a>
                             <a href="#" class="live-chat-btn" style="margin-bottom: 20px;">Live Chat</a>
                         </div>
 
@@ -1197,7 +1198,7 @@
 
                         <div class="button-container flex justify-center">
                             <a href="#" class="chat-now" style="margin-top: 30px;">CHAT NOW</a>
-                            <a href="#" class="get-a-quote" style="margin-top: 30px;">GET A QUOTE</a>
+                            <a href="#" class="get-a-quote" style="margin-top: 30px;" onclick="openModal()">GET A QUOTE</a>
                             <a href="#" class="contact-us-now" style="margin-top: 30px;">CONTACT US NOW</a>
                         </div>
 
