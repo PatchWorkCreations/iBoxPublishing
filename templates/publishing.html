@@ -190,6 +190,7 @@
 </style>
 
 {% include 'header.html' %}
+{% include 'modal.html' %}
  
 
 <div class="section-wrapper">
@@ -366,7 +367,7 @@
 
 
                         <div class="button-container">
-                            <a href="#" class="get-started-btn" style="margin-bottom: 20px;">Get Started</a>
+                            <a href="#" class="get-started-btn" style="margin-bottom: 20px;" onclick="openModal()">Get Started</a>
                             <a href="#" class="live-chat-btn" style="margin-bottom: 20px;">Live Chat</a>
                         </div>
 
@@ -474,7 +475,7 @@
                                 <p class="text-white text-sm mt-2 mb-4">________</p>
                             </div>
                             <div class="card-back text-center">
-                                <h3 class="title text-white font-bold" style="font-size: 20px;">"iRiseup will then publish the book & promote
+                                <h3 class="title text-white font-bold" style="font-size: 20px;">"i-Box Publishing will then publish the book & promote
                                     it to boost sales."</h3>
                                 
                             </div>
@@ -505,7 +506,7 @@
                                     data-aos-duration="1000"
                                     data-aos-delay="200"
                             >
-                                I RISE UP OFFERS PREMIUM BOOK WRITING SERVICES IN THE FOLLOWING GENRES
+                                i-Box Publishing OFFERS PREMIUM BOOK WRITING SERVICES IN THE FOLLOWING GENRES
                             </h2>
                             <div
                                     class="section-divider divider-traingle"
@@ -558,7 +559,7 @@
                                     <img src="{% static 'autobiography.png' %}" alt="Placeholder image for the book 'The Secret Lives of Royal Women'" class="mb-4">
                                 </div>
                                 <h2 class="text-xl font-bold mb-2 text-center">Autobiography</h2>
-                                <p class="text-gray-600 text-center">Seeking to inspire others with your life story? Let iRise Up Publisher make it happen for you! Reach out today!</p>
+                                <p class="text-gray-600 text-center">Seeking to inspire others with your life story? Let i-Box PublishingPublisher make it happen for you! Reach out today!</p>
                             </div>
                         </div>
                         
@@ -581,7 +582,7 @@
                                 <img src="{% static 'childrensbook.png' %}" alt="Placeholder image for the children's book 'ABC Dot-to-Dots'" class="mb-4">
                             </div>
                                 <h2 class="text-xl font-bold mb-2 text-center">Children's Book</h2>
-                                <p class="text-gray-600 text-center">iRiseup crafts captivating children's books.</p>
+                                <p class="text-gray-600 text-center">i-Box Publishing crafts captivating children's books.</p>
                             </div>
                         </div>
                 
@@ -647,7 +648,7 @@
                                 class="get-started-btn"
                                 data-aos="fade-up"
                                 data-aos-duration="1000"
-                                data-aos-delay="300"
+                                data-aos-delay="300" onclick="openModal()"
                         ><span>Get Started</span></a
                         >
                     </div>
@@ -734,7 +735,7 @@
                                 <div class="content__body">
                                     <h3 class="mb-4 text-center">The Beginning</h3>
                                     <p class="first-letter">
-                                        At iRiseup, we believe that every story deserves to be told in a captivating and
+                                        At i-Box Publishing, we believe that every story deserves to be told in a captivating and
                                         visually stunning manner.
                                         Our recent venture into publishing fiction books exemplifies our commitment to
                                         creativity and excellence in storytelling.
@@ -770,7 +771,7 @@
                                     <p>
                                         Join us in celebrating the power of creativity and storytelling.
                                         Dive into a world where anything is possible and let your imagination soar with
-                                        iRiseup.
+                                        i-Box Publishing.
                                     </p>
                                 </div>
                             </div>
@@ -833,7 +834,7 @@
                                     <p>
                                         Join us in celebrating the power of storytelling and the richness of the human
                                         experience. Dive into the lives of extraordinary individuals and let your
-                                        imagination soar with iRiseUp.
+                                        imagination soar with i-Box Publishing.
                                     </p>
 
                                 </div>
@@ -856,7 +857,7 @@
                                 <div class="content__body">
                                     <h3 class="mb-4 text-center">Describe Story</h3>
                                     <p class="first-letter">
-                                        At iRiseUp, we're dedicated to telling captivating stories that inspire and
+                                        At i-Box Publishing, we're dedicated to telling captivating stories that inspire and
                                         enlighten.
                                         Our recent expansion into non-fiction publishing exemplifies our commitment to
                                         excellence in storytelling. From inception to publication, our team meticulously
@@ -868,7 +869,7 @@
                                         books, from the writing to the design, captivates and engages readers.
                                         Join us in celebrating the power of knowledge and discovery. Explore our
                                         collection of non-fiction titles and embark on a journey of enlightenment with
-                                        iRiseUp.
+                                        i-Box Publishing.
                                     </p>
 
                                 </div>
@@ -891,7 +892,7 @@
                                 <div class="content__body">
                                     <h3 class="mb-4 text-center">Story Part 03</h3>
                                     <p class="first-letter">
-                                        At iRiseUp, we believe in the magic of love stories and the power they hold to
+                                        At i-Box Publishing, we believe in the magic of love stories and the power they hold to
                                         captivate hearts. Our recent venture into publishing romance novels reflects our
                                         passion for crafting tales that sweep readers off their feet.
                                     </p>
@@ -905,7 +906,7 @@
                                     </p>
                                     <p>
                                         Join us in celebrating the beauty of romance and let your heart soar with
-                                        iRiseUp.
+                                        i-Box Publishing.
                                     </p>
 
                                 </div>
@@ -928,7 +929,7 @@
                                 <div class="content__body">
                                     <h3 class="mb-4 text-center">History & Prid</h3>
                                     <p class="first-letter">
-                                        At iRiseUp, we thrive on the adrenaline rush of a good thriller, and our recent
+                                        At i-Box Publishing, we thrive on the adrenaline rush of a good thriller, and our recent
                                         foray into publishing gripping suspense novels showcases our dedication to
                                         keeping readers on the edge of their seats.
                                     </p>
@@ -941,7 +942,7 @@
                                     </p>
                                     <p>
                                         Join us in experiencing the excitement of the unknown and dive into the world of
-                                        gripping suspense with iRiseUp.
+                                        gripping suspense with i-Box Publishing.
                                     </p>
 
                                 </div>
@@ -1212,7 +1213,7 @@
 
                         <div class="button-container flex justify-center">
                             <a href="#" class="chat-now" style="margin-top: 30px;">CHAT NOW</a>
-                            <a href="#" class="get-a-quote" style="margin-top: 30px;">GET A QUOTE</a>
+                            <a href="#" class="get-a-quote" style="margin-top: 30px;" onclick="openModal()">GET A QUOTE</a>
                             <a href="#" class="contact-us-now" style="margin-top: 30px;">CONTACT US NOW</a>
                         </div>
 
@@ -1433,7 +1434,7 @@
                                             </h4>
                                             <p class="pt-2 lh-base">
                                                 "I couldn't have asked for a better publishing experience! From start to
-                                                finish, the team at I Rise Up was incredibly professional and
+                                                finish, the team at i-Box Publishing was incredibly professional and
                                                 supportive.
                                                 They guided me through every step of the process, ensuring my vision for
                                                 my book was brought to life. The final product exceeded my expectations,
@@ -1459,7 +1460,7 @@
                                                 Loyal Customer
                                             </h4>
                                             <p class="pt-2 lh-base">
-                                                "Working with I Rise Up was an absolute pleasure! As a first-time
+                                                "Working with i-Box Publishing was an absolute pleasure! As a first-time
                                                 author, I was nervous about navigating the publishing world, but their
                                                 team made it seamless.
                                                 They provided valuable feedback, excellent editing services, and took
@@ -1488,7 +1489,7 @@
                                             </h4>
                                             <p class="pt-2 lh-base">
                                                 "I've been in the writing industry for years, but I've never come across
-                                                a publishing company as dedicated and passionate as I Rise Up. Their
+                                                a publishing company as dedicated and passionate as i-Box Publishing. Their
                                                 commitment to excellence is unmatched, and it reflects in every aspect
                                                 of their work.
                                                 They treated my manuscript with the utmost care, and the end result was
@@ -1515,7 +1516,7 @@
                                             </h4>
                                             <p class="pt-2 lh-base">
                                                 "As an indie author, finding a reliable publishing partner was crucial
-                                                for me, and I hit the jackpot with I Rise Up.
+                                                for me, and I hit the jackpot with i-Box Publishing.
                                                 Their personalized approach and attention to detail set them apart from
                                                 the rest.
                                                 They took the time to understand my vision and brought it to fruition
@@ -1757,7 +1758,7 @@
                                     data-aos-duration="1000"
                                     data-aos-delay="250"
                             >
-                                At I Rise Up Publishing, we're your full-service book partner.
+                                At i-Box Publishing Publishing, we're your full-service book partner.
                                 we're here for you. Connect with us today and embark on your publishing journey!
 
                                 <div
@@ -1856,7 +1857,7 @@
                                     <span>Phone:</span><a href="tel:1124447900">112 444 7900</a>
                                 </li>
                                 <li>
-                                    <span>Email:</span><a href="#">iRiseup@support.com</a>
+                                    <span>Email:</span><a href="#">i-Box Publishing@support.com</a>
                                 </li>
                             </ul>
                             <h4>Connect book socials</h4>
