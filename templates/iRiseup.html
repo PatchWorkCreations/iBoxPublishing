@@ -352,86 +352,50 @@
         <div class="circle x4"></div>
         <div class="circle x5"></div>
         <div class="container">
-            <div class="row gx-5 align-items-left" style="margin-top: -50px;">
-                <div class="col-md-7 mb-4 mb-md-0 p-10" data-aos="zoom-in-up" data-aos-duration="1000"
+            <div class="row gx-5 align-items-center" style="margin-top: -30px;">
+                <div class="col-md-7 mb-10 mb-md-0 p-10" data-aos="zoom-in-up" data-aos-duration="1000"
                      data-aos-delay="850">
-                    <div class="hero__content position-relative">
-                        <div class="badge-text mb-2 text-uppercase">
+                    <div class="hero__content position-relative text-center">
+                        <div class="badge-text mb-2 text-uppercase font-size: 7px">
                             Let's Turn Your Ideas into Bestselling Books
                         </div>
-                        <h1 class="display-4 mb-4 text-capitalize" style="font-size: 52px;">
-                            WELCOME TO I RISE UP! ELEVATE YOUR WRITING WITH OUR BESPOKE BOOK WRITING SERVICES!
+                        <h1 class="display-4 mb-4 text-capitalize text-center" style="font-size: 60px;">
+                            WELCOME TO IRISEUP!
                         </h1>
+                        
+
+                        <h2 class="display-4 mb-4 text-capitalize text-center" style="font-size: 25px;">
+                            ELEVATE YOUR WRITING WITH OUR WRITING SERVICES!
+                        </h2>
+
+
+
                         <p class="text-muted mb-5 fs-5" style="font-size: 5px;">
                             Our bespoke book writing services are designed to cater to the unique needs of each author.
                             From brainstorming sessions and manuscript critiques to comprehensive editing and publishing
-                            support,
-                            our team of seasoned professionals is here to guide you through every stage of the writing
-                            journey.
+                            support
                     </div>
 
-                    <div class="row">
-                        <div class="col-3">
+                    <div class="row justify-content-center">
+                        <div class="col-4 text-center">
                             <img src="{% static 'assets/images/goodfirms.png' %}" class="img-fluid" alt="GoodFirms">
                         </div>
-                        <div class="col-3">
+                        <div class="col-4 text-center">
                             <img src="{% static 'assets/images/clutch.png' %}" class="img-fluid" alt="Clutch">
                         </div>
-                        <div class="col-3">
+                        <div class="col-4 text-center">
                             <img src="{% static 'assets/images/pilot.png' %}" class="img-fluid" alt="Pilot">
                         </div>
                     </div>
-                    <div class="button-container">
+                    
+                    <div class="button-container text-center justify-content-center">
                         <button type="button" class="chat-now" data-bs-toggle="modal" data-bs-target="#chatNowModal"
-                           style="margin-top: 30px;">CHAT NOW</button>
+                            style="margin-top: 30px;">CHAT NOW</button>
                         <button type="button" class="get-a-quote" data-bs-toggle="modal"
-                           data-bs-target="#getAQuoteModal" style="margin-top: 30px;">GET A QUOTE</button>
+                            data-bs-target="#getAQuoteModal" style="margin-top: 30px;">GET A QUOTE</button>
                         <a href="#" class="contact-us-now" style="margin-top: 30px;">CONTACT US NOW</a>
                     </div>
-
-                    <!-- Chat Now Modal -->
-                    <div class="modal fade" id="chatNowModal" tabindex="-1" aria-labelledby="chatNowModalLabel"
-                         aria-hidden="true">
-                        <div class="modal-dialog modal-dialog-centered">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <h5 class="modal-title" id="chatNowModalLabel">Modal title</h5>
-                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                            aria-label="Close"></button>
-                                </div>
-                                <div class="modal-body">
-                                    ...
-                                </div>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close
-                                    </button>
-                                    <button type="button" class="btn btn-primary">Save changes</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!--  Get a Quote Modal -->
-                    <div class="modal fade" id="getAQuoteModal" tabindex="-1" aria-labelledby="getAQuoteModalLabel"
-                         aria-hidden="true">
-                        <div class="modal-dialog modal-dialog-centered">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <h5 class="modal-title" id="getAQuoteModalLabel">Modal title</h5>
-                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                            aria-label="Close"></button>
-                                </div>
-                                <div class="modal-body">
-                                    ...
-                                </div>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close
-                                    </button>
-                                    <button type="button" class="btn btn-primary">Save changes</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    
 
                 </div>
                 <div class="col-md-5 text-center" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="850">
@@ -462,7 +426,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-12">
-                    <div class="owl-carousel owl-banner-logo owl-theme d-flex justify-content-center align-items-center">
+                    <div class="owl-carousel owl-banner-logo owl-theme d-flex justify-content-center align-items-center" data-visible="10">
                         <div class="item"><img src="{% static 'assets/images/banner1.png' %}" class="img-fluid"
                                                alt="LT-writing "></div>
                         <div class="item"><img src="{% static 'assets/images/banner2.png' %}" class="img-fluid"
@@ -479,8 +443,8 @@
                 </div>
             </div>
         </div>
-
     </section>
+    
 
 
     <section>
@@ -611,14 +575,15 @@
         </div>
 
         <div class="container">
-            <div class="row card-container justify-content-center">
-                <div class="col-lg-3 col-md-6 ">
+            <div class="row card-container justify-content-center mt-4">
+                <div class="col-lg-3 col-md-6 mb-4">
                     <div class="card">
                         <div class="card-inner">
                             <div class="card-front text-center">
                                 <h3 class="title text-white text-sm font-semibold mt-2 mb-3">Order Details & Outline</h3>
                                 <p class="text-white text-sm mt-2 mb-4">________</p>
                             </div>
+                        </div>
                             <div class="card-back text-center">
                                 <h3 class="title text-white font-bold" style="font-size: 20px;">"Call us now and give us the details of your
                                     book. Our experts will create an outline accordingly."</h3>
@@ -804,12 +769,12 @@
         </section>
         <!-- ========== Chapter section end ========== -->
         <!-- ========== CTA v4 section start ========== -->
-        <section class="section-padding ctav4">
+        <section class="section-padding ctav4" style="padding-top: 50px; padding-bottom: 50px;"> <!-- Adjust padding as needed -->
             <div class="container">
                 <div class="row">
-                    <div class="col-md-6 mb-4 mb-lg-0 ctav4__content">
+                    <div class="col-md-8 mb-4 mb-lg-0 ctav4__content"> <!-- Adjust column size -->
                         <h3
-                                class="display-1"
+                                class="display-4"
                                 data-aos="fade-up"
                                 data-aos-duration="1000"
                                 data-aos-delay="150"
@@ -820,18 +785,17 @@
                                 data-aos="fade-up"
                                 data-aos-duration="1000"
                                 data-aos-delay="200"
+                                style="font-size: 18px;" <!-- Adjust font size -->
                         >
                             Our book promoters and marketers can promote a book of any genre and ensure the author
-                            reaches their target audience effectively.
-                            Hire our experts today and get a chance to improve your book sales online and in bookstores!
+                            reaches their target audience effectively. Hire our experts today and get a chance to improve your book sales online and in bookstores!
                         </h3> <br>
                         <p
                                 data-aos="fade-up"
                                 data-aos-duration="1000"
                                 data-aos-delay="250"
+                                style="font-size: 16px;" <!-- Adjust font size -->
                         >
-
-
                         </p>
                         <a
                                 href="#"
@@ -839,11 +803,12 @@
                                 data-aos="fade-up"
                                 data-aos-duration="1000"
                                 data-aos-delay="300"
-                        ><span>Get Started</span></a
+                                style="font-size: 16px;" <!-- Adjust font size -->
+                        <span>Get Started</span></a
                         >
                     </div>
                     <div
-                            class="col-md-6"
+                            class="col-md-4"
                             data-aos="fade-up"
                             data-aos-duration="1000"
                             data-aos-delay="250"
@@ -867,6 +832,7 @@
                 </div>
             </div>
         </section>
+        
         <!-- ========== CTA v4 section end ========== -->
 
 
