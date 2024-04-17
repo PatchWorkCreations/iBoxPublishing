@@ -503,8 +503,15 @@ blockquote {
     
 
 .hero__padding {
-  padding-top: 80px;
+  padding-top: 20px;
   padding-bottom: 8px; }
+
+  /* Define font size for mobile view */
+@media only screen and (max-width: 767px) {
+  .mobile-font-size {
+      font-size: 10px; /* Adjust the font size as needed */
+  }
+}
 
 .hero__content {
   z-index: 9; }
