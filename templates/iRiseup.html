@@ -113,146 +113,6 @@
 
 
 
-    .floatbutton {
-      position: fixed;
-      right: 0px;
-      bottom: 100px;
-      z-index: 9999;
-
-    }
-
-    .clickbutton {
-      width: 50px;
-      height: 200px;
-      cursor: pointer;
-      border-radius: 30px 0 0 30px;
-      display: inline-block;
-      vertical-align: top;
-      color: #000000;
-      font-size: 16px;
-      font-weight: 800;
-      position: relative;
-      border: 1px solid #fff;
-      text-transform: uppercase;
-      background-color: #D9BF77;
-      box-shadow: -20px 7px 18px -7px rgba(87, 184, 151, .09), 0 0 40px #00000026;
-      transition: all 0.3s ease;
-    }
-
-    .clickbutton:hover {
-      background-color: #ffffff;
-    }
-
-    .content2 {
-  position: absolute;
-  text-align: center;
-  top: 50%;
-  bottom: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%) rotate(-90deg);
-  white-space: nowrap;
-  transform-origin: center;
-  font-style: bold;
-  bottom:87px;
-  padding: 0px;
-  
-    }
-
-    .clickbutton:hover .crossbar {
-      height: 60px;
-    }
-
-/* Add your existing CSS styles here */
-
-.floating-btn {
-  position: fixed;
-  top: 30%;
-  right: 15px; /* Adjust right positioning */
-  transform: translateY(-50%);
-  width: 230px; /* Adjust width */
-  height: 70px; /* Adjust height */
-  background-color: #D9BF77;
-  border: 2px solid #fff; /* Add border with white color */
-  border-radius: 100px; /* Adjust border-radius to make it more oblong */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  transition: width 0.3s ease-in-out, margin-right 0.3s ease-in-out; /* Adjust transition properties */
-  overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  color: #F3E9D2;
-  font-weight: bold;
-  margin-right: -180px; /* Hide half of the button */
-  z-index: 9999;
-}
-
-
-.logo-container {
-  position: absolute;
-  right: 130px;
-  left:10px;
-  text-align: center;
-}
-.logobox {
-  width: 60px; /* Adjust logo width */
-  height: auto; /* Maintain aspect ratio */
-  margin-right: 20px; /* Adjust spacing between logo and text */
-  display: flex;
-  
-}
-
-.floating-content {
-  width: 300px; /* Width of the content */
-  background-color: #F3E9D2;
-  padding: 20px;
-  display: none;
-  text-align: center ;
-}
-
-.floating-btn:hover .floating-content {
-  display: block; /* Show content on hover */
-  text-align: center;
-}
-
-.floating-btn:hover {
-  margin-right: -50px; /* Show full button on hover */
-  width: 300px; /* Adjust width on hover */
-  z-index: 99999; /* Ensure the button stays on top */
-}
-  .other-content {
-  z-index: 99999; /* Adjust as needed */
-}
-
-/* Add your existing CSS styles here */
-
-/* Second Floating Button */
-.floating-btn-2 {
-  position: fixed;/* Adjust positioning */
-  top: 42%; /* Adjust top positioning */
-  right: 20px; /* Adjust right positioning */
-  padding: 0px;
-  font-weight: bold;
-  color: #D9BF77;
-  text-align: center;
-}
-
-/* You can customize the styles for the second button as needed */
-.floating-btn-2 .logo {
-  width: 60px; /* Adjust logo width */
-  height: auto; /* Maintain aspect ratio */
-  margin-right: 20px; /* Adjust spacing between logo and text */
-  display: flex;
-}
-
-.floating-btn-2 .floating-content {
-  width: 300px; /* Width of the content */
-  background-color: #F3E9D2;
-  padding: 20px;
-  display: none;
-  text-align: center;
-}
-
 /* You may need to adjust z-index and other properties if the second button overlaps with other content */
 
 
@@ -278,37 +138,6 @@
 </style>
 
 {% include 'header.html' %}
-
-<div class="floating-btn">
-    <div class="logo-container">
-        <img src="{% static 'assets/images/chatlogo10.png' %}" alt="Logo" class="logobox">
-    </div>
-    <div class="floating-content ">
-        <!-- Content to display when hovered -->
-        <a href="">| CHAT NOW</a>
-        
-    </div>
-</div>
-
-
-<div class="floating-btn floating-btn-2">
-    <div class="logo-container">
-        <img src="{% static 'assets/images/2.png' %}" alt="Logo 2" class="logobox">
-    </div>
-
-    <div class="floating-content">
-        <!-- Content to display when hovered -->
-        <span> | Phone:</span><a href="tel:1124447900"> 112 444 7900</a>
-
-    </div>
-</div>
-
-
-<div class="floatbutton">
-    <div class="clickbutton" id="toggleButton">
-        <p class="content2">LETS GET STARTED</p></div>
-    <div class="crossbar"></div>
-</div>
 
 <section id="formContainer" style="display:none;"> <!-- Initially hide the form -->
     <div class="bg-gray-100 flex items-center justify-center">
@@ -576,18 +405,17 @@
 
         <div class="container">
             <div class="row card-container justify-content-center mt-4">
-                <div class="col-lg-3 col-md-6 mb-4">
+                <div class="col-lg-3 col-md-6">
                     <div class="card">
                         <div class="card-inner">
                             <div class="card-front text-center">
                                 <h3 class="title text-white text-sm font-semibold mt-2 mb-3">Order Details & Outline</h3>
                                 <p class="text-white text-sm mt-2 mb-4">________</p>
                             </div>
-                        </div>
                             <div class="card-back text-center">
                                 <h3 class="title text-white font-bold" style="font-size: 20px;">"Call us now and give us the details of your
                                     book. Our experts will create an outline accordingly."</h3>
-                                <a href="https://example.com">Learn More</a>
+                                
                             </div>
                         </div>
                     </div>
@@ -602,7 +430,7 @@
                             <div class="card-back text-center">
                                 <h3 class="title text-white font-bold" style="font-size: 20px;">"Next, we will begin drafting the chapters as
                                     per the outline, and send them to you for feedback."</h3>
-                                <a href="https://example.com">Learn More</a>
+                                
                             </div>
                         </div>
                     </div>
@@ -617,7 +445,7 @@
                             <div class="card-back text-center">
                                 <h3 class="title text-white font-bold" style="font-size: 20px;">"Our book writers will cater to your comments
                                     and feedback and revise the content accordingly."</h3>
-                                <a href="https://example.com">Learn More</a>
+                                
                             </div>
                         </div>
                     </div>
@@ -632,14 +460,14 @@
                             <div class="card-back text-center">
                                 <h3 class="title text-white font-bold" style="font-size: 20px;">"iRiseup will then publish the book & promote
                                     it to boost sales."</h3>
-                                <a href="https://example.com">Learn More</a>
+                                
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        
+    </section>    
         
         
 
@@ -2042,7 +1870,7 @@
         <!-- ========== Contact section end ========== -->
 
         {% include 'footer.html' %}
-</div>
+
 
 
 <script>
