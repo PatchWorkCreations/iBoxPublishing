@@ -133,7 +133,13 @@
 }
 
 
-
+.owl-carousel {
+            width: 100%;
+            float: left;
+        }
+        .owl-carousel .owl-item {
+            margin-right: 0; /* Adjust margin */
+        }
 
 </style>
 
@@ -219,7 +225,7 @@
                     </div>
                     
                     <div class="button-container text-center justify-content-center">
-                        <button type="button" class="chat-now" data-bs-toggle="modal" data-bs-target="#chatNowModal"
+                        <button type="button" class="chat-now" data-bs-toggle="modal" data-bs-target="#chatNowModal" 
                             style="margin-top: 30px;">CHAT NOW</button>
                         <button type="button" class="get-a-quote" data-bs-toggle="modal"
                             data-bs-target="#getAQuoteModal" style="margin-top: 30px;" onclick="openModal()">GET A QUOTE</button>
@@ -945,19 +951,13 @@
             <div class="container">
                 <div class="row">
                     <div class="col-12">
-                        <div class="owl-carousel owl-banner-logo owl-theme d-flex justify-content-center align-items-center">
-                            <div class="item"><img src="{% static 'assets/images/banner1.png' %}" class="img-fluid"
-                                                   alt="LT-writing "></div>
-                            <div class="item"><img src="{% static 'assets/images/banner2.png' %}" class="img-fluid"
-                                                   alt="LT-writing "></div>
-                            <div class="item"><img src="{% static 'assets/images/banner3.png' %}" class="img-fluid"
-                                                   alt="LT-writing "></div>
-                            <div class="item"><img src="{% static 'assets/images/banner4.png' %}" class="img-fluid"
-                                                   alt="LT-writing "></div>
-                            <div class="item"><img src="{% static 'assets/images/banner5.png' %}" class="img-fluid"
-                                                   alt="LT-writing "></div>
-                            <div class="item"><img src="{% static 'assets/images/banner6.png' %}" class="img-fluid"
-                                                   alt="LT-writing "></div>
+                        <div class="owl-carousel owl-banner-logo owl-theme d-flex justify-content-start align-items-center">
+                            <div class="item"><img src="{% static 'assets/images/banner1.png' %}" class="img-fluid" alt="LT-writing "></div>
+                            <div class="item"><img src="{% static 'assets/images/banner2.png' %}" class="img-fluid" alt="LT-writing "></div>
+                            <div class="item"><img src="{% static 'assets/images/banner3.png' %}" class="img-fluid" alt="LT-writing "></div>
+                            <div class="item"><img src="{% static 'assets/images/banner4.png' %}" class="img-fluid" alt="LT-writing "></div>
+                            <div class="item"><img src="{% static 'assets/images/banner5.png' %}" class="img-fluid" alt="LT-writing "></div>
+                            <div class="item"><img src="{% static 'assets/images/banner6.png' %}" class="img-fluid" alt="LT-writing "></div>
                         </div>
                     </div>
                 </div>
@@ -1089,17 +1089,17 @@
                     <div class="col-12">
                         <div class="owl-carousel owl-banner-logo owl-theme d-flex justify-content-center align-items-center">
                             <div class="item"><img src="{% static 'assets/images/banner1.png' %}" class="img-fluid"
-                                                   alt="LT-writing "></div>
+                                                   alt="i-Box Publsihing"></div>
                             <div class="item"><img src="{% static 'assets/images/banner2.png' %}" class="img-fluid"
-                                                   alt="LT-writing "></div>
+                                                   alt="i-Box Publsihing"></div>
                             <div class="item"><img src="{% static 'assets/images/banner3.png' %}" class="img-fluid"
-                                                   alt="LT-writing "></div>
+                                                   alt="i-Box Publsihing"></div>
                             <div class="item"><img src="{% static 'assets/images/banner4.png' %}" class="img-fluid"
-                                                   alt="LT-writing "></div>
+                                                   alt="i-Box Publsihing"></div>
                             <div class="item"><img src="{% static 'assets/images/banner5.png' %}" class="img-fluid"
-                                                   alt="LT-writing "></div>
+                                                   alt="i-Box Publsihing"></div>
                             <div class="item"><img src="{% static 'assets/images/banner6.png' %}" class="img-fluid"
-                                                   alt="LT-writing "></div>
+                                                   alt="i-Box Publsihing"></div>
                         </div>
                     </div>
                 </div>
@@ -1871,7 +1871,7 @@
         </section>
         <!-- ========== Contact section end ========== -->
 
-        {% include 'footer.html' %}
+
 
 
 
@@ -1885,8 +1885,39 @@ document.getElementById("toggleButton").addEventListener("click", function() {
     }
 });
 
+$(document).ready(function(){
+        $('.owl-carousel').owlCarousel({
+            loop:true,
+            margin:10,
+            autoplay:true,
+            autoplayTimeout:2000, // Adjust autoplay speed
+            responsive:{
+                0:{
+                    items:1
+                },
+                600:{
+                    items:3
+                },
+                1000:{
+                    items:5
+                }
+            }
+        });
+    });
+
+
+    document.getElementById('openChatNowModal').addEventListener('click', function() {
+    // Show the modal
+    var myModal = new bootstrap.Modal(document.getElementById('chatNowModal'));
+    myModal.show();
+
+    // Dynamically create and set the iframe source
+    var iframe = document.getElementById('chatbotFrame');
+    iframe.src = 'https://www.chatbase.co/embed.html?chatbotId=38LUjIhuRzNAhpBQH5Jxg&domain=www.chatbase.co';
+});
 
 </script>
 
 
+{% include 'footer.html' %}
 {% endblock %}
