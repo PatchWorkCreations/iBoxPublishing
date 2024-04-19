@@ -135,12 +135,28 @@
     </div>
 </nav>
 
+
+
 <script>
 $(document).ready(function(){
   $('.navbar-nav .nav-link').click(function(){
     $('.navbar-nav .nav-link').removeClass('active');
     $(this).addClass('active');
+    
+    // Collapse the navbar if it's currently expanded
+    var navbarCollapse = $('.navbar-collapse');
+    if (navbarCollapse.hasClass('show')) {
+      navbarCollapse.collapse('hide');
+    }
+  });
+
+  // Stop event propagation for click events on dropdown menu items
+  $('.dropdown-menu').click(function(event){
+    event.stopPropagation();
   });
 });
+
+
+
 </script>
 <!-- ========== Header end ========== -->
