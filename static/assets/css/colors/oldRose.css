@@ -1,7 +1,7 @@
 :root {
   --primary: #000000;
-  --secondary: #876585;
-  --tertiary: #fcb0b4;
+  --secondary: #7d597a;
+  --tertiary: #ffffff;
 }
 
 ::selection,
@@ -53,7 +53,7 @@
 .hero__images4:after,
 .hero__author--inner2--pic::before,
 .hero__book--wrapper::before {
-  background: var(--tertiary);
+  background: var(--tertiary)!important;
 }
 
 /* color primary */
@@ -93,7 +93,7 @@
 .footer__topv2 .title,
 .video-btn,
 .badge-text, .all-blog2__area__menu h2 a:hover, .blog__single-post__content .blog-metainfo li i, .blog__single-post__meta i, .blog__single-post__content .blog-metainfo li a:hover, .blog__single-post .blog-metainfo li a:hover, .blog__single-post .blog-metainfo li i, .header .navbar .navbar-nav li a:hover, .header .navbar .navbar-nav li.active a, .counters__stats-icon i, .video-btn:hover, a:hover, .footer__menu li a:hover {
-  color: var(--secondary);
+  color: var(--tertiary)!important;
 }
 .color-secondary,
 .link:hover,
@@ -102,7 +102,7 @@
 .events__single-event__content h2 a:hover,
 .blog-title ul li a:hover,
 .ctav3__content h2 a:hover, .counters__stats-box__number {
-  color: var(--secondary);
+  color: var(--tertiary);
 }
 
 .color-tertiary,
@@ -118,7 +118,7 @@
 .hero__author--inner3--wrapper::before,
 blockquote,
 .testi-row .testi-card__user-info, .hero__images3::after, .circle {
-  border-color: var(--secondary) !important;
+  border-color: var(--tertiary) !important;
 }
 
 .contact-form-box input:focus,

@@ -18,7 +18,7 @@
 
 
 .input-border-focus {
-            --tw-ring-color: #60A5FA;
+            --tw-ring-color: #bbbbbb;
         }
         .btn-hover:focus, .btn-hover:hover {
             background-color: #4CAF50;
@@ -74,7 +74,7 @@
   display: inline-block;
   padding: 10px 20px;
   margin-right: 10px; /* Adjust margin as needed */
-  background-color: #005503;
+  background-color: #a1a1a1;
   color: white;
   text-decoration: none;
   transition: background-color 0.3s ease;
@@ -83,7 +83,7 @@
 
 .get-started-btn:hover,
 .live-chat-btn:hover {
-  background-color: #45a049;
+  background-color: #c2c2c2;
 }
 
 
@@ -92,7 +92,7 @@
   display: inline-block;
   padding: 10px 20px;
   margin-right: 10px; /* Adjust margin as needed */
-  background-color: #005503;
+  background-color: #c2c2c2;
   color: white;
   text-decoration: none;
   transition: background-color 0.3s ease;
@@ -104,7 +104,7 @@
   display: inline-block;
   padding: 10px 20px;
   margin-right: 10px; /* Adjust margin as needed */
-  background-color: #4CAF50;
+  background-color: #9d9d9d;
   color: white;
   text-decoration: none;
   transition: background-color 0.3s ease;
@@ -141,6 +141,14 @@
             margin-right: 0; /* Adjust margin */
         }
 
+
+        body .bg-one {
+    background-color: #ebebeb !important;
+    z-index: 0 !important;
+  }
+
+
+  
 </style>
 
 {% include 'header.html' %}
@@ -168,6 +176,7 @@
     </div>
 </section>
 
+
 </div>
 
 
@@ -193,23 +202,27 @@
                      data-aos-delay="850">
                     <div class="hero__content position-relative text-center">
                         <div class="badge-text mb-2 text-uppercase font-size: 7px">
-                            Let's Turn Your Ideas into Bestselling Books
+                            Let's Turn Your Ideas into Bestselling Books <br>
                         </div>
-                        <h1 class="display-4 mb-4 text-capitalize text-center" style="font-size: 60px;">
-                            WELCOME TO i-RiseUp Publishing!
+                        
+                        <h1 class="display-4 mb-3 text-center" style="font-size: 80px; font-family: 'Playfair Display', serif; margin-top: 10px; margin-bottom: 5px;">
+                            WELCOME to
+                        </h1>
+                        
+                        <h1 class="display-4 mb-4 text-capitalize text-center" style="font-size: 55px; font-family: 'Playfair Display', serif; margin-top: 5px; margin-bottom: 10px;">
+                            I-Riseup Publishing! <br>
                         </h1>
                         
 
+
                         <h2 class="display-4 mb-4 text-capitalize text-center" style="font-size: 25px;">
-                            ELEVATE YOUR WRITING WITH OUR WRITING SERVICES!
+                            Unlock Your Potential with Professional Writing Services
                         </h2>
 
 
 
                         <p class="text-muted mb-5 fs-5" style="font-size: 5px;">
-                            Our bespoke book writing services are designed to cater to the unique needs of each author.
-                            From brainstorming sessions and manuscript critiques to comprehensive editing and publishing
-                            support
+                            “Have ideas? Let the experts at i-RiseUp Publishing skillfully bring your visions to life with style!”
                     </div>
 
                     <div class="row justify-content-center">
@@ -227,16 +240,17 @@
                     <div class="button-container text-center justify-content-center">
                         <button type="button" class="chat-now" onclick="openChatBox()"
                             style="margin-top: 30px;">CHAT NOW</button>
+                            <button type="button" class="get-a-quote" data-bs-toggle="modal"
+                            data-bs-target="#getAQuoteModal" style="margin-top: 30px;" onclick="openModal()">CONTACT US</button>
                         <button type="button" class="get-a-quote" data-bs-toggle="modal"
-                            data-bs-target="#getAQuoteModal" style="margin-top: 30px;" onclick="openModal()">GET A QUOTE</button>
-                        <a href="#" class="contact-us-now" style="margin-top: 30px;">CONTACT US NOW</a>
+                        data-bs-target="#getAQuoteModal" style="margin-top: 30px;" onclick="openModal()">GET A QUOTE</button>
                     </div>
                     
 
                 </div>
                 <div class="col-md-5 text-center" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="850">
-                    <div class="hero__images4 text-absolute">
-                        <img width="400" class="img-fluid" src="{% static 'assets/images/books.png' %}" alt=""/>
+                    <div class="text-absolute" style="color: white;">
+                        <img width="400" class="img-fluid" src="{% static 'assets/images/book1.png' %}" alt=""/>
                         <a href="https://youtu.be/ksImBkJNQt8" class="glightbox3 video-btn">
                             <i class="icofont-play"></i>
                         </a>
@@ -324,7 +338,7 @@
                     <div class="author-image">
                         <img
                                 class="img-fluid"
-                                src="{% static 'assets/images/author4.png' %}"
+                                src="{% static 'assets/images/author5.png' %}"
                                 alt=""
                         />
                     </div>
@@ -337,8 +351,7 @@
                 >
                     <div class="authorv3__content">
                         <div class="authorv3__content--badge">The Author</div>
-                        <h3 class="display-5 mb-0"> "Got ideas? Let our book wizards at i-RiseUp Publishing work their magic and
-                            bring them to life in style!" </h3>
+                        <h3 class="display-5 mb-0"> “Have ideas? Let the experts at i-RiseUp Publishing skillfully bring your visions to life with style!” </h3>
                         <p class="m-30px-b text-muted fs-5"></p>
                         <p class="m-30px-b">
                             Why choose i-RiseUp Publishing for your book? Here's why:
@@ -1739,20 +1752,17 @@
                             >
                                 Write Your Dream Book with Us!
                             </h2>
-                            <h2
-                                    data-aos="zoom-in-up"
-                                    data-aos-duration="1000"
-                                    data-aos-delay="250"
-                            >
-                                At i-RiseUp Publishing Publishing, we're your full-service book partner.
-                                we're here for you. Connect with us today and embark on your publishing journey!
-
+                            
                                 <div
                                         class="section-divider divider-traingle"
                                         data-aos="fade-up"
                                         data-aos-duration="1000"
                                         data-aos-delay="250"
+
+                                        
                                 ></div>
+
+                            
                         </div>
                     </div>
                 </div>
