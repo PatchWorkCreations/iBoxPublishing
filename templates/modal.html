@@ -80,9 +80,9 @@
                                 <h4></h4>
                                 <h3>Publish Your Story Today!</h3>
                             </div>
-                            <form class="addsender">
-                                <input type="hidden" name="brand_name" value="lt-writing.com">
-                                <input type="hidden" id="lead_area" name="lead_area" value="https://lt-writing.com">
+                            <form method="post" class="addsender">
+                            {% csrf_token %}
+                                <input type="hidden" name="register" value="hidden_text">
                                 <div class="form-floating mb-3">
                                     <input type="text" name="name" class="form-control" placeholder="Name" required>
                                     
