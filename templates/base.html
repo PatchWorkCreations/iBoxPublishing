@@ -443,13 +443,11 @@
     border: none;
     border-radius: 40px;
     cursor: pointer;
-    z-index: 9999; /* Ensure button is above iframe */
+    z-index: 10000; /* Ensure button is above iframe */
     height: auto; /* Reset height to auto */
 }
 
-.button-container {
-    position: relative;
-}
+
 </style>
 
 
@@ -510,10 +508,10 @@
     </div>
 </div>
 
-<div class="button-container" >
-    <span class="chat_icon"></span>
-    <button id="showIframeButton" onclick="openChatBox()">Chat</button>
-</div>
+
+
+<button class="button-container" id="showIframeButton">Chat</button>
+
    
 <div id="iframeContainer" class="chatbox-container" style="display: none;">
     <!-- Close button -->
@@ -538,50 +536,47 @@ function toggleForm() {
 
 
 // Function to toggle the display of the iframe and update the button's visibility
-
-// Function to open the chat box
-function openChatBox() {
-    iframeContainer.style.display = 'block';
-    showIframeButtons.forEach(button => {
-        button.textContent = 'Hide Chatbot';
-        button.style.display = 'none';
-    });
-}
-
+// Function to toggle the display of the iframe and update the button's visibility
 function toggleIframeVisibility() {
     var iframeContainer = document.getElementById('iframeContainer');
+    var chatButton = document.getElementById('showIframeButton');
+
     if (iframeContainer.style.display === 'none') {
         iframeContainer.style.display = 'block';
-        showIframeButtons.forEach(button => {
-            button.textContent = 'Hide Chatbot';
-            button.style.display = 'none';
-        });
+        chatButton.style.display = 'none'; // Hide the chat button when the iframe is displayed
     } else {
         iframeContainer.style.display = 'none';
-        showIframeButtons.forEach(button => {
-            button.textContent = 'Chat';
-            button.style.display = 'block';
-        });
+        chatButton.style.display = 'block'; // Show the chat button when the iframe is hidden
     }
 }
 
-// Add event listener to the close button
-var closeButton = document.getElementById('closeButton');
-closeButton.addEventListener('click', function() {
-    toggleIframeVisibility();
-});
-
-// Add event listener to the document to hide the iframe when clicked outside
-document.addEventListener('click', function(event) {
+// Function to close the iframe
+function closeIframe() {
     var iframeContainer = document.getElementById('iframeContainer');
-    // Check if the clicked element is not a button or inside the iframe container
-    if (!iframeContainer.contains(event.target) && !showIframeButtons.includes(event.target)) {
-        toggleIframeVisibility();
-    }
-});
+    iframeContainer.style.display = 'none';
+    var chatButton = document.getElementById('showIframeButton');
+    chatButton.style.display = 'block'; // Show the chat button when the iframe is closed
+}
+
+// Add event listener to the chat button to toggle iframe visibility
+var showIframeButton = document.getElementById('showIframeButton');
+showIframeButton.addEventListener('click', toggleIframeVisibility);
+
+// Add event listener to the close button within the iframe to close the iframe
+var closeButton = document.getElementById('closeButton');
+closeButton.addEventListener('click', closeIframe);
 
 // Immediately toggle visibility on load to ensure correct behavior from the start
 toggleIframeVisibility();
+
+
+// Function to open the chat box
+function openChatBox() {
+    var iframeContainer = document.getElementById('iframeContainer');
+    iframeContainer.style.display = 'block';
+    var chatButton = document.getElementById('showIframeButton');
+    chatButton.style.display = 'none'; // Hide the chat button when the iframe is displayed
+}
 
 
 </script>

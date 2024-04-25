@@ -8,7 +8,7 @@
 
 
 .input-border-focus {
-            --tw-ring-color: #60A5FA;
+            --tw-ring-color: #0073ff;
         }
         .btn-hover:focus, .btn-hover:hover {
             background-color: #4CAF50;
@@ -239,13 +239,6 @@
  
 {% include 'header.html' %}
 {% include 'modal.html' %}
-
-<div class="section-wrapper">
-    <!-- Tmb loader end -->
-    <div id="preLoader"></div>
-    <!-- Tmb loader end -->
-
-
 
     <!-- ========== Hero section start ========== -->
     <section
@@ -562,29 +555,16 @@
                 </section>
                 <!-- End of Book Writing Services Section -->
 
-                <script src="https://cdn.tailwindcss.com"></script>
-                <script>
-                tailwind.config = {
-                  theme: {
-                    extend: {
-                      colors: {
-                        // Define your brown color here if needed
-                      }
-                    }
-                  }
-                }
-
-                </script>
+                
 
                 <!-- BOOK SERVICE SECTION END -->
 
-                <!-- ========== CTA v4 section start ========== -->
-                <section class="section-padding ctav4">
+                <section class="section-padding ctav4" style="padding-top: 50px; padding-bottom: 50px;"> <!-- Adjust padding as needed -->
                     <div class="container">
                         <div class="row">
-                            <div class="col-md-6 mb-4 mb-lg-0 ctav4__content">
+                            <div class="col-md-8 mb-4 mb-lg-0 ctav4__content"> <!-- Adjust column size -->
                                 <h3
-                                        class="display-1"
+                                        class="display-4"
                                         data-aos="fade-up"
                                         data-aos-duration="1000"
                                         data-aos-delay="150"
@@ -595,31 +575,31 @@
                                         data-aos="fade-up"
                                         data-aos-duration="1000"
                                         data-aos-delay="200"
-                                >
-                                    Our book promoters and marketers can promote a book of any genre and ensure the
-                                    author reaches their target audience effectively.
-                                    Hire our experts today and get a chance to improve your book sales online and in
-                                    bookstores!
+                                        style="font-size: 18px;" <!-- Adjust font size -->
+                                
+                                    Our book promoters and marketers can promote a book of any genre and ensure the author
+                                    reaches their target audience effectively. Hire our experts today and get a chance to improve your book sales online and in bookstores!
                                 </h3> <br>
                                 <p
                                         data-aos="fade-up"
                                         data-aos-duration="1000"
                                         data-aos-delay="250"
-                                >
-
-
+                                        style="font-size: 16px;" <!-- Adjust font size -->
+                                
                                 </p>
                                 <a
                                         href="#"
                                         class="get-started-btn"
                                         data-aos="fade-up"
                                         data-aos-duration="1000"
-                                        data-aos-delay="300" onclick="openModal()"
-                                > <span>Get Started</span></a
+                                        data-aos-delay="300"
+                                        style="font-size: 16px;"
+                                        onclick="openModal()" <!-- Adjust font size -->
+                                <span>Get Started</span></a
                                 >
                             </div>
                             <div
-                                    class="col-md-6"
+                                    class="col-md-4"
                                     data-aos="fade-up"
                                     data-aos-duration="1000"
                                     data-aos-delay="250"
@@ -643,6 +623,7 @@
                         </div>
                     </div>
                 </section>
+                
                 <!-- ========== CTA v4 section end ========== -->
 
 
@@ -1466,98 +1447,95 @@
                 </section>
                 <!-- ========== CTA v3 section end ========== -->
                 <!-- ========== Contact section start ========== -->
-                <section id="contact" class="p-80px-tb bg-white">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-xl-6 offset-xl-3 col-lg-10 offset-lg-1">
-                                <div class="section-title-center text-center">
+        <section id="contact" class="p-80px-tb bg-white">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-6 offset-xl-3 col-lg-10 offset-lg-1">
+                        <div class="section-title-center text-center">
                 <span
                         data-aos="fade-up"
                         data-aos-duration="1000"
                         data-aos-delay="150"
                 >Contact Us</span
                 >
-                                    <h2
-                                            class="display-6"
-                                            data-aos="zoom-in-up"
-                                            data-aos-duration="1000"
-                                            data-aos-delay="200"
-                                    >
-                                        Write Your Dream Book with Us!
-                                    </h2>
-                                    <h2
-                                            data-aos="zoom-in-up"
-                                            data-aos-duration="1000"
-                                            data-aos-delay="250"
-                                    >
-                                        At i-Box Publishing Publishing, we're your full-service book partner.
-                                        we're here for you. Connect with us today and embark on your publishing journey!
-
-                                        <div
-                                                class="section-divider divider-traingle"
-                                                data-aos="fade-up"
-                                                data-aos-duration="1000"
-                                                data-aos-delay="250"
-                                        ></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div
-                                    class="col-lg-8 col-md-6 col-sm-12 m-25px-b"
-                                    data-aos="fade-right"
+                            <h2
+                                    class="display-6"
+                                    data-aos="zoom-in-up"
                                     data-aos-duration="1000"
                                     data-aos-delay="200"
                             >
-                                <div class="contact-form-box">
-                                    <form id="contact-form" method="post" action="php/sendmail.php">
-                                        <div class="message col">
-                                            <p class="email-loading alert alert-warning">
-                                                <img
-                                                        src="{% static 'assets/images/loading.gif' %}"
-                                                        alt=""
-                                                />&nbsp;&nbsp;&nbsp;Sending...
-                                            </p>
-                                            <p class="email-success alert alert-success">
-                                                <i class="icon icon-icon-check-alt2"></i> Your quote has
-                                                successfully been sent.
-                                            </p>
-                                            <p class="email-failed alert alert-danger">
-                                                <i class="icon icon-icon-close-alt2"></i> Something went
-                                                wrong!
-                                            </p>
-                                        </div>
-                                        <div class="mb13">
-                                            <input
-                                                    name="name"
-                                                    class="contact-name"
-                                                    id="contact-name"
-                                                    type="text"
-                                                    placeholder="Your Name"
-                                                    required=""
-                                            />
-                                        </div>
-                                        <div class="mb13">
-                                            <input
-                                                    name="email"
-                                                    class="contact-email"
-                                                    id="contact-email"
-                                                    type="email"
-                                                    placeholder="Your Email"
-                                                    required=""
-                                            />
-                                        </div>
-                                        <div class="mb13">
-                                            <input
-                                                    name="subject"
-                                                    class="contact-subject"
-                                                    id="contact-subject"
-                                                    type="text"
-                                                    placeholder="Subject"
-                                                    required=""
-                                            />
-                                        </div>
-                                        <div class="mb30">
+                                Write Your Dream Book with Us!
+                            </h2>
+                            
+                                <div
+                                        class="section-divider divider-traingle"
+                                        data-aos="fade-up"
+                                        data-aos-duration="1000"
+                                        data-aos-delay="250"
+
+                                        
+                                ></div>
+
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div
+                            class="col-lg-8 col-md-6 col-sm-12 m-25px-b"
+                            data-aos="fade-right"
+                            data-aos-duration="1000"
+                            data-aos-delay="200"
+                    >
+                        <div class="contact-form-box">
+                            <form id="contact-form" method="post" action="php/sendmail.php">
+                                <div class="message col">
+                                    <p class="email-loading alert alert-warning">
+                                        <img
+                                                src="{% static 'assets/images/loading.gif' %}"
+                                                alt=""
+                                        />&nbsp;&nbsp;&nbsp;Sending...
+                                    </p>
+                                    <p class="email-success alert alert-success">
+                                        <i class="icon icon-icon-check-alt2"></i> Your quote has
+                                        successfully been sent.
+                                    </p>
+                                    <p class="email-failed alert alert-danger">
+                                        <i class="icon icon-icon-close-alt2"></i> Something went
+                                        wrong!
+                                    </p>
+                                </div>
+                                <div class="mb13">
+                                    <input
+                                            name="name"
+                                            class="contact-name"
+                                            id="contact-name"
+                                            type="text"
+                                            placeholder="Your Name"
+                                            required=""
+                                    />
+                                </div>
+                                <div class="mb13">
+                                    <input
+                                            name="email"
+                                            class="contact-email"
+                                            id="contact-email"
+                                            type="email"
+                                            placeholder="Your Email"
+                                            required=""
+                                    />
+                                </div>
+                                <div class="mb13">
+                                    <input
+                                            name="subject"
+                                            class="contact-subject"
+                                            id="contact-subject"
+                                            type="text"
+                                            placeholder="Subject"
+                                            required=""
+                                    />
+                                </div>
+                                <div class="mb30">
                     <textarea
                             name="message"
                             class="contact-message"
@@ -1565,14 +1543,14 @@
                             placeholder="Your Message"
                             required=""
                     ></textarea>
-                                        </div>
-                                        <button class="button button__primary align-items-center">
-                                            <span>Send Now</span>
-                                        </button>
-                                    </form>
                                 </div>
-                            </div>
-                            <!-- End contact form area-->
+                                <button class="button button__primary align-items-center">
+                                    <span>Send Now</span>
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                    <!-- End contact form area-->
                             <div
                                     class="col-lg-4 col-md-6 col-sm-12 m-25px-b"
                                     data-aos="fade-left"
@@ -1616,9 +1594,11 @@
                     </div>
                 </section>
                 <!-- ========== Contact section end ========== -->
-                {% include 'footer.html' %}
-            </div>
 
+                
+                
+            
+            {% include 'footer.html' %}
             {% endblock %}
 
 
