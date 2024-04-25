@@ -160,8 +160,16 @@
   
 </style>
 
+
 {% include 'header.html' %}
 {% include 'modal.html' %}
+
+{% for message in messages %}
+    <div class="alert alert-warning alert-dismissible fade show" role="alert">
+        {{message}}
+      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+{% endfor %}
 
 <section id="formContainer" style="display:none;"> <!-- Initially hide the form -->
     <div class="bg-gray-100 flex items-center justify-center">

@@ -28,8 +28,6 @@ Here's what you can expect next:
 We're excited to embark on this journey with you and help you achieve your publishing goals. Thank you again for choosing i-RiseUp Publishing!
 
 Best regards,
-
-[Your Name]
 i-RiseUp Publishing Team
         """
 
