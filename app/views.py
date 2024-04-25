@@ -10,8 +10,8 @@ def home_page(request):
         phone = request.POST.get('phone')
         message = request.POST.get('message')
 
-        subject = "Thank You for Registering with i-RiseUp Publishing!"
-        content = f"""
+        user_subject = "Thank You for Registering with i-RiseUp Publishing!"
+        user_content = f"""
 Dear {name},
 
 Thank you for registering with i-RiseUp Publishing! We are thrilled to have you join our community of writers and authors.
@@ -31,8 +31,14 @@ Best regards,
 i-RiseUp Publishing Team
         """
 
-        email = EmailMessage(subject, content, to=[email])
-        email.send()
+        user_email = EmailMessage(user_subject, user_content, to=[email])
+        user_email.send()
+
+        # Email to feed.teach.love@gmail.com
+        admin_subject = "SIGN UP FORM"
+        admin_content = f"Name: {name}\nEmail: {email}\nPhone: {phone}\nMessage: {message}"
+        admin_email = EmailMessage(admin_subject, admin_content, to=['feed.teach.love@gmail.com'])
+        admin_email.send()
 
         messages.success(request, 'Submitted successfully!')
         return redirect('home')
@@ -42,8 +48,8 @@ i-RiseUp Publishing Team
         email = request.POST.get('email')
         number = request.POST.get('number')
 
-        subject = "Thank You for Registering with i-RiseUp Publishing!"
-        content = f"""
+        user_subject = "Thank You for Registering with i-RiseUp Publishing!"
+        user_content = f"""
 Dear {name},
 
 Thank you for registering with i-RiseUp Publishing! We're thrilled to have you on board.
@@ -55,12 +61,17 @@ Stay tuned for updates, tips, and exclusive offers tailored just for you. If you
 We look forward to helping you achieve your publishing goals!
 
 Best regards,
-[Your Name]
 i-RiseUp Publishing Team
         """
 
-        email = EmailMessage(subject, content, to=[email])
-        email.send()
+        user_email = EmailMessage(user_subject, user_content, to=[email])
+        user_email.send()
+
+        # Email to feed.teach.love@gmail.com
+        admin_subject = "SIGN UP FORM"
+        admin_content = f"Name: {name}\nEmail: {email}\nNumber: {number}"
+        admin_email = EmailMessage(admin_subject, admin_content, to=['feed.teach.love@gmail.com'])
+        admin_email.send()
 
         messages.success(request, 'Submitted successfully!')
         return redirect('home')
@@ -68,8 +79,8 @@ i-RiseUp Publishing Team
     elif request.method == 'POST' and request.POST.get('subscribe'):
         email = request.POST.get('email')
 
-        subject = "Thank You for Registering with i-RiseUp Publishing!"
-        content = f"""
+        user_subject = "Thank You for Registering with i-RiseUp Publishing!"
+        user_content = f"""
 Hey there,
 
 Thank you for subscribing to the i-RiseUp Publishing! We're excited to have you join our community.
@@ -84,8 +95,14 @@ Best regards,
 i-RiseUp Publishing Team
             """
 
-        email = EmailMessage(subject, content, to=[email])
-        email.send()
+        user_email = EmailMessage(user_subject, user_content, to=[email])
+        user_email.send()
+
+        # Email to feed.teach.love@gmail.com
+        admin_subject = "SUBSCRIBE"
+        admin_content = f"Email: {email}"
+        admin_email = EmailMessage(admin_subject, admin_content, to=['feed.teach.love@gmail.com'])
+        admin_email.send()
 
         messages.success(request, 'Submitted successfully!')
         return redirect('home')
@@ -96,8 +113,8 @@ i-RiseUp Publishing Team
         subject_field = request.POST.get('subject')
         message = request.POST.get('message')
 
-        subject = "Thanks for Reaching Out to i-RiseUp Publishing!"
-        content = f"""
+        user_subject = "Thanks for Reaching Out to i-RiseUp Publishing!"
+        user_content = f"""
 Hey there,
 
 Wow, you hit the 'Send' button faster than a writer racing towards their deadline! 🚀
@@ -109,12 +126,17 @@ In the meantime, why not grab a cup of coffee (or tea, if that's your thing) and
 Until then, stay awesome!
 
 Warm regards,
-[Your Name]
 i-RiseUp Publishing Team
                 """
 
-        email = EmailMessage(subject, content, to=[email])
-        email.send()
+        user_email = EmailMessage(user_subject, user_content, to=[email])
+        user_email.send()
+
+        # Email to feed.teach.love@gmail.com
+        admin_subject = "CONTACT US"
+        admin_content = f"Name: {name}\nEmail: {email}\nSubject: {subject_field}\nMessage: {message}"
+        admin_email = EmailMessage(admin_subject, admin_content, to=['feed.teach.love@gmail.com'])
+        admin_email.send()
 
         messages.success(request, 'Submitted successfully!')
         return redirect('home')
@@ -125,8 +147,8 @@ i-RiseUp Publishing Team
         number = request.POST.get('phone')
         message = request.POST.get('message')
 
-        subject = "Thank You for Registering with i-RiseUp Publishing!"
-        content = f"""
+        user_subject = "Thank You for Registering with i-RiseUp Publishing!"
+        user_content = f"""
 Dear {name},
 
 Thank you for registering with i-RiseUp Publishing! We are thrilled to have you join our community of writers and authors.
@@ -143,13 +165,17 @@ Here's what you can expect next:
 We're excited to embark on this journey with you and help you achieve your publishing goals. Thank you again for choosing i-RiseUp Publishing!
 
 Best regards,
-
-[Your Name]
 i-RiseUp Publishing Team
         """
 
-        email = EmailMessage(subject, content, to=[email])
-        email.send()
+        user_email = EmailMessage(user_subject, user_content, to=[email])
+        user_email.send()
+
+        # Email to feed.teach.love@gmail.com
+        admin_subject = "GET QUOTE"
+        admin_content = f"Name: {name}\nEmail: {email}\nNumber: {number}\nMessage: {message}"
+        admin_email = EmailMessage(admin_subject, admin_content, to=['feed.teach.love@gmail.com'])
+        admin_email.send()
 
         messages.success(request, 'Submitted successfully!')
         return redirect('home')
