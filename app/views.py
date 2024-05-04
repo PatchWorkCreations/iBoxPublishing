@@ -37,7 +37,7 @@ i-RiseUp Publishing Team
         # Email to feed.teach.love@gmail.com
         admin_subject = "SIGN UP FORM"
         admin_content = f"Name: {name}\nEmail: {email}\nPhone: {phone}\nMessage: {message}"
-        admin_email = EmailMessage(admin_subject, admin_content, to=['feed.teach.love@gmail.com'])
+        admin_email = EmailMessage(admin_subject, admin_content, to=['iriseuppublishing@gmail.com'])
         admin_email.send()
 
         messages.success(request, 'Submitted successfully!')
@@ -70,7 +70,7 @@ i-RiseUp Publishing Team
         # Email to feed.teach.love@gmail.com
         admin_subject = "SIGN UP FORM"
         admin_content = f"Name: {name}\nEmail: {email}\nNumber: {number}"
-        admin_email = EmailMessage(admin_subject, admin_content, to=['feed.teach.love@gmail.com'])
+        admin_email = EmailMessage(admin_subject, admin_content, to=['iriseuppublishing@gmail.com'])
         admin_email.send()
 
         messages.success(request, 'Submitted successfully!')
@@ -101,7 +101,7 @@ i-RiseUp Publishing Team
         # Email to feed.teach.love@gmail.com
         admin_subject = "SUBSCRIBE"
         admin_content = f"Email: {email}"
-        admin_email = EmailMessage(admin_subject, admin_content, to=['feed.teach.love@gmail.com'])
+        admin_email = EmailMessage(admin_subject, admin_content, to=['iriseuppublishing@gmail.com'])
         admin_email.send()
 
         messages.success(request, 'Submitted successfully!')
@@ -135,7 +135,7 @@ i-RiseUp Publishing Team
         # Email to feed.teach.love@gmail.com
         admin_subject = "CONTACT US"
         admin_content = f"Name: {name}\nEmail: {email}\nSubject: {subject_field}\nMessage: {message}"
-        admin_email = EmailMessage(admin_subject, admin_content, to=['feed.teach.love@gmail.com'])
+        admin_email = EmailMessage(admin_subject, admin_content, to=['iriseuppublishing@gmail.com'])
         admin_email.send()
 
         messages.success(request, 'Submitted successfully!')
@@ -174,7 +174,7 @@ i-RiseUp Publishing Team
         # Email to feed.teach.love@gmail.com
         admin_subject = "GET QUOTE"
         admin_content = f"Name: {name}\nEmail: {email}\nNumber: {number}\nMessage: {message}"
-        admin_email = EmailMessage(admin_subject, admin_content, to=['feed.teach.love@gmail.com'])
+        admin_email = EmailMessage(admin_subject, admin_content, to=['iriseuppublishing@gmail.com'])
         admin_email.send()
 
         messages.success(request, 'Submitted successfully!')
