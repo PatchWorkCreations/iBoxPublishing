@@ -133,5 +133,5 @@ EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 DEFAULT_FROM_EMAIL = 'iRiseup Publishing Admin'
-EMAIL_HOST_USER = 'feed.teach.love@gmail.com'  # Your Gmail email address
-EMAIL_HOST_PASSWORD = 'crxv azjt vtzr jfdw'  # Your Gmail app password or regular password
+EMAIL_HOST_USER = 'iriseuppublishing@gmail.com'  # Your Gmail email address
+EMAIL_HOST_PASSWORD = 'qssn droz qmll flaz'  # Your Gmail app password or regular password
