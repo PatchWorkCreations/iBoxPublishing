@@ -1265,7 +1265,7 @@ p.first-letter::first-letter {
     border: none;
     padding: 10px;
     margin-bottom: 15px;
-    background-color: #ffffff;
+    background-color: #dcdcdc;
     border-bottom: 2px solid transparent; }
   .contact-form-box input:focus,
   .contact-form-box textarea:focus {
