@@ -7,6 +7,7 @@
 
 /* Your custom styles go here */
 
+
 @keyframes preLoader {
   100% {
     top: 100%; } }
@@ -1637,7 +1638,7 @@ p.first-letter::first-letter {
     opacity: 0.5;
     width: 100%;
     height: 100%;
-    background-color: #9b6c6c; }
+    background-color: #ffffff; }
   .ctav4__content {
     z-index: 0; }
     .ctav4__content h3 {

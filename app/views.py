@@ -56,7 +56,7 @@ Thank you for registering with i-RiseUp Publishing! We're thrilled to have you o
 
 Your registration is confirmed, and you're now part of our community of authors and creators. Whether you're an aspiring writer or an experienced author, we're here to support you on your publishing journey.
 
-Stay tuned for updates, tips, and exclusive offers tailored just for you. If you have any questions or need assistance, feel free to reach out to our team at [your contact email or phone number].
+Stay tuned for updates, tips, and exclusive offers tailored just for you. If you have any questions or need assistance, feel free to reach out to our team at iriseuppublishing@gmail.com .
 
 We look forward to helping you achieve your publishing goals!
 

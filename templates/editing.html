@@ -393,18 +393,29 @@
 
     <!-- ========== Benefits v3 section start ========== -->
 
-    <section class="flip-boxx">
-        <div class="row">
-            <div class="col-xl-6 offset-xl-3 col-lg-10 offset-lg-1">
-                <div class="section-title-center text-center">
 
+        {% include 'flipbox.html' %}
+
+        <!-- ========== Chapter section start ========== -->
+ <!-- ========== Chapter section start ========== -->
+ <section id="chapters" class="section-padding chapter bg-one">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-6 offset-xl-3 col-lg-5 offset-lg-1">
+                <div class="section-title-center text-center">
+        <span
+                data-aos="fade-up"
+                data-aos-duration="1000"
+                data-aos-delay="150"
+        >SERVICES</span
+        >
                     <h2
                             class="display-6"
                             data-aos="zoom-in-up"
                             data-aos-duration="1000"
                             data-aos-delay="200"
                     >
-                        LEARN ABOUT OUR SIMPLE BOOK WRITING PROCESS BELOW
+                        WE OFFER PREMIUM BOOK WRITING SERVICES IN THE FOLLOWING GENRES
                     </h2>
                     <div
                             class="section-divider divider-traingle"
@@ -415,179 +426,101 @@
                 </div>
             </div>
         </div>
-
-       <div class="container">
-            <div class="row card-container">
-              <div class="col-md-3">
-                <div class="card">
-                  <div class="card-inner">
-                    <div class="card-front text-center">
-                      <h3 class="title text-white text-sm font-semibold mt-2 mb-3">Order Details & Outline</h3>
-                      <p class="text-white text-sm mt-2 mb-4">________</p>
+        <div class="container mx-auto px-4 py-8">
+            <div class="row justify-content-center">
+                <!-- Fiction -->
+                <div class="col-md-3">
+                    <div class="flex flex-col items-center">
+                        <div class="d-flex justify-content-center">
+                        <img src="{% static 'fiction.png' %}" alt="Placeholder image for the book 'Three Cowboys Baby' by Kate Pearce" class="mb-4">
                     </div>
-                    <div class="card-back text-center">
-                        <h3 class="title text-white font-bold" style="font-size: 20px;">"Call us now and give us the details of your
-                            book. Our experts will create an outline accordingly."</h3>                                              
-                      <a href="https://example.com">Learn More</a>
+                        <h2 class="text-xl font-bold mb-2 text-center">Fiction</h2>
+                        <p class="text-gray-600 text-center">Unleash your plot's potential with our online book writers. Elevate your story with our expertise!</p>
                     </div>
-                  </div>
                 </div>
-              </div>
-              <div class="col-md-3">
-                <div class="card">
-                  <div class="card-inner">
-                    <div class="card-front text-center">
-                      <h3 class="title text-white text-sm font-semibold mt-2 mb-3">Chapters Delivery</h3>
-                      <p class="text-white text-sm mt-2 mb-4">________</p>
+        
+                <!-- Nonfiction -->
+                <div class="col-md-3">
+                    <div class="flex flex-col items-center">
+                        <div class="d-flex justify-content-center">
+                        <img src="{% static 'nonfiction.png' %}" alt="Placeholder image for the book 'Essays 2023' by Alexander Chee" class="mb-4">
                     </div>
-                    <div class="card-back text-center">
-                      <h3 class="title text-white font-bold" style="font-size: 20px;">"Next, we will begin drafting the chapters as
-                        per the outline, and send them to you for feedback."</h3>
-                      <a href="https://example.com">Learn More</a>
+                        <h2 class="text-xl font-bold mb-2 text-center">Nonfiction</h2>
+                        <p class="text-gray-600 text-center">Partner with our top nonfiction writers to bring your ideas to life! Contact us today!</p>
                     </div>
-                  </div>
                 </div>
-              </div>
-              <div class="col-md-3">
-                <div class="card">
-                  <div class="card-inner">
-                    <div class="card-front text-center">
-                      <h3 class="title text-white text-sm font-semibold mt-2 mb-3">Feedback & Approval</h3>
-                      <p class="text-white text-sm mt-2 mb-4">________</p>
+        
+                <!-- Fantasy -->
+                <div class="col-md-3">
+                    <div class="flex flex-col items-center">
+                        <div class="d-flex justify-content-center">
+                        <img src="{% static 'fantasy.png' %}" alt="Placeholder image for the fantasy book" class="mb-4">
                     </div>
-                    <div class="card-back text-center">
-                      <h3 class="title text-white font-bold" style="font-size: 20px;">"Our book writers will cater to your comments
-                        and feedback and revise the content accordingly."</h3>
-                      <a href="https://example.com">Learn More</a>
+                        <h2 class="text-xl font-bold mb-2 text-center">Fantasy</h2>
+                        <p class="text-gray-600 text-center">Writing's tough! Let our fantasy wizards create captivating tales. Get in touch!</p>
                     </div>
-                  </div>
                 </div>
-              </div>
-              <div class="col-md-3">
-                <div class="card">
-                  <div class="card-inner">
-                    <div class="card-front text-center">
-                      <h3 class="title text-white text-sm font-semibold mt-2 mb-3">Publication</h3>
-                      <p class="text-white text-sm mt-2 mb-4">________</p>
+        
+                <!-- Autobiography -->
+                <div class="col-md-3">
+                    <div class="flex flex-col items-center">
+                        <div class="d-flex justify-content-center"> <!-- Center the image horizontally -->
+                            <img src="{% static 'autobiography.png' %}" alt="Placeholder image for the book 'The Secret Lives of Royal Women'" class="mb-4">
+                        </div>
+                        <h2 class="text-xl font-bold mb-2 text-center">Autobiography</h2>
+                        <p class="text-gray-600 text-center">Seeking to inspire others with your life story? Let i-RiseUp PublishingPublisher make it happen for you! Reach out today!</p>
                     </div>
-                    <div class="card-back text-center">
-                      <h3 class="title text-white font-bold" style="font-size: 20px;">"i-RiseUp Publishing will then publish the book & promote
-                        it to boost sales."</h3>
-                      <a href="https://example.com">Learn More</a>
-                    </div>
-                  </div>
                 </div>
-              </div>
+                
+        
+                <!-- Memoirs -->
+                <div class="col-md-3">
+                    <div class="flex flex-col items-center">
+                        <div class="d-flex justify-content-center">
+                        <img src="{% static 'memoirs.png' %}" alt="Placeholder image for the book 'Anxiously Ever After' by Clint Edwards" class="mb-4">
+                    </div>
+                        <h2 class="text-xl font-bold mb-2 text-center">Memoirs</h2>
+                        <p class="text-gray-600 text-center">Crafting memoirs? Consult with our experts today!</p>
+                    </div>
+                </div>
+        
+                <!-- Children's Book -->
+                <div class="col-md-3">
+                    <div class="flex flex-col items-center">
+                        <div class="d-flex justify-content-center">
+                        <img src="{% static 'childrensbook.png' %}" alt="Placeholder image for the children's book 'ABC Dot-to-Dots'" class="mb-4">
+                    </div>
+                        <h2 class="text-xl font-bold mb-2 text-center">Children's Book</h2>
+                        <p class="text-gray-600 text-center">i-RiseUp Publishing crafts captivating children's books.</p>
+                    </div>
+                </div>
+        
+                <!-- Self-Help -->
+                <div class="col-md-3">
+                    <div class="flex flex-col items-center">
+                        <div class="d-flex justify-content-center">
+                        <img src="{% static 'selfhelp.png' %}" alt="Placeholder image for the self-help book 'Grief Therapy'" class="mb-4">
+                    </div>
+                        <h2 class="text-xl font-bold mb-2 text-center">Self-Help</h2>
+                        <p class="text-gray-600 text-center">Unlock self-help strategies for a better world.</p>
+                    </div>
+                </div>
+        
+                <!-- Research-Based -->
+                <div class="col-md-3">
+                    <div class="flex flex-col items-center">
+                        <div class="d-flex justify-content-center">
+                        <img src="{% static 'researchbased.png' %}" alt="Placeholder image for the research-based book 'Documentary Narrative Film'" class="mb-4">
+                    </div>
+                        <h2 class="text-xl font-bold mb-2 text-center">Research-Based</h2>
+                        <p class="text-gray-600 text-center">Ready to publish your research? We're here to assist! Contact us.</p>
+                    </div>
+                </div>
             </div>
-          </div>
+        </div>
+        
 
-        <!-- ========== Chapter section start ========== -->
- <section id="chapters" class="section-padding chapter bg-one">
-            <div class="container">
-                <div class="row">
-                    <div class="col-xl-6 offset-xl-3 col-lg-10 offset-lg-1">
-                        <div class="section-title-center text-center">
-                <span
-                        data-aos="fade-up"
-                        data-aos-duration="1000"
-                        data-aos-delay="150"
-                >SERVICES</span
-                >
-                            <h2
-                                    class="display-6"
-                                    data-aos="zoom-in-up"
-                                    data-aos-duration="1000"
-                                    data-aos-delay="200"
-                            >
-                                i-RiseUp Publishing OFFERS PREMIUM BOOK WRITING SERVICES IN THE FOLLOWING GENRES
-                            </h2>
-                            <div
-                                    class="section-divider divider-traingle"
-                                    data-aos="fade-up"
-                                    data-aos-duration="1000"
-                                    data-aos-delay="300"
-                            ></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="container mx-auto px-4 py-8">
-                    <div class="row justify-content-center">
-                        <!-- Fiction -->
-                        <div class="col-md-3">
-                            <div class="flex flex-col items-center">
-                                <img src="{% static 'fiction.png' %}" alt="Placeholder image for the book 'Three Cowboys Baby' by Kate Pearce" class="mb-4">
-                                <h2 class="text-xl font-bold mb-2 text-center">Fiction</h2>
-                                <p class="text-gray-600 text-center">Unleash your plot's potential with our online book writers. Elevate your story with our expertise!</p>
-                            </div>
-                        </div>
-                
-                        <!-- Nonfiction -->
-                        <div class="col-md-3">
-                            <div class="flex flex-col items-center">
-                                <img src="{% static 'nonfiction.png' %}" alt="Placeholder image for the book 'Essays 2023' by Alexander Chee" class="mb-4">
-                                <h2 class="text-xl font-bold mb-2 text-center">Nonfiction</h2>
-                                <p class="text-gray-600 text-center">Partner with our top nonfiction writers to bring your ideas to life! Contact us today!</p>
-                            </div>
-                        </div>
-                
-                        <!-- Fantasy -->
-                        <div class="col-md-3">
-                            <div class="flex flex-col items-center">
-                                <img src="{% static 'fantasy.png' %}" alt="Placeholder image for the fantasy book" class="mb-4">
-                                <h2 class="text-xl font-bold mb-2 text-center">Fantasy</h2>
-                                <p class="text-gray-600 text-center">Writing's tough! Let our fantasy wizards create captivating tales. Get in touch!</p>
-                            </div>
-                        </div>
-                
-                        <!-- Autobiography -->
-                        <div class="col-md-3">
-                            <div class="flex flex-col items-center">
-                                <img src="{% static 'autobiography.png' %}" alt="Placeholder image for the book 'The Secret Lives of Royal Women'" class="mb-4">
-                                <h2 class="text-xl font-bold mb-2 text-center">Autobiography</h2>
-                                <p class="text-gray-600 text-center">Seeking to inspire others with your life story? Let i-RiseUp PublishingPublisher make it happen for you! Reach out today!</p>
-                            </div>
-                        </div>
-                
-                        <!-- Memoirs -->
-                        <div class="col-md-3">
-                            <div class="flex flex-col items-center">
-                                <img src="{% static 'memoirs.png' %}" alt="Placeholder image for the book 'Anxiously Ever After' by Clint Edwards" class="mb-4">
-                                <h2 class="text-xl font-bold mb-2 text-center">Memoirs</h2>
-                                <p class="text-gray-600 text-center">Crafting memoirs? Consult with our experts today!</p>
-                            </div>
-                        </div>
-                
-                        <!-- Children's Book -->
-                        <div class="col-md-3">
-                            <div class="flex flex-col items-center">
-                                <img src="{% static 'childrensbook.png' %}" alt="Placeholder image for the children's book 'ABC Dot-to-Dots'" class="mb-4">
-                                <h2 class="text-xl font-bold mb-2 text-center">Children's Book</h2>
-                                <p class="text-gray-600 text-center">i-RiseUp Publishing crafts captivating children's books.</p>
-                            </div>
-                        </div>
-                
-                        <!-- Self-Help -->
-                        <div class="col-md-3">
-                            <div class="flex flex-col items-center">
-                                <img src="{% static 'selfhelp.png' %}" alt="Placeholder image for the self-help book 'Grief Therapy'" class="mb-4">
-                                <h2 class="text-xl font-bold mb-2 text-center">Self-Help</h2>
-                                <p class="text-gray-600 text-center">Unlock self-help strategies for a better world.</p>
-                            </div>
-                        </div>
-                
-                        <!-- Research-Based -->
-                        <div class="col-md-3">
-                            <div class="flex flex-col items-center">
-                                <img src="{% static 'researchbased.png' %}" alt="Placeholder image for the research-based book 'Documentary Narrative Film'" class="mb-4">
-                                <h2 class="text-xl font-bold mb-2 text-center">Research-Based</h2>
-                                <p class="text-gray-600 text-center">Ready to publish your research? We're here to assist! Contact us.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-
-        </section>
+</section>
         <!-- ========== Chapter section end ========== -->
 
                 <!-- ========== Chapter preview section start ========== -->
