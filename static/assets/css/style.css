@@ -1625,7 +1625,7 @@ p.first-letter::first-letter {
   background-image: url(../images/ctav5.png);
   background-repeat: no-repeat;
   background-size: cover;
-  color: #7e5400;
+  color: #3a2700;
   position: relative; }
   @media only screen and (max-width: 767px) {
     .ctav4 {
@@ -1638,7 +1638,7 @@ p.first-letter::first-letter {
     opacity: 0.5;
     width: 100%;
     height: 100%;
-    background-color: #ffffff; }
+    background-color: #372500; }
   .ctav4__content {
     z-index: 0; }
     .ctav4__content h3 {
