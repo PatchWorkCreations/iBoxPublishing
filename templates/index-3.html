@@ -2,206 +2,120 @@
 {% block content %}
 {% load static %}
 
-
 <style>
 
-
-.input-border-focus {
-            --tw-ring-color: #60A5FA;
-        }
-        .btn-hover:focus, .btn-hover:hover {
-            background-color: #4CAF50;
-            border-color: #4CAF50;
-        }
-        .floating-form {
-            position: fixed;
-            bottom: -100px; /* Initially hide the form */
-            right: 20px;
-            transition: bottom 0.3s ease-in-out; /* Smooth transition */
-            z-index: 999;
-        }
-        .floating-form.show {
-            bottom: 20px; /* Show the form when scrolled down */
-        }
-
-.banner-logo-bg {
-	background: transparent radial-gradient(closest-side at 50% 50%, #091a39 0, #091a39 100%);
-	padding: 30px 0;
-}
-.banner-form {
-	background: #fff;
-	box-shadow: 0 3px 30px #00000029;
-	border-radius: 15px;
-	padding: 35px;
-	position: relative;
-	top: 60px;
-	margin: 0
-}
-.banner-btn button {
-	background: #4CAF50;
-	border-radius: 5px;
-	text-decoration: none;
-	color: #fff;
-	padding: 10px 0;
-	width: 100%;
-	border: 2px solid #4CAF50
-}
-.banner-logo-bg input {
-	height: 50px
-}
-.banner-logo-bg .owl-carousel .owl-item img {
-	width: 160px;
-}
-
-.owl-carousel .item {
-    margin-right: 30px;
-    margin-left: 30px; /* Adjust the value as needed */
-}
-
-
-
-.button-container {
-  display: flex;
-  align-items: center;
-}
-
-.get-started-btn,
-.live-chat-btn {
-  display: inline-block;
-  padding: 10px 20px;
-  margin-right: 10px; /* Adjust margin as needed */
-  background-color: #4CAF50;
-  color: white;
-  text-decoration: none;
-  transition: background-color 0.3s ease;
-  border-radius: 5px;
-}
-
-.get-started-btn:hover,
-.live-chat-btn:hover {
-  background-color: #45a049;
-}
-
-
-.chat-now, 
-.contact-us-now, .get-a-quote {
-  display: inline-block;
-  padding: 10px 20px;
-  margin-right: 10px; /* Adjust margin as needed */
-  background-color: #005503;
-  color: white;
-  text-decoration: none;
-  transition: background-color 0.3s ease;
-  border-radius: 5px;
-}
-
-.chat-now:hover, 
-.contact-us-now:hover, .get-a-quote:hover {
-  display: inline-block;
-  padding: 10px 20px;
-  margin-right: 10px; /* Adjust margin as needed */
-  background-color: #4CAF50;
-  color: white;
-  text-decoration: none;
-  transition: background-color 0.3s ease;
-  border-radius: 5px;
-}
-
-.flip-cards-container {
-    display: flex;
-    justify-content: space-between;
-    padding-bottom: 8px;
-    z-index:-1;
-}
-
-.flip-card {
-    width: calc(25% - 25px); /* Adjust width as needed */
-    margin-bottom: 20px; /* Adjust margin as needed */
-    margin-left: 50px;
-    margin-right: 50px;
-    
-}
-
-/* Add your existing CSS styles here */
- 
-
-
+  
 </style>
 
 
- 
+{% include 'header.html' %}
+{% include 'modal.html' %}
+
+{% for message in messages %}
+    <div class="alert alert-warning alert-dismissible fade show" role="alert">
+        {{message}}
+      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+{% endfor %}
+
+<section id="formContainer" style="display:none;"> <!-- Initially hide the form -->
+    <div class="bg-gray-100 flex items-center justify-center">
+        <div class="bg-white p-10 rounded-lg shadow-lg">
+            <p style="font-size: 20px;">Sign up now and get started</p>
+            <form method="post" class="mt-2">
+                <input type="text" name="name" class="form-control" placeholder="Enter your name">
+                <br>
+                <input type="email" name="email" class="form-control" placeholder="Enter your email">
+                <br>
+                <input type="number" name="contact" class="form-control" placeholder="Enter your contact">
+                <br>
+                <textarea class="form-control" name="project" placeholder="Talk about your project"></textarea>
+                <br>
+                <div class="d-grid">
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </div>
+            </form>
+
+        </div>
+    </div>
+</section>
+
+
+</div>
+
 
 <div class="section-wrapper">
     <!-- Tmb loader end -->
     <div id="preLoader"></div>
     <!-- Tmb loader end -->
 
-    {% include 'header.html' %}
+   
 
 
     <!-- ========== Hero section start ========== -->
-    <section
-            id="hero"
-            class="hero hero__padding overflow-hidden position-relative bg-one"
-    >
+    <section id="hero" class="hero hero__padding overflow-hidden position-relative bg-one" style="margin-top: -20px;">
+
         <div class="circle x1"></div>
         <div class="circle x2"></div>
         <div class="circle x3"></div>
         <div class="circle x4"></div>
         <div class="circle x5"></div>
         <div class="container">
-            <div class="row gx-5 align-items-left" style="margin-top: -50px;">
-                <div class="col-md-7 mb-4 mb-md-0 p-10" data-aos="zoom-in-up" data-aos-duration="1000"
+            <div class="row gx-5 align-items-center" style="margin-top: -30px;">
+                <div class="col-md-7 mb-10 mb-md-0 p-10" data-aos="zoom-in-up" data-aos-duration="1000"
                      data-aos-delay="850">
-                    <div class="hero__content position-relative">
-                        <div class="badge-text mb-2 text-uppercase">
-                            Let's Turn Your Ideas into Bestselling Books
+                    <div class="hero__content position-relative text-center">
+                        <div class="badge-text mb-2 text-uppercase font-size: 7px">
+                            Let's Turn Your Ideas into Bestselling Books <br>
                         </div>
-                        <h1 class="display-4 mb-4 text-capitalize" style="font-size: 52px;">
-                            WELCOME TO I RISE UP! ELEVATE YOUR WRITING WITH OUR BESPOKE BOOK WRITING SERVICES!
+                        
+                        <h1 class="display-4 mb-3 text-center" style="font-size: 70px; font-family: 'Playfair Display', serif; margin-top: 10px; margin-bottom: 5px;">
+                            WELCOME to
                         </h1>
+                        
+                        <h1 class="display-4 mb-4 text-capitalize text-center" style="font-size: 50px; font-family: 'Playfair Display', serif; margin-top: 5px; margin-bottom: 10px;">
+                            I-Riseup Publishing! <br>
+                        </h1>
+                        
+
+
+                        <h2 class="display-4 mb-4 text-capitalize text-center" style="font-size: 25px;">
+                            Unlock Your Potential with Professional Writing Services
+                        </h2>
+
+
+
                         <p class="text-muted mb-5 fs-5" style="font-size: 5px;">
-                            Our bespoke book writing services are designed to cater to the unique needs of each author.
-                            From brainstorming sessions and manuscript critiques to comprehensive editing and publishing
-                            support,
-                            our team of seasoned professionals is here to guide you through every stage of the writing
-                            journey.
+                            “Have ideas? Let the experts at i-RiseUp Publishing skillfully bring your visions to life with style!”
                     </div>
 
-                    <div class="row">
-                        <div class="col-3">
+                    <div class="row justify-content-center">
+                        <div class="col-4 text-center">
                             <img src="{% static 'assets/images/goodfirms.png' %}" class="img-fluid" alt="GoodFirms">
                         </div>
-                        <div class="col-3">
+                        <div class="col-4 text-center">
                             <img src="{% static 'assets/images/clutch.png' %}" class="img-fluid" alt="Clutch">
                         </div>
-                        <div class="col-3">
+                        <div class="col-4 text-center">
                             <img src="{% static 'assets/images/pilot.png' %}" class="img-fluid" alt="Pilot">
                         </div>
                     </div>
-                    <div class="button-container">
-                        <a href="#" class="chat-now" style="margin-top: 30px;">CHAT NOW</a>
-                        <a href="#" class="get-a-quote" style="margin-top: 30px;" onclick="openModal()"
-                        >GET A QUOTE</a>
-                        <a href="#" class="contact-us-now" style="margin-top: 30px;">CONTACT US NOW</a>
+                    
+                    <div class="button-container text-center justify-content-center">
+                        <button type="button" class="chat-now" onclick="openChatBox(event)"
+                            style="margin-top: 30px;">CHAT NOW</button>
+                            <button type="button" class="get-a-quote" data-bs-toggle="modal"
+                            data-bs-target="#getAQuoteModal" style="margin-top: 30px;" onclick="openModal()">CONTACT US</button>
+                        <button type="button" class="get-a-quote" data-bs-toggle="modal"
+                        data-bs-target="#getAQuoteModal" style="margin-top: 30px;" onclick="openModal()">GET A QUOTE</button>
                     </div>
-
+                    
 
                 </div>
                 <div class="col-md-5 text-center" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="850">
-                    <div class="hero__images4 text-absolute">
-                        <img width="400" class="img-fluid" src="{% static 'assets/images/books.png' %}" alt=""/>
-                        <a href="https://youtu.be/ksImBkJNQt8" class="glightbox3 video-btn">
-                            <i class="icofont-play"></i>
-                        </a>
-                        <div class="promo-video">
-                            <div class="waves-block">
-                                <div class="waves wave-1" style="background-color: #fcb0b4;"></div>
-                                <div class="waves wave-2" style="background-color: #fcb0b4;"></div>
-                                <div class="waves wave-3" style="background-color: #fcb0b4;"></div>
-
-
-                            </div>
+                    <div class="text-absolute" style="color: white;">
+                        <img width="400" class="img-fluid" src="{% static 'assets/images/book1.png' %}" alt=""/>
+                        
                         </div>
                     </div>
                 </div>
@@ -216,7 +130,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-12">
-                    <div class="owl-carousel owl-banner-logo owl-theme d-flex justify-content-center align-items-center">
+                    <div class="owl-carousel owl-banner-logo owl-theme d-flex justify-content-center align-items-center" data-visible="10">
                         <div class="item"><img src="{% static 'assets/images/banner1.png' %}" class="img-fluid"
                                                alt="LT-writing "></div>
                         <div class="item"><img src="{% static 'assets/images/banner2.png' %}" class="img-fluid"
@@ -234,6 +148,7 @@
             </div>
         </div>
     </section>
+    
 
 
     <section>
@@ -242,16 +157,18 @@
             <div class="rectangle bg-white" data-aos="fade-up"
             data-aos-duration="1000"
             data-aos-delay="150">
-                <form>
+                <form method="post">
+                {% csrf_token %}
+                    <input type="hidden" name="lets_start" value="hidden_text">
                     <div class="form-row align-items-center">
                         <div class="col">
-                            <input type="text" class="form-control form-control-lg" id="name" placeholder="Name">
+                            <input type="text" class="form-control form-control-lg" name="name" id="name" placeholder="Name">
                         </div>
                         <div class="col">
-                            <input type="email" class="form-control form-control-lg" id="email" placeholder="Email">
+                            <input type="email" class="form-control form-control-lg" name="email" id="email" placeholder="Email">
                         </div>
                         <div class="col">
-                            <input type="text" class="form-control form-control-lg" id="number" placeholder="Number">
+                            <input type="text" class="form-control form-control-lg" name="number" id="number" placeholder="Number">
                         </div>
                         <div class="col">
                             <button type="submit" class="btn btn-success btn-lg">Let's Start</button>
@@ -260,7 +177,7 @@
                 </form>
             </div>
         </div>
-        
+
     </section>
 
 
@@ -277,7 +194,7 @@
                     <div class="author-image">
                         <img
                                 class="img-fluid"
-                                src="{% static 'assets/images/author4.png' %}"
+                                src="{% static 'assets/images/author5.png' %}"
                                 alt=""
                         />
                     </div>
@@ -290,11 +207,10 @@
                 >
                     <div class="authorv3__content">
                         <div class="authorv3__content--badge">The Author</div>
-                        <h3 class="display-5 mb-0"> "Got ideas? Let our book wizards at iRiseUp work their magic and
-                            bring them to life in style!" </h3>
+                        <h3 class="display-5 mb-0"> “Have ideas? Let the experts at i-RiseUp Publishing skillfully bring your visions to life with style!” </h3>
                         <p class="m-30px-b text-muted fs-5"></p>
                         <p class="m-30px-b">
-                            Why choose iRiseUp for your book? Here's why:
+                            Why choose i-RiseUp Publishing for your book? Here's why:
 
                             We dive deep, conducting meticulous research and interviews to craft your book's outline.
                             Taking inspiration from the greats, we infuse timeless styles into our work.
@@ -307,7 +223,7 @@
                             now!
                         </p>
 
-                        {% include 'modal.html' %}
+
                         <div class="button-container">
                             <a href="#" class="get-started-btn" style="margin-bottom: 20px;" onclick="openModal()">Get Started</a>
                             <a href="#" class="live-chat-btn" style="margin-bottom: 20px;">Live Chat</a>
@@ -330,7 +246,7 @@
                             <li>
                                 <a href="#"><i class="icofont-whatsapp"></i></a>
                             </li>
-                        </ul>
+                        </ul> <br>
                     </div>
                 </div>
             </div>
@@ -340,118 +256,15 @@
 
     <!-- ========== Benefits v3 section start ========== -->
 
-    <section class="flip-boxx">
-        <div class="row">
-            <div class="col-xl-6 offset-xl-3 col-lg-10 offset-lg-1">
-                <div class="section-title-center text-center">
-
-                    <h2
-                            class="display-6"
-                            data-aos="zoom-in-up"
-                            data-aos-duration="1000"
-                            data-aos-delay="200"
-                    >
-                        LEARN ABOUT OUR SIMPLE BOOK WRITING PROCESS BELOW
-                    </h2>
-                    <div
-                            class="section-divider divider-traingle"
-                            data-aos="fade-up"
-                            data-aos-duration="1000"
-                            data-aos-delay="300"
-                    ></div>
-                </div>
-            </div>
-        </div>
-
-        <div class="flip-cards-container">
-            <!-- Chapter 01 -->
-            <div class="flip-card bg-white rounded-lg shadow-lg">
-                <div class="flip-card-inner">
-                    <div class="flip-card-front"
-                         data-aos="zoom-in-up"
-                         data-aos-duration="1000"
-                         data-aos-delay="200"
-                    >
-
-                        <p class="title text-white text-lg font-semibold">Order Details & Outline</p>
-                        <p class="text-white text-sm mb-2">________</p>
-
-                    </div>
-                    <div class="flip-card-back">
-                        <p class="title text-white text-lg font-semibold">"Call us now and give us the details of your
-                            book.
-                            Our experts will create an outline accordingly.</p>
-                        <p>Learn More</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Chapter 02 -->
-            <div class="flip-card bg-white rounded-lg shadow-lg">
-                <div class="flip-card-inner">
-                    <div class="flip-card-front"
-                         data-aos="zoom-in-up"
-                         data-aos-duration="1000"
-                         data-aos-delay="300"
-                    >
-                        <p class="title text-white text-lg font-semibold">Chapters Delivery</p>
-                        <p class="text-white text-sm mb-2">________</p>
-                        <p></p>
-                    </div>
-                    <div class="flip-card-back">
-                        <p class="title text-white text-lg font-semibold">"Next, we will begin drafting the chapters as
-                            per the outline, and send them to you for feedback.</p>
-                        <p>Learn More</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Chapter 03 -->
-            <div class="flip-card bg-white rounded-lg shadow-lg">
-                <div class="flip-card-inner">
-                    <div class="flip-card-front"
-                         data-aos="zoom-in-up"
-                         data-aos-duration="1000"
-                         data-aos-delay="400"
-                    >
-                        <p class="title text-white text-lg font-semibold">Feedback & Approval</p>
-                        <p class="text-white text-sm mb-2">________</p>
-                        <p></p>
-                    </div>
-                    <div class="flip-card-back">
-                        <p class="title text-white text-lg font-semibold">"Our book writers will cater to your comments
-                            and feedback and revise the content accordingly.</p>
-                        <p>Learn More</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Chapter 04 -->
-            <div class="flip-card bg-white rounded-lg shadow-lg">
-                <div class="flip-card-inner">
-                    <div class="flip-card-front"
-                         data-aos="zoom-in-up"
-                         data-aos-duration="1000"
-                         data-aos-delay="500"
-                    >
-                        <p class="title text-white text-lg font-semibold">Publication</p>
-                        <p class="text-white text-sm mb-2">________</p>
-                        <p></p>
-                    </div>
-                    <div class="flip-card-back">
-                        <p class="title text-white text-lg font-semibold">"iRiseup will then publish the book & promote
-                            it to boost sales.</p>
-                        <p>Learn More</p>
-                    </div>
-                </div>
-            </div>
-        </div>
+    {% include 'flipbox.html' %}
+        
+        
 
         <!-- ========== Chapter section start ========== -->
         <section id="chapters" class="section-padding chapter bg-one">
             <div class="container">
                 <div class="row">
-                    <div class="col-xl-6 offset-xl-3 col-lg-10 offset-lg-1">
+                    <div class="col-xl-6 offset-xl-3 col-lg-5 offset-lg-1">
                         <div class="section-title-center text-center">
                 <span
                         data-aos="fade-up"
@@ -465,7 +278,7 @@
                                     data-aos-duration="1000"
                                     data-aos-delay="200"
                             >
-                                I RISE UP OFFERS PREMIUM BOOK WRITING SERVICES IN THE FOLLOWING GENRES
+                                WE OFFER PREMIUM BOOK WRITING SERVICES IN THE FOLLOWING GENRES
                             </h2>
                             <div
                                     class="section-divider divider-traingle"
@@ -476,108 +289,136 @@
                         </div>
                     </div>
                 </div>
-                <div class="row justify-content-center">
-
-
-                    <!-- chapter 01 -->
-
-                    <!DOCTYPE html>
-                    {% load static %}
-                    <html lang="en">
-
-
-                    <meta charset="UTF-8">
-                    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-                    <title>Book Genres</title>
-                    
-
-                    <body class="bg-gray-100">
-                    <div class="container mx-auto px-4 py-8">
-                        <div class="grid grid-cols-2 md:grid-cols-4 gap-4"
-                             class="display-6"
-                             data-aos="zoom-in-up"
-                             data-aos-duration="1000"
-                             data-aos-delay="200">
-                            <!-- Fiction -->
+                <div class="container mx-auto px-4 py-8">
+                    <div class="row justify-content-center">
+                        <!-- Fiction -->
+                        <div class="col-md-3">
                             <div class="flex flex-col items-center">
-
-                                <img src="{% static 'fiction.png' %}"
-                                     alt="Placeholder image for the book 'Three Cowboys Baby' by Kate Pearce"
-                                     class="mb-4">
-                                <h2 class="text-xl font-bold mb-2">Fiction</h2>
-                                <p class="text-gray-600 text-center">Unleash your plot's potential with our online book
-                                    writers. Elevate your story with our expertise!</p>
+                                <div class="d-flex justify-content-center">
+                                <img src="{% static 'fiction.png' %}" alt="Placeholder image for the book 'Three Cowboys Baby' by Kate Pearce" class="mb-4">
                             </div>
-
-                            <!-- Nonfiction -->
-                            <div class="flex flex-col items-center">
-                                <img src="{% static 'nonfiction.png' %}"
-                                     alt="Placeholder image for the book 'Essays 2023' by Alexander Chee" class="mb-4">
-                                <h2 class="text-xl font-bold mb-2">Nonfiction</h2>
-                                <p class="text-gray-600 text-center">Partner with our top nonfiction writers to bring
-                                    your ideas to life! Contact us today!</p>
+                                <h2 class="text-xl font-bold mb-2 text-center">Fiction</h2>
+                                <p class="text-gray-600 text-center">Unleash your plot's potential with our online book writers. Elevate your story with our expertise!</p>
                             </div>
-
-                            <!-- Fantasy -->
+                        </div>
+                
+                        <!-- Nonfiction -->
+                        <div class="col-md-3">
                             <div class="flex flex-col items-center">
-                                <img src="{% static 'fantasy.png' %}" alt="Placeholder image for the fantasy book"
-                                     class="mb-4">
-                                <h2 class="text-xl font-bold mb-2">Fantasy</h2>
-                                <p class="text-gray-600 text-center">Writing's tough! Let our fantasy wizards create
-                                    captivating tales. Get in touch!</p>
+                                <div class="d-flex justify-content-center">
+                                <img src="{% static 'nonfiction.png' %}" alt="Placeholder image for the book 'Essays 2023' by Alexander Chee" class="mb-4">
                             </div>
-
-                            <!-- Autobiography -->
-                            <div class="flex flex-col items-center">
-                                <img src="{% static 'autobiography.png' %}"
-                                     alt="Placeholder image for the book 'The Secret Lives of Royal Women'"
-                                     class="mb-4">
-                                <h2 class="text-xl font-bold mb-2">Autobiography</h2>
-                                <p class="text-gray-600 text-center">Seeking to inspire others with your life story? Let
-                                    iRise Up Publisher make it happen for you! Reach out today!</p>
+                                <h2 class="text-xl font-bold mb-2 text-center">Nonfiction</h2>
+                                <p class="text-gray-600 text-center">Partner with our top nonfiction writers to bring your ideas to life! Contact us today!</p>
                             </div>
-
-                            <!-- Memoirs -->
+                        </div>
+                
+                        <!-- Fantasy -->
+                        <div class="col-md-3">
                             <div class="flex flex-col items-center">
-                                <img src="{% static 'memoirs.png' %}"
-                                     alt="Placeholder image for the book 'Anxiously Ever After' by Clint Edwards"
-                                     class="mb-4">
-                                <h2 class="text-xl font-bold mb-2">Memoirs</h2>
-                                <p class="text-gray-600 text-center">Crafting memoirs? Consult with our experts
-                                    today!</p>
+                                <div class="d-flex justify-content-center">
+                                <img src="{% static 'fantasy.png' %}" alt="Placeholder image for the fantasy book" class="mb-4">
                             </div>
-
-                            <!-- Children's Book -->
-                            <div class="flex flex-col items-center">
-                                <img src="{% static 'childrensbook.png' %}"
-                                     alt="Placeholder image for the children's book 'ABC Dot-to-Dots'" class="mb-4">
-                                <h2 class="text-xl font-bold mb-2">Children's Book</h2>
-                                <p class="text-gray-600 text-center">iRiseup crafts captivating children's books.</p>
+                                <h2 class="text-xl font-bold mb-2 text-center">Fantasy</h2>
+                                <p class="text-gray-600 text-center">Writing's tough! Let our fantasy wizards create captivating tales. Get in touch!</p>
                             </div>
-
-                            <!-- Self-Help -->
+                        </div>
+                
+                        <!-- Autobiography -->
+                        <div class="col-md-3">
                             <div class="flex flex-col items-center">
-                                <img src="{% static 'selfhelp.png' %}"
-                                     alt="Placeholder image for the self-help book 'Grief Therapy'" class="mb-4">
-                                <h2 class="text-xl font-bold mb-2">Self-Help</h2>
+                                <div class="d-flex justify-content-center"> <!-- Center the image horizontally -->
+                                    <img src="{% static 'autobiography.png' %}" alt="Placeholder image for the book 'The Secret Lives of Royal Women'" class="mb-4">
+                                </div>
+                                <h2 class="text-xl font-bold mb-2 text-center">Autobiography</h2>
+                                <p class="text-gray-600 text-center">Seeking to inspire others with your life story? Reach out today!</p>
+                            </div>
+                        </div>
+                        
+                
+                        <!-- Memoirs -->
+                        <div class="col-md-3">
+                            <div class="flex flex-col items-center">
+                                <div class="d-flex justify-content-center">
+                                <img src="{% static 'memoirs.png' %}" alt="Placeholder image for the book 'Anxiously Ever After' by Clint Edwards" class="mb-4">
+                            </div>
+                                <h2 class="text-xl font-bold mb-2 text-center">Memoirs</h2>
+                                <p class="text-gray-600 text-center">Crafting memoirs? Consult with our experts today!</p>
+                            </div>
+                        </div>
+                
+                        <!-- Children's Book -->
+                        <div class="col-md-3">
+                            <div class="flex flex-col items-center">
+                                <div class="d-flex justify-content-center">
+                                <img src="{% static 'childrensbook.png' %}" alt="Placeholder image for the children's book 'ABC Dot-to-Dots'" class="mb-4">
+                            </div>
+                                <h2 class="text-xl font-bold mb-2 text-center">Children's Book</h2>
+                                <p class="text-gray-600 text-center">i-RiseUp Publishing crafts captivating children's books.</p>
+                            </div>
+                        </div>
+                
+                        <!-- Self-Help -->
+                        <div class="col-md-3">
+                            <div class="flex flex-col items-center">
+                                <div class="d-flex justify-content-center">
+                                <img src="{% static 'selfhelp.png' %}" alt="Placeholder image for the self-help book 'Grief Therapy'" class="mb-4">
+                            </div>
+                                <h2 class="text-xl font-bold mb-2 text-center">Self-Help</h2>
                                 <p class="text-gray-600 text-center">Unlock self-help strategies for a better world.</p>
                             </div>
-
-                            <!-- Research-Based -->
+                        </div>
+                
+                        <!-- Research-Based -->
+                        <div class="col-md-3">
                             <div class="flex flex-col items-center">
-                                <img src="{% static 'researchbased.png' %}"
-                                     alt="Placeholder image for the research-based book 'Documentary Narrative Film'"
-                                     class="mb-4">
-                                <h2 class="text-xl font-bold mb-2">Research-Based</h2>
-                                <p class="text-gray-600 text-center">Ready to publish your research? We're here to
-                                    assist! Contact us.</p>
+                                <div class="d-flex justify-content-center">
+                                <img src="{% static 'researchbased.png' %}" alt="Placeholder image for the research-based book 'Documentary Narrative Film'" class="mb-4">
+                            </div>
+                                <h2 class="text-xl font-bold mb-2 text-center">Research-Based</h2>
+                                <p class="text-gray-600 text-center">Ready to publish your research? We're here to assist! Contact us.</p>
                             </div>
                         </div>
                     </div>
-
+                </div>
+                
 
         </section>
         <!-- ========== Chapter section end ========== -->
+        <!-- ========== CTA v4 section start ========== -->
+        <section class="section-padding ctav4" style="padding-top: 50px; padding-bottom: 50px;"> <!-- Adjust padding as needed -->
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8 mb-4 mb-lg-0 ctav4__content"> <!-- Adjust column size -->
+                        <h3
+                                class="display-4"
+                                data-aos="fade-up"
+                                data-aos-duration="1000"
+                                data-aos-delay="150"
+                        >
+                            WHY HIRE THE BEST BOOK PROMOTION EXPERTS?
+                        </h3>
+                        <h3
+                                data-aos="fade-up"
+                                data-aos-duration="1000"
+                                data-aos-delay="200"
+                                style="font-size: 18px;" <!-- Adjust font size -->
+                        
+                            Our book promoters and marketers can promote a book of any genre and ensure the author
+                            reaches their target audience effectively. Hire our experts today and get a chance to improve your book sales online and in bookstores!
+                        </h3> <br> </div>
+                        
+                        
+                       
+                        
+                    </div>
+                    
+                    
+        </section>
+        
+        <!-- ========== CTA v4 section end ========== -->
+
+
         <!-- ========== Chapter preview section start ========== -->
         <section id="preview" class="section-padding chapter-preview">
             <div class="container">
@@ -618,22 +459,22 @@
                             <div
                                     class="panel active"
                                     style="
-                    background-image: url({% static 'assets/images/fiction2.png' %});
-                  "
+                    background-image: url({% static 'assets/images/fiction2.png' %}); "
+                  
                             >
                                 <a
                                         data-glightbox=" description: .custom-desc1; descPosition: right;"
                                         class="glightbox2"
-                                        href="{% static 'assets/images/nonfiction 2.png' %}"
+                                        href="{% static 'assets/images/bestsellerbook/4.png' %}"
                                 >
                                 </a>
                                 <h3>FICTION</h3>
                             </div>
                             <div class="chapters__content glightbox-desc custom-desc1">
                                 <div class="content__body">
-                                    <h3 class="mb-4 text-center">The Beginning</h3>
+                                    <h3 class="mb-4 text-center">Fiction</h3>
                                     <p class="first-letter">
-                                        At iRiseup, we believe that every story deserves to be told in a captivating and
+                                        At i-RiseUp Publishing, we believe that every story deserves to be told in a captivating and
                                         visually stunning manner.
                                         Our recent venture into publishing fiction books exemplifies our commitment to
                                         creativity and excellence in storytelling.
@@ -669,7 +510,7 @@
                                     <p>
                                         Join us in celebrating the power of creativity and storytelling.
                                         Dive into a world where anything is possible and let your imagination soar with
-                                        iRiseup.
+                                        i-RiseUp Publishing.
                                     </p>
                                 </div>
                             </div>
@@ -682,53 +523,59 @@
                                 <a
                                         data-glightbox=" description: .custom-desc2; descPosition: right;"
                                         class="glightbox2"
-                                        href="{% static 'assets/images/chapter-preview/7.png' %}"
+                                        href="{% static 'assets/images/bestsellerbook/3.png' %}"
                                 >
                                 </a>
                                 <h3>BIOGRAPHY</h3>
                             </div>
                             <div class="chapters__content glightbox-desc custom-desc2">
                                 <div class="content__body">
-                                    <h3 class="mb-4 text-center">Main Story</h3>
+                                    <h3 class="mb-4 text-center">Biography</h3>
                                     <p class="first-letter">
-                                        Dpsum vehicula eros ultrices lacinia Vestibulum ante ipsum
-                                        primis in faucibus orci luctus et ultrices posuere cubilia
-                                        Curae Duis quis ipsum vehicula eros ultrices lacinia.
-                                        Vestibulum ante ipsum primis in faucibus orci luctus et
-                                        ultrices posuere
+                                        we firmly believe that every life is a story waiting to be told, and our recent
+                                        venture into publishing biographies showcases our unwavering dedication to
+                                        honoring these remarkable narratives.
                                     </p>
                                     <p>
-                                        Primis pharetra facilisis lorem quis penatibus ad nulla
-                                        inceptos, dui per tempor taciti aliquet consequat sodales,
-                                        curae tristique gravida auctor interdum malesuada
-                                        sagittis. Felis pretium eros ligula natoque ad ante rutrum
-                                        himenaeos, adipiscing urna mauris porta quam efficitur
-                                        odio, sagittis morbi tellus nisi molestie mus faucibus.
+                                        Just as with our fiction books, our journey into the realm of biographies is a
+                                        testament to our commitment to creativity and excellence in storytelling. From
+                                        the initial spark of inspiration to the finished product on bookstore shelves,
+                                        our team pours their passion and expertise into every aspect of the process.
                                     </p>
                                     <p>
-                                        Primis pharetra facilisis lorem quis penatibus ad nulla
-                                        inceptos, dui per tempor taciti aliquet consequat sodales,
-                                        curae tristique gravida auctor interdum malesuada
-                                        sagittis. Felis pretium eros ligula natoque ad ante rutrum
-                                        himenaeos, adipiscing urna mauris porta quam efficitur
-                                        odio, sagittis morbi tellus nisi molestie mus faucibus.
+                                        We embark on a journey of exploration and discovery, delving deep into the lives
+                                        of our subjects to unearth the essence of their experiences. Through meticulous
+                                        research, heartfelt interviews, and compassionate storytelling, we strive to
+                                        capture the true essence of each individual's journey, painting a vivid portrait
+                                        that resonates with readers.
                                     </p>
                                     <p>
-                                        Primis pharetra facilisis lorem quis penatibus ad nulla
-                                        inceptos, dui per tempor taciti aliquet consequat sodales,
-                                        curae tristique gravida auctor interdum malesuada
-                                        sagittis. Felis pretium eros ligula natoque ad ante rutrum
-                                        himenaeos, adipiscing urna mauris porta quam efficitur
-                                        odio, sagittis morbi tellus nisi molestie mus faucibus.
+                                        With a discerning eye for detail, we spare no effort in ensuring that every page
+                                        of our biographies is a masterpiece in its own right. From the choice of premium
+                                        paper to the thoughtful selection of photographs and illustrations, every
+                                        element is meticulously curated to evoke a sense of wonder and reverence.
                                     </p>
                                     <p>
-                                        Primis pharetra facilisis lorem quis penatibus ad nulla
-                                        inceptos, dui per tempor taciti aliquet consequat sodales,
-                                        curae tristique gravida auctor interdum malesuada
-                                        sagittis. Felis pretium eros ligula natoque ad ante rutrum
-                                        himenaeos, adipiscing urna mauris porta quam efficitur
-                                        odio, sagittis morbi tellus nisi molestie mus faucibus.
+                                        Our dedication to quality extends far beyond the printed page. We collaborate
+                                        closely with our authors, subjects, and a team of talented designers, fostering
+                                        an environment of collaboration and innovation. Together, we push the boundaries
+                                        of traditional biography writing, exploring new storytelling techniques and
+                                        narrative approaches to create books that captivate and inspire readers of all
+                                        ages.
+                                        But our mission does not end with the publication of a beautiful book. We are
+                                        passionate about sharing these extraordinary stories with the world, igniting
+                                        imaginations and stirring hearts.
                                     </p>
+                                    <p>
+                                        That's why we invite you to discover the magic of our biographies and embark on
+                                        a transformative journey with each turn of the page.
+                                    </p>
+                                    <p>
+                                        Join us in celebrating the power of storytelling and the richness of the human
+                                        experience. Dive into the lives of extraordinary individuals and let your
+                                        imagination soar with i-RiseUp Publishing.
+                                    </p>
+
                                 </div>
                             </div>
                             <div
@@ -740,53 +587,30 @@
                                 <a
                                         data-glightbox=" description: .custom-desc3; descPosition: right;"
                                         class="glightbox2"
-                                        href="{% static 'assets/images/nonfiction2.png' %}"
+                                        href="{% static 'assets/images/bestsellerbook/1.png' %}"
                                 >
                                 </a>
                                 <h3>NON-FICTION</h3>
                             </div>
                             <div class="chapters__content glightbox-desc custom-desc3">
                                 <div class="content__body">
-                                    <h3 class="mb-4 text-center">Describe Story</h3>
+                                    <h3 class="mb-4 text-center">Non-Fiction</h3>
                                     <p class="first-letter">
-                                        Dpsum vehicula eros ultrices lacinia Vestibulum ante ipsum
-                                        primis in faucibus orci luctus et ultrices posuere cubilia
-                                        Curae Duis quis ipsum vehicula eros ultrices lacinia.
-                                        Vestibulum ante ipsum primis in faucibus orci luctus et
-                                        ultrices posuere
-                                    </p>
+                                        At i-RiseUp Publishing, we're dedicated to telling captivating stories that inspire and
+                                        enlighten.
+                                        Our recent expansion into non-fiction publishing exemplifies our commitment to
+                                        excellence in storytelling. From inception to publication, our team meticulously
+                                        crafts each narrative,
+                                        delving deep into the subject matter to present compelling and thought-provoking
+                                        content. </p>
                                     <p>
-                                        Primis pharetra facilisis lorem quis penatibus ad nulla
-                                        inceptos, dui per tempor taciti aliquet consequat sodales,
-                                        curae tristique gravida auctor interdum malesuada
-                                        sagittis. Felis pretium eros ligula natoque ad ante rutrum
-                                        himenaeos, adipiscing urna mauris porta quam efficitur
-                                        odio, sagittis morbi tellus nisi molestie mus faucibus.
+                                        With a keen eye for detail, we ensure that every aspect of our non-fiction
+                                        books, from the writing to the design, captivates and engages readers.
+                                        Join us in celebrating the power of knowledge and discovery. Explore our
+                                        collection of non-fiction titles and embark on a journey of enlightenment with
+                                        i-RiseUp Publishing.
                                     </p>
-                                    <p>
-                                        Primis pharetra facilisis lorem quis penatibus ad nulla
-                                        inceptos, dui per tempor taciti aliquet consequat sodales,
-                                        curae tristique gravida auctor interdum malesuada
-                                        sagittis. Felis pretium eros ligula natoque ad ante rutrum
-                                        himenaeos, adipiscing urna mauris porta quam efficitur
-                                        odio, sagittis morbi tellus nisi molestie mus faucibus.
-                                    </p>
-                                    <p>
-                                        Primis pharetra facilisis lorem quis penatibus ad nulla
-                                        inceptos, dui per tempor taciti aliquet consequat sodales,
-                                        curae tristique gravida auctor interdum malesuada
-                                        sagittis. Felis pretium eros ligula natoque ad ante rutrum
-                                        himenaeos, adipiscing urna mauris porta quam efficitur
-                                        odio, sagittis morbi tellus nisi molestie mus faucibus.
-                                    </p>
-                                    <p>
-                                        Primis pharetra facilisis lorem quis penatibus ad nulla
-                                        inceptos, dui per tempor taciti aliquet consequat sodales,
-                                        curae tristique gravida auctor interdum malesuada
-                                        sagittis. Felis pretium eros ligula natoque ad ante rutrum
-                                        himenaeos, adipiscing urna mauris porta quam efficitur
-                                        odio, sagittis morbi tellus nisi molestie mus faucibus.
-                                    </p>
+
                                 </div>
                             </div>
                             <div
@@ -798,53 +622,32 @@
                                 <a
                                         data-glightbox=" description: .custom-desc4; descPosition: right;"
                                         class="glightbox2"
-                                        href="{% static 'assets/images/chapter-preview/9.png' %}"
+                                        href="{% static 'assets/images/bestsellerbook/2.png' %}"
                                 >
                                 </a>
                                 <h3>ROMANCE</h3>
                             </div>
                             <div class="chapters__content glightbox-desc custom-desc4">
                                 <div class="content__body">
-                                    <h3 class="mb-4 text-center">Story Part 03</h3>
+                                    <h3 class="mb-4 text-center">Romance</h3>
                                     <p class="first-letter">
-                                        Dpsum vehicula eros ultrices lacinia Vestibulum ante ipsum
-                                        primis in faucibus orci luctus et ultrices posuere cubilia
-                                        Curae Duis quis ipsum vehicula eros ultrices lacinia.
-                                        Vestibulum ante ipsum primis in faucibus orci luctus et
-                                        ultrices posuere
+                                        At i-RiseUp Publishing, we believe in the magic of love stories and the power they hold to
+                                        captivate hearts. Our recent venture into publishing romance novels reflects our
+                                        passion for crafting tales that sweep readers off their feet.
                                     </p>
                                     <p>
-                                        Primis pharetra facilisis lorem quis penatibus ad nulla
-                                        inceptos, dui per tempor taciti aliquet consequat sodales,
-                                        curae tristique gravida auctor interdum malesuada
-                                        sagittis. Felis pretium eros ligula natoque ad ante rutrum
-                                        himenaeos, adipiscing urna mauris porta quam efficitur
-                                        odio, sagittis morbi tellus nisi molestie mus faucibus.
+                                        From the initial spark of inspiration to the final heartfelt page, our team
+                                        pours their creativity and dedication into every aspect of the process. We weave
+                                        intricate plots, develop memorable characters, and paint vivid settings that
+                                        transport readers to worlds of passion and desire. With a commitment to
+                                        capturing the essence of love, we spare no effort in ensuring that each romance
+                                        novel is a tale to cherish.
                                     </p>
                                     <p>
-                                        Primis pharetra facilisis lorem quis penatibus ad nulla
-                                        inceptos, dui per tempor taciti aliquet consequat sodales,
-                                        curae tristique gravida auctor interdum malesuada
-                                        sagittis. Felis pretium eros ligula natoque ad ante rutrum
-                                        himenaeos, adipiscing urna mauris porta quam efficitur
-                                        odio, sagittis morbi tellus nisi molestie mus faucibus.
+                                        Join us in celebrating the beauty of romance and let your heart soar with
+                                        i-RiseUp Publishing.
                                     </p>
-                                    <p>
-                                        Primis pharetra facilisis lorem quis penatibus ad nulla
-                                        inceptos, dui per tempor taciti aliquet consequat sodales,
-                                        curae tristique gravida auctor interdum malesuada
-                                        sagittis. Felis pretium eros ligula natoque ad ante rutrum
-                                        himenaeos, adipiscing urna mauris porta quam efficitur
-                                        odio, sagittis morbi tellus nisi molestie mus faucibus.
-                                    </p>
-                                    <p>
-                                        Primis pharetra facilisis lorem quis penatibus ad nulla
-                                        inceptos, dui per tempor taciti aliquet consequat sodales,
-                                        curae tristique gravida auctor interdum malesuada
-                                        sagittis. Felis pretium eros ligula natoque ad ante rutrum
-                                        himenaeos, adipiscing urna mauris porta quam efficitur
-                                        odio, sagittis morbi tellus nisi molestie mus faucibus.
-                                    </p>
+
                                 </div>
                             </div>
                             <div
@@ -863,46 +666,24 @@
                             </div>
                             <div class="chapters__content glightbox-desc custom-desc5">
                                 <div class="content__body">
-                                    <h3 class="mb-4 text-center">History & Prid</h3>
+                                    <h3 class="mb-4 text-center">Thriller</h3>
                                     <p class="first-letter">
-                                        Dpsum vehicula eros ultrices lacinia Vestibulum ante ipsum
-                                        primis in faucibus orci luctus et ultrices posuere cubilia
-                                        Curae Duis quis ipsum vehicula eros ultrices lacinia.
-                                        Vestibulum ante ipsum primis in faucibus orci luctus et
-                                        ultrices posuere
+                                        At i-RiseUp Publishing, we thrive on the adrenaline rush of a good thriller, and our recent
+                                        foray into publishing gripping suspense novels showcases our dedication to
+                                        keeping readers on the edge of their seats.
                                     </p>
                                     <p>
-                                        Primis pharetra facilisis lorem quis penatibus ad nulla
-                                        inceptos, dui per tempor taciti aliquet consequat sodales,
-                                        curae tristique gravida auctor interdum malesuada
-                                        sagittis. Felis pretium eros ligula natoque ad ante rutrum
-                                        himenaeos, adipiscing urna mauris porta quam efficitur
-                                        odio, sagittis morbi tellus nisi molestie mus faucibus.
+                                        From the first chilling twist to the heart-pounding climax, our team
+                                        meticulously crafts each thriller to deliver pulse-pounding excitement and
+                                        spine-tingling suspense. With expertly crafted plots, complex characters, and
+                                        atmospheric settings, we ensure that every page is a rollercoaster ride of
+                                        thrills and surprises.
                                     </p>
                                     <p>
-                                        Primis pharetra facilisis lorem quis penatibus ad nulla
-                                        inceptos, dui per tempor taciti aliquet consequat sodales,
-                                        curae tristique gravida auctor interdum malesuada
-                                        sagittis. Felis pretium eros ligula natoque ad ante rutrum
-                                        himenaeos, adipiscing urna mauris porta quam efficitur
-                                        odio, sagittis morbi tellus nisi molestie mus faucibus.
+                                        Join us in experiencing the excitement of the unknown and dive into the world of
+                                        gripping suspense with i-RiseUp Publishing.
                                     </p>
-                                    <p>
-                                        Primis pharetra facilisis lorem quis penatibus ad nulla
-                                        inceptos, dui per tempor taciti aliquet consequat sodales,
-                                        curae tristique gravida auctor interdum malesuada
-                                        sagittis. Felis pretium eros ligula natoque ad ante rutrum
-                                        himenaeos, adipiscing urna mauris porta quam efficitur
-                                        odio, sagittis morbi tellus nisi molestie mus faucibus.
-                                    </p>
-                                    <p>
-                                        Primis pharetra facilisis lorem quis penatibus ad nulla
-                                        inceptos, dui per tempor taciti aliquet consequat sodales,
-                                        curae tristique gravida auctor interdum malesuada
-                                        sagittis. Felis pretium eros ligula natoque ad ante rutrum
-                                        himenaeos, adipiscing urna mauris porta quam efficitur
-                                        odio, sagittis morbi tellus nisi molestie mus faucibus.
-                                    </p>
+
                                 </div>
                             </div>
                         </div>
@@ -917,19 +698,13 @@
             <div class="container">
                 <div class="row">
                     <div class="col-12">
-                        <div class="owl-carousel owl-banner-logo owl-theme d-flex justify-content-center align-items-center">
-                            <div class="item"><img src="{% static 'assets/images/banner1.png' %}" class="img-fluid"
-                                                   alt="LT-writing "></div>
-                            <div class="item"><img src="{% static 'assets/images/banner2.png' %}" class="img-fluid"
-                                                   alt="LT-writing "></div>
-                            <div class="item"><img src="{% static 'assets/images/banner3.png' %}" class="img-fluid"
-                                                   alt="LT-writing "></div>
-                            <div class="item"><img src="{% static 'assets/images/banner4.png' %}" class="img-fluid"
-                                                   alt="LT-writing "></div>
-                            <div class="item"><img src="{% static 'assets/images/banner5.png' %}" class="img-fluid"
-                                                   alt="LT-writing "></div>
-                            <div class="item"><img src="{% static 'assets/images/banner6.png' %}" class="img-fluid"
-                                                   alt="LT-writing "></div>
+                        <div class="owl-carousel owl-banner-logo owl-theme d-flex justify-content-start align-items-center">
+                            <div class="item"><img src="{% static 'assets/images/banner1.png' %}" class="img-fluid" alt="LT-writing "></div>
+                            <div class="item"><img src="{% static 'assets/images/banner2.png' %}" class="img-fluid" alt="LT-writing "></div>
+                            <div class="item"><img src="{% static 'assets/images/banner3.png' %}" class="img-fluid" alt="LT-writing "></div>
+                            <div class="item"><img src="{% static 'assets/images/banner4.png' %}" class="img-fluid" alt="LT-writing "></div>
+                            <div class="item"><img src="{% static 'assets/images/banner5.png' %}" class="img-fluid" alt="LT-writing "></div>
+                            <div class="item"><img src="{% static 'assets/images/banner6.png' %}" class="img-fluid" alt="LT-writing "></div>
                         </div>
                     </div>
                 </div>
@@ -966,7 +741,9 @@
                         </div>
                         <div class="cta-form-box">
                             <!-- subscription form start -->
-                            <form action="{% static 'assets/subscribe/subscribe.php' %}" id="subscribe">
+                            <form method="post" id="subscribe">
+                            {% csrf_token %}
+                                <input type="hidden" name="subscribe" value="hidden_text">
                                 <div
                                         class="mb13"
                                         data-aos="fade-up"
@@ -1061,17 +838,17 @@
                     <div class="col-12">
                         <div class="owl-carousel owl-banner-logo owl-theme d-flex justify-content-center align-items-center">
                             <div class="item"><img src="{% static 'assets/images/banner1.png' %}" class="img-fluid"
-                                                   alt="LT-writing "></div>
+                                                   alt="i-RiseUp Publsihing"></div>
                             <div class="item"><img src="{% static 'assets/images/banner2.png' %}" class="img-fluid"
-                                                   alt="LT-writing "></div>
+                                                   alt="i-RiseUp Publsihing"></div>
                             <div class="item"><img src="{% static 'assets/images/banner3.png' %}" class="img-fluid"
-                                                   alt="LT-writing "></div>
+                                                   alt="i-RiseUp Publsihing"></div>
                             <div class="item"><img src="{% static 'assets/images/banner4.png' %}" class="img-fluid"
-                                                   alt="LT-writing "></div>
+                                                   alt="i-RiseUp Publsihing"></div>
                             <div class="item"><img src="{% static 'assets/images/banner5.png' %}" class="img-fluid"
-                                                   alt="LT-writing "></div>
+                                                   alt="i-RiseUp Publsihing"></div>
                             <div class="item"><img src="{% static 'assets/images/banner6.png' %}" class="img-fluid"
-                                                   alt="LT-writing "></div>
+                                                   alt="i-RiseUp Publsihing"></div>
                         </div>
                     </div>
                 </div>
@@ -1079,220 +856,35 @@
         </section>
         <!-- ========== CTA section end ========== -->
 
-        <!-- ========== Achievement section start ========== -->
-        <section id="achievement" class="section-padding achievement">
+        <!-- ========== register banner start ========== -->
+        <section>
+
             <div class="container">
-                <div class="row">
-                    <div class="col-xl-6 offset-xl-3 col-lg-10 offset-lg-1">
-                        <div class="section-title-center text-center">
-                <span
-                        data-aos="fade-up"
-                        data-aos-duration="1000"
-                        data-aos-delay="150"
-                >Author Achievements</span
-                >
-                            <h2
-                                    class="display-6"
-                                    data-aos="fade-up"
-                                    data-aos-duration="1000"
-                                    data-aos-delay="200"
-                            >
-                                Awards Achieved for this book
-                            </h2>
-                            <div
-                                    class="section-divider divider-traingle"
-                                    data-aos="fade-up"
-                                    data-aos-duration="1000"
-                                    data-aos-delay="250"
-                            ></div>
+            <div class="rectangle bg-white" data-aos="fade-up"
+            data-aos-duration="1000"
+            data-aos-delay="150">
+                <form>
+                    <div class="form-row align-items-center">
+                        <div class="col">
+                            <input type="text" class="form-control form-control-lg" id="name" placeholder="Name">
+                        </div>
+                        <div class="col">
+                            <input type="email" class="form-control form-control-lg" id="email" placeholder="Email">
+                        </div>
+                        <div class="col">
+                            <input type="text" class="form-control form-control-lg" id="number" placeholder="Number">
+                        </div>
+                        <div class="col">
+                            <button type="submit" class="btn btn-success btn-lg">Let's Start</button>
                         </div>
                     </div>
-                </div>
-                <div class="row row-cols-1 row-cols-md-2">
-                    <div
-                            class="col m-30px-b"
-                            data-aos="fade-up"
-                            data-aos-duration="1000"
-                            data-aos-delay="200"
-                    >
-                        <div class="achievement__item h-100 translateEffect1">
-                            <div class="row row-cols-2">
-                                <div class="col mt-0">
-                                    <img
-                                            class="img-fluid"
-                                            src="{% static 'assets/images/awards/1.jpg' %}"
-                                            alt=""
-                                    />
-                                </div>
-                                <div class="col mt-0">
-                                    <div class="achievement__content">
-                                        <div class="achievement__content__icon">
-                                            <i class="icofont-award"></i>
-                                        </div>
-                                        <h3>Nominated</h3>
-                                        <p>
-                                            International Thriller Writers Award for Best Novel
-                                            (These Toxic Things)
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div
-                            class="col m-30px-b"
-                            data-aos="fade-up"
-                            data-aos-duration="1000"
-                            data-aos-delay="300"
-                    >
-                        <div class="achievement__item h-100 translateEffect1">
-                            <div class="row row-cols-2">
-                                <div class="col mt-0">
-                                    <img
-                                            class="img-fluid"
-                                            src="{% static 'assets/images/awards/2.jpg' %}"
-                                            alt=""
-                                    />
-                                </div>
-                                <div class="col mt-0">
-                                    <div class="achievement__content">
-                                        <div class="achievement__content__icon">
-                                            <i class="icofont-award"></i>
-                                        </div>
-                                        <h3>Winner</h3>
-                                        <p>
-                                            International Thriller Writers Award for Best Novel
-                                            (These Toxic Things)
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div
-                            class="col m-30px-b"
-                            data-aos="fade-up"
-                            data-aos-duration="1000"
-                            data-aos-delay="400"
-                    >
-                        <div class="achievement__item h-100 translateEffect1">
-                            <div class="row row-cols-2">
-                                <div class="col mt-0">
-                                    <img
-                                            class="img-fluid"
-                                            src="{% static 'assets/images/awards/3.jpg' %}"
-                                            alt=""
-                                    />
-                                </div>
-                                <div class="col mt-0">
-                                    <div class="achievement__content">
-                                        <div class="achievement__content__icon">
-                                            <i class="icofont-award"></i>
-                                        </div>
-                                        <h3>Guest of Honor</h3>
-                                        <p>
-                                            International Thriller Writers Award for Best Novel
-                                            (These Toxic Things)
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div
-                            class="col m-30px-b"
-                            data-aos="fade-up"
-                            data-aos-duration="1000"
-                            data-aos-delay="500"
-                    >
-                        <div class="achievement__item h-100 translateEffect1">
-                            <div class="row row-cols-2">
-                                <div class="col mt-0">
-                                    <img
-                                            class="img-fluid"
-                                            src="{% static 'assets/images/awards/4.jpg' %}"
-                                            alt=""
-                                    />
-                                </div>
-                                <div class="col mt-0">
-                                    <div class="achievement__content">
-                                        <div class="achievement__content__icon">
-                                            <i class="icofont-award"></i>
-                                        </div>
-                                        <h3>Finalist</h3>
-                                        <p>
-                                            International Thriller Writers Award for Best Novel
-                                            (These Toxic Things)
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div
-                            class="col m-30px-b"
-                            data-aos="fade-up"
-                            data-aos-duration="1000"
-                            data-aos-delay="600"
-                    >
-                        <div class="achievement__item h-100 translateEffect1">
-                            <div class="row row-cols-2">
-                                <div class="col mt-0">
-                                    <img
-                                            class="img-fluid"
-                                            src="{% static 'assets/images/awards/5.jpg' %}"
-                                            alt=""
-                                    />
-                                </div>
-                                <div class="col mt-0">
-                                    <div class="achievement__content">
-                                        <div class="achievement__content__icon">
-                                            <i class="icofont-award"></i>
-                                        </div>
-                                        <h3>Winner</h3>
-                                        <p>
-                                            International Thriller Writers Award for Best Novel
-                                            (These Toxic Things)
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div
-                            class="col m-30px-b"
-                            data-aos="fade-up"
-                            data-aos-duration="1000"
-                            data-aos-delay="700"
-                    >
-                        <div class="achievement__item h-100 translateEffect1">
-                            <div class="row row-cols-2">
-                                <div class="col mt-0">
-                                    <img
-                                            class="img-fluid"
-                                            src="{% static 'assets/images/awards/1.jpg' %}"
-                                            alt=""
-                                    />
-                                </div>
-                                <div class="col mt-0">
-                                    <div class="achievement__content">
-                                        <div class="achievement__content__icon">
-                                            <i class="icofont-award"></i>
-                                        </div>
-                                        <h3>Nominated</h3>
-                                        <p>
-                                            International Thriller Writers Award for Best Novel
-                                            (These Toxic Things)
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                </form>
             </div>
+        </div>
         </section>
-        <!-- ========== Achievement section end ========== -->
+        <!-- ========== CTA section end ========== -->
+
+
         <!-- ========== CTA v5 section start ========== -->
         <section class="section-padding ctav5">
             <div class="container">
@@ -1354,10 +946,9 @@
 
                         </p>
 
-                        <div class="button-container flex justify-center">
-                            <a href="#" class="chat-now" style="margin-top: 30px;" onclick="openChatBox()" onclick="openChatBox()">CHAT NOW</a>
-                            <a href="#" class="get-a-quote" style="margin-top: 30px;" onclick="openModal()"
-                            >GET A QUOTE</a>
+                        <div class="justify-center">
+                            <a href="#" class="chat-now" style="margin-top: 30px;" onclick="openChatBox()">CHAT NOW</a>
+                            <a href="#" class="get-a-quote" style="margin-top: 30px;" onclick="openModal()">GET A QUOTE</a>
                             <a href="#" class="contact-us-now" style="margin-top: 30px;">CONTACT US NOW</a>
                         </div>
 
@@ -1407,7 +998,7 @@
                                 <a href="{% url 'single-event' %}">
                                     <img
                                             class="img-fluid"
-                                            src="{% static 'assets/images/events/1.jpg' %}"
+                                            src="{% static 'assets/images/event1.png' %}"
                                             alt="events 01"
                                     />
                                 </a>
@@ -1416,7 +1007,7 @@
                                 <div class="events__single-event__content">
                                     <h2 class="fs-4">
                                         <a href="{% url 'single-event' %}"
-                                        >Discussion On Horror Thriller</a
+                                        >Discussion</a
                                         >
                                     </h2>
                                     <p class="m-0">
@@ -1448,7 +1039,7 @@
                                 <a href="{% url 'single-event' %}">
                                     <img
                                             class="img-fluid"
-                                            src="{% static 'assets/images/events/2.jpg' %}"
+                                            src="{% static 'assets/images/event1.png' %}"
                                             alt="events 01"
                                     />
                                 </a>
@@ -1457,7 +1048,7 @@
                                 <div class="events__single-event__content">
                                     <h2 class="fs-4">
                                         <a href="{% url 'single-event' %}"
-                                        >Discussion On Horror Thriller</a
+                                        >Discussion</a
                                         >
                                     </h2>
                                     <p class="m-0">
@@ -1490,7 +1081,7 @@
                                 <a href="{% url 'single-event' %}">
                                     <img
                                             class="img-fluid"
-                                            src="{% static 'assets/images/events/3.jpg' %}"
+                                            src="{% static 'assets/images/event1.png' %}"
                                             alt="events 02"
                                     />
                                 </a>
@@ -1499,7 +1090,7 @@
                                 <div class="events__single-event__content">
                                     <h2 class="fs-4">
                                         <a href="{% url 'single-event' %}"
-                                        >Discussion On Horror Thriller</a
+                                        >Discussion</a
                                         >
                                     </h2>
                                     <p class="m-0">
@@ -1546,7 +1137,7 @@
                                     data-aos-duration="1000"
                                     data-aos-delay="200"
                             >
-                                Best reviews and & feedback by top class company
+                                Best Reviews & Feedback By Our Clients
                             </h3>
                             <div
                                     class="section-divider divider-traingle"
@@ -1571,15 +1162,19 @@
                                         <div class="card-body text-center p-4">
                                             <img src="{% static 'assets/images/user-2.png' %}" alt="User Image"/>
                                             <h2 class="testimonialv2__card-title">
-                                                Brightlight books
+                                                John D. :
                                             </h2>
                                             <h4 class="testimonialv2__card-subtitle">
-                                                Ubold Customer
+                                                Customer
                                             </h4>
                                             <p class="pt-2 lh-base">
-                                                Lorem ipsum dolor sit amet consectetur adipisicing
-                                                elit. Saepe, aliquid quo eligendi voluptates veritatis
-                                                odit suscipit similique iure architecto autem.
+                                                "I couldn't have asked for a better publishing experience! From start to
+                                                finish, the team at i-RiseUp Publishing was incredibly professional and
+                                                supportive.
+                                                They guided me through every step of the process, ensuring my vision for
+                                                my book was brought to life. The final product exceeded my expectations,
+                                                and I'm grateful for their dedication to helping authors like myself
+                                                achieve their dreams."
                                             </p>
                                         </div>
                                     </div>
@@ -1594,15 +1189,20 @@
                                         <div class="card-body text-center p-4">
                                             <img src="{% static 'assets/images/user-1.png' %}" alt="User Image"/>
                                             <h2 class="testimonialv2__card-title">
-                                                Brightlight books
+                                                Sarah K.:
                                             </h2>
                                             <h4 class="testimonialv2__card-subtitle">
-                                                Ubold Customer
+                                                Loyal Customer
                                             </h4>
                                             <p class="pt-2 lh-base">
-                                                Lorem ipsum dolor sit amet consectetur adipisicing
-                                                elit. Saepe, aliquid quo eligendi voluptates veritatis
-                                                odit suscipit similique iure architecto autem.
+                                                "Working with i-RiseUp Publishing was an absolute pleasure! As a first-time
+                                                author, I was nervous about navigating the publishing world, but their
+                                                team made it seamless.
+                                                They provided valuable feedback, excellent editing services, and took
+                                                care of all the intricate details. Thanks to them, my book is now out in
+                                                the world, touching hearts and making a difference.
+                                                I highly recommend their services to anyone looking to publish their
+                                                work!"
                                             </p>
                                         </div>
                                     </div>
@@ -1617,15 +1217,19 @@
                                         <div class="card-body text-center p-4">
                                             <img src="{% static 'assets/images/user-2.png' %}" alt="User Image"/>
                                             <h2 class="testimonialv2__card-title">
-                                                Brightlight books
+                                                Michael R.:
                                             </h2>
                                             <h4 class="testimonialv2__card-subtitle">
-                                                Ubold Customer
+                                                Repeated Customer
                                             </h4>
                                             <p class="pt-2 lh-base">
-                                                Lorem ipsum dolor sit amet consectetur adipisicing
-                                                elit. Saepe, aliquid quo eligendi voluptates veritatis
-                                                odit suscipit similique iure architecto autem.
+                                                "I've been in the writing industry for years, but I've never come across
+                                                a publishing company as dedicated and passionate as i-RiseUp Publishing. Their
+                                                commitment to excellence is unmatched, and it reflects in every aspect
+                                                of their work.
+                                                They treated my manuscript with the utmost care, and the end result was
+                                                a beautifully crafted book that I'm proud to have my name on. Thank you
+                                                for making my publishing journey a memorable one!"
                                             </p>
                                         </div>
                                     </div>
@@ -1640,15 +1244,20 @@
                                         <div class="card-body text-center p-4">
                                             <img src="{% static 'assets/images/user-1.png' %}" alt="User Image"/>
                                             <h2 class="testimonialv2__card-title">
-                                                Brightlight books
+                                                David H.:
                                             </h2>
                                             <h4 class="testimonialv2__card-subtitle">
-                                                Ubold Customer
+                                                Customer
                                             </h4>
                                             <p class="pt-2 lh-base">
-                                                Lorem ipsum dolor sit amet consectetur adipisicing
-                                                elit. Saepe, aliquid quo eligendi voluptates veritatis
-                                                odit suscipit similique iure architecto autem.
+                                                "As an indie author, finding a reliable publishing partner was crucial
+                                                for me, and I hit the jackpot with i-RiseUp Publishing.
+                                                Their personalized approach and attention to detail set them apart from
+                                                the rest.
+                                                They took the time to understand my vision and brought it to fruition
+                                                with precision and care. Thanks to their guidance,
+                                                my book is now reaching audiences far and wide. I couldn't be happier
+                                                with the results!"
                                             </p>
                                         </div>
                                     </div>
@@ -1702,7 +1311,7 @@
                                 <a href="{% url 'single-blog' %}">
                                     <img
                                             class="img-fluid"
-                                            src="{% static 'assets/images/blog/blog_01.jpg' %}"
+                                            src="{% static 'assets/images/blog/blog.png' %}"
                                             alt="Blog 01"
                                     />
                                 </a>
@@ -1711,8 +1320,7 @@
                                 <div class="blog__single-post__content">
                                     <h2 class="fs-4">
                                         <a href="{% url 'single-blog' %}"
-                                        >Book News: Egypt Bans Ridley Scott’s ‘Exodus’ For
-                                            ‘Historical</a
+                                        >The Evolution of Genre Fiction: Trends and Predictions</a
                                         >
                                     </h2>
                                     <p class="m-0">
@@ -1745,7 +1353,7 @@
                                 <a href="#">
                                     <img
                                             class="img-fluid"
-                                            src="{% static 'assets/images/blog/blog_02.jpg' %}"
+                                            src="{% static 'assets/images/blog/blog1.png' %}"
                                             alt="Blog 02"
                                     />
                                 </a>
@@ -1754,7 +1362,7 @@
                                 <div class="blog__single-post__content">
                                     <h2 class="fs-4">
                                         <a href="#"
-                                        >Wyden, Eshoo question “big five” publishers over</a
+                                        >The Impact of Social Media on Book Marketing: Strategies for Authors</a
                                         >
                                     </h2>
                                     <p class="m-0">
@@ -1787,7 +1395,7 @@
                                 <a href="{% url 'single-blog' %}">
                                     <img
                                             class="img-fluid"
-                                            src="{% static 'assets/images/blog/blog_03.jpg' %}"
+                                            src="{% static 'assets/images/blog/blog2.png' %}"
                                             alt="Blog 03"
                                     />
                                 </a>
@@ -1880,48 +1488,28 @@
                             >
                                 Write Your Dream Book with Us!
                             </h2>
-                            <h2
-                                    data-aos="zoom-in-up"
-                                    data-aos-duration="1000"
-                                    data-aos-delay="250"
-                            >
-                                At I Rise Up Publishing, we're your full-service book partner.
-                                we're here for you. Connect with us today and embark on your publishing journey!
-
+                            
                                 <div
                                         class="section-divider divider-traingle"
                                         data-aos="fade-up"
                                         data-aos-duration="1000"
                                         data-aos-delay="250"
+
+                                        
                                 ></div>
+
+                            
                         </div>
                     </div>
                 </div>
                 <div class="row">
                     <div
                             class="col-lg-8 col-md-6 col-sm-12 m-25px-b"
-                            data-aos="fade-right"
-                            data-aos-duration="1000"
-                            data-aos-delay="200"
                     >
                         <div class="contact-form-box">
-                            <form id="contact-form" method="post" action="php/sendmail.php' %}">
-                                <div class="message col">
-                                    <p class="email-loading alert alert-warning">
-                                        <img
-                                                src="{% static 'assets/images/loading.gif' %}"
-                                                alt=""
-                                        />&nbsp;&nbsp;&nbsp;Sending...
-                                    </p>
-                                    <p class="email-success alert alert-success">
-                                        <i class="icon icon-icon-check-alt2"></i> Your quote has
-                                        successfully been sent.
-                                    </p>
-                                    <p class="email-failed alert alert-danger">
-                                        <i class="icon icon-icon-close-alt2"></i> Something went
-                                        wrong!
-                                    </p>
-                                </div>
+                            <form method="post">
+                            {% csrf_token %}
+                                <input type="hidden" name="reaching_out" value="hidden_text">
                                 <div class="mb13">
                                     <input
                                             name="name"
@@ -1929,7 +1517,7 @@
                                             id="contact-name"
                                             type="text"
                                             placeholder="Your Name"
-                                            required=""
+                                            required
                                     />
                                 </div>
                                 <div class="mb13">
@@ -1939,7 +1527,7 @@
                                             id="contact-email"
                                             type="email"
                                             placeholder="Your Email"
-                                            required=""
+                                            required
                                     />
                                 </div>
                                 <div class="mb13">
@@ -1949,7 +1537,7 @@
                                             id="contact-subject"
                                             type="text"
                                             placeholder="Subject"
-                                            required=""
+                                            required
                                     />
                                 </div>
                                 <div class="mb30">
@@ -1958,10 +1546,10 @@
                             class="contact-message"
                             id="contact-message"
                             placeholder="Your Message"
-                            required=""
+                            required
                     ></textarea>
                                 </div>
-                                <button class="button button__primary align-items-center">
+                                <button type="submit" class="button button__primary align-items-center">
                                     <span>Send Now</span>
                                 </button>
                             </form>
@@ -1981,10 +1569,10 @@
                                     Ohio, USA 99544
                                 </li>
                                 <li>
-                                    <span>Phone:</span><a href="tel:1124447900">112 444 7900</a>
+                                    <span>Phone:</span><a href="tel:16142598933">161 425 98933</a>
                                 </li>
                                 <li>
-                                    <span>Email:</span><a href="#">iRiseup@support.com</a>
+                                    <span>Email:</span><a href="#">iriseuppublishing@gmail.com</a>
                                 </li>
                             </ul>
                             <h4>Connect book socials</h4>
@@ -2012,8 +1600,53 @@
         </section>
         <!-- ========== Contact section end ========== -->
 
-        {% include 'footer.html' %}
-</div>
 
 
+
+
+<script>
+document.getElementById("toggleButton").addEventListener("click", function() {
+    var formContainer = document.getElementById("formContainer");
+    if (formContainer.style.display === "none" || formContainer.style.display === "") {
+        formContainer.style.display = "block";
+    } else {
+        formContainer.style.display = "none";
+    }
+});
+
+$(document).ready(function(){
+        $('.owl-carousel').owlCarousel({
+            loop:true,
+            margin:10,
+            autoplay:true,
+            autoplayTimeout:2000, // Adjust autoplay speed
+            responsive:{
+                0:{
+                    items:1
+                },
+                600:{
+                    items:3
+                },
+                1000:{
+                    items:5
+                }
+            }
+        });
+    });
+
+
+    document.getElementById('openChatNowModal').addEventListener('click', function() {
+    // Show the modal
+    var myModal = new bootstrap.Modal(document.getElementById('chatNowModal'));
+    myModal.show();
+
+    // Dynamically create and set the iframe source
+    var iframe = document.getElementById('chatbotFrame');
+    iframe.src = 'https://www.chatbase.co/embed.html?chatbotId=38LUjIhuRzNAhpBQH5Jxg&domain=www.chatbase.co';
+});
+
+</script>
+
+
+{% include 'footer.html' %}
 {% endblock %}
